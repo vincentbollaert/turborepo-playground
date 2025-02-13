@@ -1,10 +1,10 @@
 {
-  "private": true,
   "name": "web",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack --port 3000",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0",
@@ -20,11 +20,15 @@
     "@repo/database": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/tailwind-config": "*",
     "@types/node": "^22",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
-    "@next/eslint-plugin-next": "^14.1.1",
+    "@next/eslint-plugin-next": "^15.1.6",
     "eslint": "^9.20.0",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.5.1",
     "typescript": "5.7.3"
   }
 }
