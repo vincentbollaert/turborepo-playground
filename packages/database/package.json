@@ -1,21 +1,23 @@
 {
   "name": "@repo/database",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "exports": {
     ".": "./src/client.ts"
   },
+  "type": "module",
   "scripts": {
+    "dev": "tsup src/* --watch",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "prebuild": "npm run generate",
+    "predev": "npm run generate",
+    "studio": "prisma studio",
+    "db:seed": "tsx src/seed.ts",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:migrate:dev": "prisma migrate dev",
     "db:push": "prisma db push",
-    "db:seed": "tsx src/seed.ts",
-    "dev": "tsup src/* --watch",
     "format": "prisma format",
-    "generate": "prisma generate",
-    "lint": "eslint . --max-warnings 0",
-    "prebuild": "npm run generate",
-    "predev": "npm run generate",
-    "studio": "prisma studio"
+    "generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "latest"
