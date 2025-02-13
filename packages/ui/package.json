@@ -9,10 +9,13 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./Card": "./src/Card.tsx"
+    "./card": {
+      "types": "./src/card.tsx",
+      "default": "./dist/card.js"
+    }
   },
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "build": "tsc && tailwindcss -i ./src/styles.css -o ./dist/index.css",
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",

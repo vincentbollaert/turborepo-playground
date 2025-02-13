@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { prisma } from '@repo/database'
-import { Card } from '@repo/ui/Card'
+import { Card } from '@repo/ui/card'
 
 function Gradient({ conic, className, small }: { small?: boolean; conic?: boolean; className?: string }) {
   return (
