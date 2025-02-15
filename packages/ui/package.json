@@ -18,15 +18,15 @@
       "types": "./dist/cardTwo/CardTwo.d.ts",
       "import": "./dist/cardTwo/CardTwo.mjs",
       "require": "./dist/cardTwo/CardTwo.js"
-    },
-    "./styles.css": "./dist/index.css"
+    }
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "npm run update-package-exports && tsup",
+    "dev": "npm run update-package-exports && tsup --watch",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "generate:component": "turbo gen react-component"
+    "generate:component": "turbo gen react-component",
+    "update-package-exports": "node scripts/update-package-exports.cjs"
   },
   "peerDependencies": {
     "react": "^19"
