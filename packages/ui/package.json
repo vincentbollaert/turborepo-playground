@@ -29,7 +29,7 @@
     "sync-package-exports": "node scripts/sync-package-exports.cjs"
   },
   "peerDependencies": {
-    "react": "^19"
+    "react": "^19.0.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -38,14 +38,14 @@
     "@turbo/gen": "^2.4.0",
     "@types/glob": "^8.1.0",
     "@types/node": "^22.13.0",
-    "@types/react": "19.0.8",
-    "@types/react-dom": "19.0.3",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.20.0",
     "glob": "^11.0.1",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
     "tsup": "^8.3.6",
-    "typescript": "5.7.3"
+    "typescript": "^5.7.3"
   }
 }
