@@ -5,13 +5,20 @@
     "**/*.css"
   ],
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./card": "./src/card/Card.tsx"
+    "./card": {
+      "types": "./dist/card/Card.d.ts",
+      "import": "./dist/card/Card.mjs",
+      "require": "./dist/card/Card.js"
+    },
+    "./styles.css": "./dist/index.css"
   },
   "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",
     "generate:component": "turbo gen react-component"
@@ -21,16 +28,19 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "@repo/tailwind-config": "*",
+    "@repo/typescript-config": "*",
     "@turbo/gen": "^2.4.0",
+    "@types/glob": "^8.1.0",
     "@types/node": "^22.13.0",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.20.0",
+    "glob": "^11.0.1",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
+    "tsup": "^8.3.6",
     "typescript": "5.7.3"
   }
 }
