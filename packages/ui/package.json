@@ -21,12 +21,12 @@
     }
   },
   "scripts": {
-    "build": "npm run update-package-exports && tsup",
-    "dev": "npm run update-package-exports && tsup --watch",
+    "build": "npm run sync-package-exports && tsup",
+    "dev": "npm run sync-package-exports && tsup --watch",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",
-    "generate:component": "turbo gen react-component",
-    "update-package-exports": "node scripts/update-package-exports.cjs"
+    "generate:component": "turbo gen component",
+    "sync-package-exports": "node scripts/sync-package-exports.cjs"
   },
   "peerDependencies": {
     "react": "^19"
