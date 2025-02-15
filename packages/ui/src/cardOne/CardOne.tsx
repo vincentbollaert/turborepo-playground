@@ -6,7 +6,7 @@ export type CardProps = {
   href: string
 }
 
-export function Card({ title, children, href }: CardProps) {
+export function CardOne({ title, children, href }: CardProps) {
   return (
     <a
       className="ui-group ui-rounded-lg ui-border ui-border-transparent ui-px-5 ui-py-4 ui-transition-colors hover:ui-border-neutral-700 hover:ui-bg-neutral-800/30"

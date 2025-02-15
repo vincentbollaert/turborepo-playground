@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { prisma } from '@repo/database'
-import { Card } from '@repo/ui/card'
+import { CardOne } from '@repo/ui/cardOne'
 
 function Gradient({ conic, className, small }: { small?: boolean; conic?: boolean; className?: string }) {
   return (
@@ -45,9 +45,9 @@ export default async function IndexPage() {
           <code className="font-mono font-bold">web</code>
         </p>
         <pre>{JSON.stringify(users, null, 2)}</pre>
-        <Card title="test title" href="">
+        <CardOne title="test title" href="">
           Test description
-        </Card>
+        </CardOne>
         <div className="fixed bottom-0 left-0 flex items-end justify-center w-full h-48 bg-gradient-to-t from-black via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="flex gap-2 p-8 pointer-events-none place-items-center lg:pointer-events-auto lg:p-0"
@@ -99,9 +99,9 @@ export default async function IndexPage() {
 
       <div className="grid mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         {LINKS.map(({ title, href, description }) => (
-          <Card href={href} key={title} title={title}>
+          <CardOne href={href} key={title} title={title}>
             {description}
-          </Card>
+          </CardOne>
         ))}
       </div>
     </main>

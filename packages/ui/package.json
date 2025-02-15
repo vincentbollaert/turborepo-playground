@@ -9,10 +9,15 @@
     "src"
   ],
   "exports": {
-    "./card": {
-      "types": "./dist/card/Card.d.ts",
-      "import": "./dist/card/Card.mjs",
-      "require": "./dist/card/Card.js"
+    "./cardOne": {
+      "types": "./dist/cardOne/CardOne.d.ts",
+      "import": "./dist/cardOne/CardOne.mjs",
+      "require": "./dist/cardOne/CardOne.js"
+    },
+    "./cardTwo": {
+      "types": "./dist/cardTwo/CardTwo.d.ts",
+      "import": "./dist/cardTwo/CardTwo.mjs",
+      "require": "./dist/cardTwo/CardTwo.js"
     },
     "./styles.css": "./dist/index.css"
   },
