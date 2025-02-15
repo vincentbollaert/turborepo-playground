@@ -9,14 +9,9 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./card": {
-      "types": "./src/card/Card.tsx",
-      "default": "./dist/Card.js"
-    }
+    "./card": "./src/card/Card.tsx"
   },
   "scripts": {
-    "build": "tsc && tailwindcss -i ./src/styles.css -o ./dist/index.css",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",
     "generate:component": "turbo gen react-component"
