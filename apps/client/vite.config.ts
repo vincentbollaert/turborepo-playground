@@ -7,11 +7,12 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   // necessary because vite expects imported monorepo modules to be ESM
-  // alternatively, could convert the UI package to a JIT package
-  // but compiled packages help for caching
+  // could convert the UI package to a JIT package, but compiled packages help for caching
+  // TODO: find better solution
   resolve: {
     alias: {
-      '@repo/ui': resolve(__dirname, '../../packages/ui/src'),
+      '@repo/ui/styles': resolve(__dirname, '../../packages/ui/src/styles'),
+      '@repo/ui': resolve(__dirname, '../../packages/ui/src/components'),
     },
   },
   optimizeDeps: {

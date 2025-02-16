@@ -9,21 +9,26 @@
     "src"
   ],
   "exports": {
-    "./index.css": "./dist/output.css",
+    "./index.css": "./dist/styles/output.css",
     "./avatar": {
-      "types": "./dist/avatar/Avatar.d.ts",
-      "import": "./dist/avatar/Avatar.mjs",
-      "require": "./dist/avatar/Avatar.js"
+      "types": "./dist/components/avatar/avatar.d.ts",
+      "import": "./dist/components/avatar/avatar.mjs",
+      "require": "./dist/components/avatar/avatar.js"
     },
     "./profileCard": {
-      "types": "./dist/profileCard/ProfileCard.d.ts",
-      "import": "./dist/profileCard/ProfileCard.mjs",
-      "require": "./dist/profileCard/ProfileCard.js"
+      "types": "./dist/components/profileCard/profileCard.d.ts",
+      "import": "./dist/components/profileCard/profileCard.mjs",
+      "require": "./dist/components/profileCard/profileCard.js"
+    },
+    "./button": {
+      "types": "./dist/components/button/button.d.ts",
+      "import": "./dist/components/button/button.mjs",
+      "require": "./dist/components/button/button.js"
     }
   },
   "scripts": {
-    "build": "tsup && bunx @tailwindcss/cli -i ./src/index.css -o ./dist/output.css",
-    "dev": "tsup && bunx @tailwindcss/cli -i ./src/index.css -o ./dist/output.css --watch",
+    "build": "tsup && bunx @tailwindcss/cli -i ./src/styles/index.css -o ./dist/styles/output.css",
+    "dev": "tsup && bunx @tailwindcss/cli -i ./src/styles/index.css -o ./dist/styles/output.css --watch",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",
     "generate:component": "turbo gen component",
@@ -49,6 +54,7 @@
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.3",
+    "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/cli": "^4.0.6",
     "@tailwindcss/postcss": "^4.0.6",
     "class-variance-authority": "^0.7.1",

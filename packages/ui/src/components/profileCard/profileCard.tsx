@@ -1,4 +1,4 @@
-import { Avatar, AvatarImage, AvatarFallback } from '../avatar/Avatar'
+import { Avatar, AvatarImage, AvatarFallback } from '../avatar/avatar'
 
 export const ProfileCard = () => {
   return (

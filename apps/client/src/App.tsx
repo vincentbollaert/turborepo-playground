@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@repo/ui/avatar'
 import { ProfileCard } from '@repo/ui/profileCard'
-import '@repo/ui/index.css'
+import '@repo/ui/styles/index.css'
 import './App.css'
 
 function App() {

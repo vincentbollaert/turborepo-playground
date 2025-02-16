@@ -1,8 +1,0 @@
-@import 'tailwindcss';
-
-@import './avatar/Avatar';
-@import './profileCard/ProfileCard';
-
-@theme {
-  --background-color-test: red;
-}
