@@ -1,4 +1,8 @@
 .profile-card {
+  --card-max-width: 42rem;
+  --card-radius: 0.75rem;
+  --content-padding: 1.5rem;
+
   max-width: var(--card-max-width);
   margin-left: auto;
   margin-right: auto;

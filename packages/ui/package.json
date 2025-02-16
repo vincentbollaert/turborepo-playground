@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@turbo/gen": "^2.4.0",
     "@types/glob": "^8.1.0",

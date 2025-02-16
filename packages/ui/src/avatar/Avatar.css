@@ -15,6 +15,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
+  background-color: var(--background-color-test)
 }
 
 .avatar__fallback {
