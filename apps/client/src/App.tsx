@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   return (
     <div className="app">
-      <Avatar>
+      <Avatar className='large-avatar'>
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
