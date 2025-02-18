@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import { prisma } from '@repo/database'
 import { Avatar, AvatarFallback, AvatarImage } from '@repo/ui/avatar'
-import { ProfileCard } from '@repo/ui/profileCard'
+import { FeatureCard } from '@repo/ui/featureCard'
 
 export default async function IndexPage() {
   const users = await prisma.user.findMany()
@@ -14,7 +13,7 @@ export default async function IndexPage() {
           <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <ProfileCard />
+        <FeatureCard title="test" description="test desc" status="done" />
       </div>
     </main>
   )
