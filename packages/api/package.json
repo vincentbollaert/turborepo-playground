@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "generate": "openapi-typescript ./schema/openapi.yaml --output ./schema/generated/schema.d.ts"
+    "build": "openapi-typescript ./schema/openapi.yaml --output ./schema/generated/schema.d.ts"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
