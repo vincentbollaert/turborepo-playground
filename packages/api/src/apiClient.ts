@@ -1,13 +1,14 @@
 import createFetchClient from 'openapi-fetch'
+import createReactQueryClient from 'openapi-react-query'
 
-import { paths } from '../../schema/generated/schema'
-import { Endpoints } from '../types/apiClient'
+import { paths } from '../schema/generated/schema'
+import { Endpoints } from './apiTypes'
 
 const baseClient = createFetchClient<paths>({
-  baseUrl: 'localhost/api/v1',
+  baseUrl: '/api/v1',
 })
 
-export const httpApi = {
+export const apiClient = {
   features: {
     getFeatures: () => baseClient.GET('/features'),
     addFeature: (feature: Endpoints['Features']['AddFeature']['RequestBody']) =>
@@ -16,3 +17,5 @@ export const httpApi = {
       baseClient.DELETE('/features/{id}', { params: { path: { id } } }),
   },
 }
+
+export const reactQueryClient = createReactQueryClient(baseClient)

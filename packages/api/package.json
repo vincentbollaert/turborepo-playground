@@ -1,14 +1,24 @@
 {
-  "name": "api",
+  "name": "@repo/api",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "openapi-typescript ./schema/openapi.yaml --output ./schema/generated/schema.d.ts"
   },
+  "exports": {
+    "./apiClient": "./src/apiClient.ts",
+    "./apiTypes": "./src/apiTypes.ts",
+    "./useMswInit": "./src/hooks/useMswInit.ts"
+  },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "msw": "^2.7.0",
     "openapi-fetch": "^0.13.4",
     "openapi-typescript": "^7.6.1"
+  },
+  "dependencies": {
+    "openapi-react-query": "^0.3.0"
   }
 }
