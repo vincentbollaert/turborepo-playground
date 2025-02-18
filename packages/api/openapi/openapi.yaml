@@ -1,0 +1,101 @@
+openapi: 3.1.0
+info:
+  title: Side project features API
+  description: API for managing side project features
+  version: 0.0.1
+
+servers:
+  - url: /api/v1
+    description: API routes
+
+components:
+  examples:
+    Feature:
+      value:
+        id: 'feature-1'
+        name: 'React'
+        status: 'done'
+
+    Features:
+      value:
+        features:
+          - id: 'feature-1'
+            name: 'React'
+            status: 'done'
+
+  schemas:
+    Feature:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Auto-generated ID for the feature
+        name:
+          type: string
+          description: Name of the feature
+        status:
+          type: string
+          description: Status of the feature 'not started' | 'in progress' | 'done'
+      required:
+        - id
+        - name
+        - status
+      example:
+        default:
+          $ref: '#/components/examples/Feature'
+
+paths:
+  /features:
+    get:
+      summary: Get features
+      responses:
+        '200':
+          description: Features
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+                  properties:
+                    features:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/Feature'
+              examples:
+                default:
+                  $ref: '#/components/examples/Features'
+    post:
+      summary: Add a new feature
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Feature'
+            examples:
+              default:
+                $ref: '#/components/examples/Feature'
+      responses:
+        '201':
+          description: Feature added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Feature'
+              examples:
+                default:
+                  $ref: '#/components/examples/Feature'
+
+  /features/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    delete:
+      summary: Remove a feature
+      responses:
+        '200':
+          description: Feature removed successfully
