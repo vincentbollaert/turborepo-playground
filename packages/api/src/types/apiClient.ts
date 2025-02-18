@@ -22,14 +22,3 @@ export type Endpoints = {
     }
   }
 }
-
-export type Client = {
-  features: {
-    getFeatures: (params: Endpoints['Features']['GetFeatures']['PathParams']) => 
-      Promise<Endpoints['Features']['GetFeatures']['Response']>
-    addFeature: (params: Endpoints['Features']['AddFeature']['RequestBody']) => 
-      Promise<Endpoints['Features']['AddFeature']['Response']>
-    removeFeature: (params: Endpoints['Features']['RemoveFeature']['PathParams']) => 
-      Promise<Endpoints['Features']['RemoveFeature']['Response']>
-  }
-}
