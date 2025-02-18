@@ -1,7 +1,7 @@
-import express, { Request, Response } from 'express'
+import { Endpoints } from '@repo/api/apiTypes'
+import express, { Response } from 'express'
 import { Pool } from 'pg'
 import { config } from '../config.js'
-import { Endpoints } from '@repo/api/apiTypes'
 
 const pool = new Pool({
   connectionString: config.dbPath,
