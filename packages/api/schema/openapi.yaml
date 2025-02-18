@@ -61,13 +61,11 @@ paths:
             application/json:
               schema:
                 type: object
-                additionalProperties:
-                  type: object
-                  properties:
-                    features:
-                      type: array
-                      items:
-                        $ref: '#/components/schemas/Feature'
+                properties:
+                  features:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Feature'
               examples:
                 default:
                   $ref: '#/components/examples/Features'
