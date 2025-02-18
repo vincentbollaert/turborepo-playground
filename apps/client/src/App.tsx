@@ -9,11 +9,11 @@ import './App.css'
 const queryClient = new QueryClient()
 
 export const Layout = () => {
-  const mswStatus = useMswInit()
+  // const mswStatus = useMswInit()
 
-  if (mswStatus === 'initializing') {
-    return <div>Initializing app locally</div>
-  }
+  // if (mswStatus === 'initializing') {
+  //   return <div>Initializing app locally</div>
+  // }
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div className="app">
       <div>
-        {data.data?.features?.map(({ id, name, description, status }) => {
+        {data?.features?.map(({ id, name, description, status }) => {
           return <FeatureCard key={id} title={name} description={description} status={status} />
         })}
 

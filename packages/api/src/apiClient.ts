@@ -5,7 +5,7 @@ import { paths } from '../schema/generated/schema'
 import { Endpoints } from './apiTypes'
 
 const baseClient = createFetchClient<paths>({
-  baseUrl: '/api/v1',
+  baseUrl: 'http://localhost:1337/api/v1',
 })
 
 export const apiClient = {

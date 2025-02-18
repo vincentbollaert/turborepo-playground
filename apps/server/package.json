@@ -16,7 +16,6 @@
     "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "@repo/database": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/cors": "^2.8.17",

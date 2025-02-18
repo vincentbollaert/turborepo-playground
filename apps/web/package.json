@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.1.6",
-    "@repo/database": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/node": "^22.13.0",
