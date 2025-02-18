@@ -15,10 +15,10 @@
       "import": "./dist/components/avatar/avatar.mjs",
       "require": "./dist/components/avatar/avatar.js"
     },
-    "./profileCard": {
-      "types": "./dist/components/profileCard/profileCard.d.ts",
-      "import": "./dist/components/profileCard/profileCard.mjs",
-      "require": "./dist/components/profileCard/profileCard.js"
+    "./featureCard": {
+      "types": "./dist/components/featureCard/featureCard.d.ts",
+      "import": "./dist/components/featureCard/featureCard.mjs",
+      "require": "./dist/components/featureCard/featureCard.js"
     },
     "./button": {
       "types": "./dist/components/button/button.d.ts",

@@ -1,31 +1,28 @@
 import { reactQueryClient } from '@repo/api/apiClient'
 import { useMswInit } from '@repo/api/useMswInit'
 import { Avatar, AvatarFallback, AvatarImage } from '@repo/ui/avatar'
-import { ProfileCard } from '@repo/ui/profileCard'
+import { FeatureCard } from '@repo/ui/featureCard'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import '@repo/ui/styles/index.css'
 import './App.css'
 
 const queryClient = new QueryClient()
 
-export default function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Example />
-    </QueryClientProvider>
-  )
-}
-
-function Example() {
+export const Layout = () => {
   const mswStatus = useMswInit()
 
   if (mswStatus === 'initializing') {
     return <div>Initializing app locally</div>
   }
-  return <Content />
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  )
 }
 
-const Content = () => {
+const App = () => {
   const { isPending, error, data } = reactQueryClient.useQuery('get', '/features')
 
   if (isPending) return 'Loading...'
@@ -35,17 +32,16 @@ const Content = () => {
   return (
     <div className="app">
       <div>
-        {/* <h1>{data.name}</h1>
-        <p>{data.description}</p>
-        <strong>👀 {data.subscribers_count}</strong> <strong>✨ {data.stargazers_count}</strong>{' '}
-        <strong>🍴 {data.forks_count}</strong> */}
+        {data.data?.features?.map(({ id, name, description, status }) => {
+          return <FeatureCard key={id} title={name} description={description} status={status} />
+        })}
+
       </div>
 
       <Avatar className="large-avatar">
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      <ProfileCard />
     </div>
   )
 }

@@ -12,15 +12,17 @@ components:
   examples:
     Feature:
       value:
-        id: 'feature-1'
-        name: 'React'
+        id: 'id1'
+        name: 'Modern web applications'
+        description: 'Modern web applications showing diverging setups'
         status: 'done'
 
     Features:
       value:
         features:
-          - id: 'feature-1'
-            name: 'React'
+          - id: 'id2'
+            name: 'Shared component library'
+            description: 'Tailwind component library with codegen'
             status: 'done'
 
   schemas:
@@ -33,12 +35,16 @@ components:
         name:
           type: string
           description: Name of the feature
+        description:
+          type: string
+          description: Description of the feature
         status:
           type: string
           description: Status of the feature 'not started' | 'in progress' | 'done'
       required:
         - id
         - name
+        - description
         - status
       example:
         default:
