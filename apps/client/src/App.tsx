@@ -1,46 +1,65 @@
 import { reactQueryClient } from '@repo/api/apiClient'
-// import { useMswInit } from '@repo/api/useMswInit'
 import { Avatar, AvatarFallback, AvatarImage } from '@repo/ui/avatar'
 import { FeatureCard } from '@repo/ui/featureCard'
-import '@repo/ui/styles/index.css'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Skeleton } from '@repo/ui/skeleton'
+import { useState } from 'react'
 import './App.css'
 
-const queryClient = new QueryClient()
-
-export const Layout = () => {
-  // const mswStatus = useMswInit()
-
-  // if (mswStatus === 'initializing') {
-  //   return <div>Initializing app locally</div>
-  // }
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <App />
-    </QueryClientProvider>
-  )
-}
-
-const App = () => {
+export const App = () => {
+  const [activeTab, setActiveTab] = useState('features')
   const { isPending, error, data } = reactQueryClient.useQuery('get', '/features')
 
-  if (isPending) return 'Loading...'
+  if (isPending) {
+    return <Skeleton className="w-[140px] h-[30px] rounded-full" />
+  }
 
-  if (error) return 'An error has occurred: ' + error
+  if (error) {
+    return 'An error has occurred: ' + error
+  }
 
   return (
-    <div className="app">
-      <div>
-        {data?.features?.map(({ id, name, description, status }) => {
-          return <FeatureCard key={id} title={name} description={description} status={status} />
-        })}
-      </div>
-
+    <div>
       <Avatar className="large-avatar">
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
+
+      <div className="max-w-2xl mx-auto p-4">
+        <nav className="mb-8">
+          <ul className="flex justify-center space-x-8">
+            {(['features', 'learnings'] as const).map(tab => (
+              <li key={tab}>
+                <button
+                  onClick={() => setActiveTab(tab)}
+                  className={`text-lg font-semibold capitalize transition-colors duration-200 ${
+                    activeTab === tab
+                      ? 'text-primary border-b-2 border-primary'
+                      : 'text-muted-foreground hover:text-primary'
+                  }`}
+                >
+                  {tab}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {activeTab === 'features' && (
+          <ul className="divide-y divide-gray-200">
+            {/* TODO: should components know about feature model? */}
+            {data?.features?.map(({ id, name, description, status }) => {
+              return <FeatureCard key={id} id={id} title={name} description={description} status={status} />
+            })}
+          </ul>
+        )}
+
+        {activeTab === 'learnings' && (
+          <div className="text-center text-gray-500">
+            <p>Your learnings will be displayed here.</p>
+            <p>This section is under construction.</p>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
