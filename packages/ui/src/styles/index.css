@@ -1,8 +1,31 @@
+@import './reset.css';
+
 @import 'tailwindcss';
 
-@import '../components/avatar/avatar';
-@import '../components/featureCard/featureCard';
+@import '../components/avatar/avatar.css';
+@import '../components/featureCard/featureCard.css';
+@import '../components/switch/switch.css';
+
+/* RADIX DOCS */
+/* color palette - https://www.radix-ui.com/colors/docs/palette-composition/scales */
+
+/* TAILWIND DOCS */
+/* theme var namespaces - https://tailwindcss.com/docs/theme#theme-variable-namespaces */
+/* margin classes - https://tailwindcss.com/docs/margin */
 
 @theme {
   --background-color-test: red;
+
+  --color-primary: #3db9cf;
+  --color-secondary: #82827c;
+  --color-error: #ec8e7b;
+
+  --spacing: 0.4rem;
+
+  --text-xxsm: 0.9rem;
+  --text-xsm: 1rem;
+  --text-sm: 1.1rem;
+  --text-md: 1.2rem;
+  --text-lg: 1.3rem;
+  --text-xlg: 1.6rem;
 }
