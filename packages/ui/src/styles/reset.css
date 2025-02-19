@@ -1,0 +1,55 @@
+/* @layer to not override Tailwind styles */
+@layer base {
+  * {
+    margin: unset;
+    padding: unset;
+    border: unset;
+    background: unset;
+    color: unset;
+    font: unset;
+    text-align: unset;
+    text-decoration: unset;
+    vertical-align: unset;
+    box-shadow: unset;
+    list-style: unset;
+    outline: unset;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  button {
+    all: unset;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    appearance: none;
+    background-color: transparent;
+    border-radius: unset;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: unset;
+  }
+  ol,
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
