@@ -1,4 +1,4 @@
-/* @layer to not override Tailwind styles */
+/* @layer to not override tailwind styles */
 @layer base {
   * {
     margin: unset;
