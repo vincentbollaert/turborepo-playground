@@ -11,7 +11,7 @@ export const App = () => {
   const { isPending, error, data } = reactQueryClient.useQuery('get', '/features')
 
   if (isPending) {
-    return <Skeleton className="w-[140px] h-[30px] rounded-full" />
+    return <Skeleton className="skeleton" />
   }
 
   if (error) {

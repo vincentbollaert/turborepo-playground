@@ -1,9 +1,6 @@
-
 .feature {
   padding: 1.2rem;
-  background-color: var(--pink-0);
-  background-image: var(--gradient-20);
-  margin: var(--size-3);
+  margin: var(--spacing-md);
 }
 
 .feature__header {
@@ -18,9 +15,9 @@
 }
 
 .feature__title {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: var(--text-lg);
   flex-grow: 1;
+  color: var(--color-text-primary);
 }
 
 .feature__expand-button {
@@ -43,6 +40,6 @@
 }
 
 .feature__description-text {
-  font-size: 1.2rem;
-  color: #4b5563;
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
 }

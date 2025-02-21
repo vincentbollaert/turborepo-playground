@@ -3,16 +3,39 @@
 @import '../components/avatar/avatar.css';
 @import '../components/featureCard/featureCard.css';
 @import '../components/switch/switch.css';
+@import '../components/skeleton/skeleton.css';
 
 html {
-  /* try on some alt gradients why dont ya! */
-  font-size: 62.5%;
-  background-image: var(--gradient-21);
+  font-family: var(--font-antique);
 }
 
-/* TODO: should i remove these radix colors and use only open-props? */
+:root {
+  --color-primary: var(--blue-2);
+  --color-secondary: var(--gray-7);
 
+  --color-accent: var(--blue-2);
+  --color-accent-light: var(--blue-0);
+  --color-accent-dark: var(--blue-4);
 
+  --color-surface-1: var(--gray-1);
+  --color-surface-2: var(--gray-0);
+  --color-text-primary: var(--gray-7);
+  --color-text-secondary: var(--gray-6);
+  --color-border: var(--gray-0);
+  --color-error: var(--red-4);
+
+  --size-sm: 0.4rem;
+  --size-md: 0.8rem;
+  --size-lg: 1.2rem;
+
+  --text-sm: 1.1rem;
+  --text-md: 1.6rem;
+  --text-lg: 1.8rem;
+
+  --radius-sm: var(--radius-2);
+  --radius-md: var(--radius-3);
+  --radius-lg: var(--radius-4);
+}
 
 
 /* RADIX DOCS */
