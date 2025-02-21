@@ -7,25 +7,6 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-    "topo": {
-      "dependsOn": ["^topo"]
-    },
-    "check-types": {
-      "dependsOn": ["topo"]
-    },
-    "db:migrate:dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "db:migrate:deploy": {
-      "cache": false
-    },
-    "db:push": {
-      "cache": false
-    },
-    "db:seed": {
-      "cache": false
-    },
     "dev": {
       "cache": false,
       "persistent": true
