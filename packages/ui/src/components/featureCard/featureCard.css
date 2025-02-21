@@ -1,8 +1,9 @@
+
 .feature {
   padding: 1.2rem;
-
-  &:hover {
-  }
+  background-color: var(--pink-0);
+  background-image: var(--gradient-20);
+  margin: var(--size-3);
 }
 
 .feature__header {

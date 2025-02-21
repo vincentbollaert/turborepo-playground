@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@repo/ui/avatar'
 import { FeatureCard } from '@repo/ui/featureCard'
 import { Skeleton } from '@repo/ui/skeleton'
 import { useState } from 'react'
+import '@repo/ui/styles/index.css'
 import './App.css'
 
 export const App = () => {

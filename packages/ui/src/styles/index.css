@@ -1,8 +1,19 @@
+@import '@radix-ui/colors/black-alpha.css';
 @import './reset.css';
-
 @import '../components/avatar/avatar.css';
 @import '../components/featureCard/featureCard.css';
 @import '../components/switch/switch.css';
+
+html {
+  /* try on some alt gradients why dont ya! */
+  font-size: 62.5%;
+  background-image: var(--gradient-21);
+}
+
+/* TODO: should i remove these radix colors and use only open-props? */
+
+
+
 
 /* RADIX DOCS */
 /* color palette - https://www.radix-ui.com/colors/docs/palette-composition/scales */

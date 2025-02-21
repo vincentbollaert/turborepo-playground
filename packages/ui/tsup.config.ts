@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup'
 import { globSync } from 'glob'
 
 export default defineConfig({
-  entry: globSync('src/**/*.{tsx,ts,js}'),
+  entry: globSync('src/**/*.{tsx,ts,js,css}'),
   format: ['esm', 'cjs'],
   dts: true,
   clean: true,
@@ -10,5 +10,5 @@ export default defineConfig({
   treeshake: true,
   sourcemap: true,
   outDir: 'dist',
-  onSuccess: 'bun run check-types',
+  onSuccess: 'bun run check-types'
 })

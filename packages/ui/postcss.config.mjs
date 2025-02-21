@@ -1,6 +1,10 @@
 import postcssJitProps from 'postcss-jit-props'
+import postcssImport from 'postcss-import'
 import OpenProps from 'open-props'
 
 export default {
-  plugins: [postcssJitProps(OpenProps)],
+  plugins: [
+    postcssImport(),
+    postcssJitProps(OpenProps),
+  ],
 }

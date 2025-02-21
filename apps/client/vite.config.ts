@@ -10,7 +10,7 @@ export default defineConfig({
   // TODO: find better solution
   resolve: {
     alias: {
-      '@repo/ui/styles': resolve(__dirname, '../../packages/ui/src/styles'),
+      '@repo/ui/styles': resolve(__dirname, '../../packages/ui/dist/styles'),
       '@repo/ui': resolve(__dirname, '../../packages/ui/src/components'),
     },
   },
