@@ -11,7 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@repo/ui/styles': resolve(__dirname, '../../packages/ui/dist/styles'),
-      '@repo/ui': resolve(__dirname, '../../packages/ui/src/components'),
+      '@repo/ui': resolve(__dirname, '../../packages/ui/src'),
     },
   },
   optimizeDeps: {

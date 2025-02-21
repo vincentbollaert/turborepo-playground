@@ -10,30 +10,30 @@
   ],
   "exports": {
     "./index.css": "./dist/styles/index.css",
-    "./avatar": {
+    "./primitives/skeleton": {
+      "types": "./dist/primitives/skeleton/skeleton.d.ts",
+      "import": "./dist/primitives/skeleton/skeleton.mjs",
+      "require": "./dist/primitives/skeleton/skeleton.js"
+    },
+    "./components/avatar": {
       "types": "./dist/components/avatar/avatar.d.ts",
       "import": "./dist/components/avatar/avatar.mjs",
       "require": "./dist/components/avatar/avatar.js"
     },
-    "./featureCard": {
-      "types": "./dist/components/featureCard/featureCard.d.ts",
-      "import": "./dist/components/featureCard/featureCard.mjs",
-      "require": "./dist/components/featureCard/featureCard.js"
-    },
-    "./button": {
+    "./components/button": {
       "types": "./dist/components/button/button.d.ts",
       "import": "./dist/components/button/button.mjs",
       "require": "./dist/components/button/button.js"
     },
-    "./skeleton": {
-      "types": "./dist/components/skeleton/skeleton.d.ts",
-      "import": "./dist/components/skeleton/skeleton.mjs",
-      "require": "./dist/components/skeleton/skeleton.js"
-    },
-    "./switch": {
+    "./components/switch": {
       "types": "./dist/components/switch/switch.d.ts",
       "import": "./dist/components/switch/switch.mjs",
       "require": "./dist/components/switch/switch.js"
+    },
+    "./patterns/featureCard": {
+      "types": "./dist/patterns/featureCard/featureCard.d.ts",
+      "import": "./dist/patterns/featureCard/featureCard.mjs",
+      "require": "./dist/patterns/featureCard/featureCard.js"
     }
   },
   "scripts": {

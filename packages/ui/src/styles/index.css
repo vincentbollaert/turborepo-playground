@@ -1,9 +1,9 @@
 @import '@radix-ui/colors/black-alpha.css';
 @import './reset.css';
+@import '../primitives/skeleton/skeleton.css';
 @import '../components/avatar/avatar.css';
-@import '../components/featureCard/featureCard.css';
 @import '../components/switch/switch.css';
-@import '../components/skeleton/skeleton.css';
+@import '../patterns/featureCard/featureCard.css';
 
 html {
   font-family: var(--font-antique);

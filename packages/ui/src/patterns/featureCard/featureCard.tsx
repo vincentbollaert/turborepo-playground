@@ -1,7 +1,7 @@
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
-import { Button } from '../button'
-import { Switch } from '../switch'
+import { Button } from '../../components/button'
+import { Switch } from '../../components/switch'
 
 export type FeatureCardProps = {
   id: string
