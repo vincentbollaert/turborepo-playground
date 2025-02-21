@@ -1,0 +1,120 @@
+.btn {
+  --ghost-btn-hover-bg: #fff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: var(--radius-drawn-6);
+  font-size: var(--text-md);
+  cursor: pointer;
+  transition:
+    color 150ms,
+    box-shadow 150ms;
+
+  & svg {
+    pointer-events: none;
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    &:not([class*='size-']) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline-width: 1px;
+    outline-color: rgb(0 0 0 / 0.5);
+    ring-width: 4px;
+    ring-color: rgb(0 0 0 / 0.1);
+
+    @media (prefers-color-scheme: dark) {
+      outline-color: rgb(255 255 255 / 0.4);
+      ring-color: rgb(255 255 255 / 0.2);
+    }
+  }
+
+  &[aria-invalid='true']:focus-visible {
+    ring-width: 0;
+  }
+}
+
+/* style variants */
+.btn--default {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  &:hover {
+    background-color: rgb(var(--color-primary) / 0.9);
+  }
+}
+
+.btn--destructive {
+  background-color: var(--color-destructive);
+  color: var(--color-destructive-foreground);
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.05);
+
+  &:hover {
+    background-color: rgb(var(--color-destructive) / 0.9);
+  }
+}
+
+.btn--outline {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-1);
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.05);
+
+  &:hover {
+    background-color: var(--color-surface-1);
+    color: var(--color-text-primary);
+  }
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.05);
+
+  &:hover {
+    background-color: rgb(var(--color-secondary) / 0.8);
+  }
+}
+
+.btn--ghost {
+  &:hover {
+    background-color: var(--ghost-btn-hover-bg);
+    color: var(--color-text-primary);
+  }
+}
+
+.btn--link {
+  color: var(--color-primary);
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* size variants */
+.btn--size-default {
+  padding: var(--size-md);
+
+  &:has(> svg) {
+    padding-inline: 0.75rem;
+  }
+}
+
+.btn--size-icon {
+  inline-size: 3.8rem;
+  block-size: 3.8rem;
+}

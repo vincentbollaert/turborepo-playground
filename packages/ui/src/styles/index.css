@@ -3,6 +3,7 @@
 @import '../primitives/skeleton/skeleton.css';
 @import '../components/avatar/avatar.css';
 @import '../components/switch/switch.css';
+@import '../components/button/button.css';
 @import '../patterns/featureCard/featureCard.css';
 
 html {
@@ -11,9 +12,14 @@ html {
 
 :root {
   --color-primary: var(--blue-2);
+  --color-primary-foreground: var(--blue-9);
+
   --color-secondary: var(--gray-7);
+  --color-secondary-foreground: var(--gray-9);
 
   --color-accent: var(--blue-2);
+  --color-accent-foreground: var(--blue-9);
+
   --color-accent-light: var(--blue-0);
   --color-accent-dark: var(--blue-4);
 
@@ -21,20 +27,21 @@ html {
   --color-surface-2: var(--gray-0);
   --color-text-primary: var(--gray-7);
   --color-text-secondary: var(--gray-6);
-  --color-border: var(--gray-0);
-  --color-error: var(--red-4);
+  --color-border: var(--gray-3);
+
+  --color-destructive: var(--red-4);
+  --color-destructive-foreground: var(--red-9);
 
   --size-sm: 0.4rem;
   --size-md: 0.8rem;
   --size-lg: 1.2rem;
+  --size-xlg: 2.4rem;
 
   --text-sm: 1.1rem;
   --text-md: 1.6rem;
   --text-lg: 1.8rem;
 
-  --radius-sm: var(--radius-2);
-  --radius-md: var(--radius-3);
-  --radius-lg: var(--radius-4);
+  --radius-default: 2px;
 }
 
 

@@ -1,6 +1,22 @@
 .feature {
-  padding: 1.2rem;
-  margin: var(--spacing-md);
+  --spacing: var(--size-lg);
+
+  padding: var(--spacing);
+  margin-bottom: var(--size-md);
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: var(--radius-drawn-6);
+  cursor: pointer;
+
+  &:hover, &.isExpanded {
+    border: 1px solid var(--color-surface-1);
+    background-color: var(--color-surface-1);
+
+    .btn {
+      background-color: var(--ghost-btn-hover-bg);
+      box-shadow: var(--shadow-2);
+    }
+  }
 }
 
 .feature__header {
@@ -21,17 +37,17 @@
 }
 
 .feature__expand-button {
-  padding: 0;
-  height: auto;
+  position: absolute;
+  right: 6px;
 }
 
 .feature__icon {
-  height: 1rem;
-  width: 1rem;
+  height: 1.6rem;
+  width: 1.6rem;
 }
 
 .feature__description {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
   display: none;
 }
 

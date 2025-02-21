@@ -13,3 +13,12 @@
   left: 50%;
   transform: translate(-50%);
 }
+
+.features {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.learnings {
+  color: var(--color-text-secondary);
+}

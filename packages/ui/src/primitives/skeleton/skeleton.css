@@ -3,5 +3,5 @@
   height: 40px;
   background-color: var(--color-surface-1);
   animation: var(--animation-blink) forwards;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-default);
 }

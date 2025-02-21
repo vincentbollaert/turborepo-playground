@@ -5,6 +5,7 @@ import { Skeleton } from '@repo/ui/primitives/skeleton'
 import { useState } from 'react'
 import '@repo/ui/styles/index.css'
 import './App.css'
+import { Button } from '@repo/ui/components/button'
 
 export const App = () => {
   const [activeTab, setActiveTab] = useState('features')
@@ -24,6 +25,8 @@ export const App = () => {
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
+
+      <Button variant="default" size="default">I am default lg button</Button>
 
       <div className="max-w-2xl mx-auto p-4">
         <nav className="mb-8">
@@ -46,7 +49,7 @@ export const App = () => {
         </nav>
 
         {activeTab === 'features' && (
-          <ul className="divide-y divide-gray-200">
+          <ul className="features">
             {/* TODO: should components know about feature model? */}
             {data?.features?.map(({ id, name, description, status }) => {
               return <FeatureCard key={id} id={id} title={name} description={description} status={status} />
@@ -55,7 +58,7 @@ export const App = () => {
         )}
 
         {activeTab === 'learnings' && (
-          <div className="text-center text-gray-500">
+          <div className="learnings">
             <p>Your learnings will be displayed here.</p>
             <p>This section is under construction.</p>
           </div>
