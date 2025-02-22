@@ -17,11 +17,8 @@ html {
   --color-secondary: var(--gray-7);
   --color-secondary-foreground: var(--gray-9);
 
-  --color-accent: var(--blue-2);
+  --color-accent: var(--cyan-4);
   --color-accent-foreground: var(--blue-9);
-
-  --color-accent-light: var(--blue-0);
-  --color-accent-dark: var(--blue-4);
 
   --color-surface-1: var(--gray-1);
   --color-surface-2: var(--gray-0);
