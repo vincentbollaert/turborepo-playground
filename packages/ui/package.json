@@ -9,45 +9,15 @@
     "src"
   ],
   "exports": {
-    "./index.css": "./dist/styles/index.css",
-    "./primitives/skeleton": {
-      "types": "./dist/primitives/skeleton/skeleton.d.ts",
-      "import": "./dist/primitives/skeleton/skeleton.mjs",
-      "require": "./dist/primitives/skeleton/skeleton.js"
-    },
-    "./components/avatar": {
-      "types": "./dist/components/avatar/avatar.d.ts",
-      "import": "./dist/components/avatar/avatar.mjs",
-      "require": "./dist/components/avatar/avatar.js"
-    },
-    "./components/button": {
-      "types": "./dist/components/button/button.d.ts",
-      "import": "./dist/components/button/button.mjs",
-      "require": "./dist/components/button/button.js"
-    },
-    "./components/switch": {
-      "types": "./dist/components/switch/switch.d.ts",
-      "import": "./dist/components/switch/switch.mjs",
-      "require": "./dist/components/switch/switch.js"
-    },
-    "./patterns/featureCard": {
-      "types": "./dist/patterns/featureCard/featureCard.d.ts",
-      "import": "./dist/patterns/featureCard/featureCard.mjs",
-      "require": "./dist/patterns/featureCard/featureCard.js"
-    },
-    "./patterns/navigation": {
-      "types": "./dist/patterns/navigation/navigation.d.ts",
-      "import": "./dist/patterns/navigation/navigation.mjs",
-      "require": "./dist/patterns/navigation/navigation.js"
-    }
+    "./index.css": "./src/styles/index.css",
+    "./skeleton": "./src/primitives/skeleton/skeleton.tsx",
+    "./avatar": "./src/components/avatar/avatar.tsx",
+    "./button": "./src/components/button/button.tsx",
+    "./switch": "./src/components/switch/switch.tsx",
+    "./featureCard": "./src/patterns/featureCard/featureCard.tsx",
+    "./navigation": "./src/patterns/navigation/navigation.tsx"
   },
   "scripts": {
-    "build:css": "postcss src/styles/index.css -o dist/index.css",
-    "build:ts": "tsup",
-    "build:css:watch": "postcss src/styles/index.css -o dist/index.css --watch",
-    "build:ts:watch": "tsup --watch",
-    "build": "npm run build:css && npm run build:ts",
-    "dev": "concurrently \"npm run build:css:watch\" \"npm run build:ts:watch\"",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",
     "generate:component": "turbo gen component",
@@ -66,9 +36,6 @@
     "@types/react-dom": "^19.0.3",
     "eslint": "^9.20.0",
     "glob": "^11.0.1",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^11.0.0",
-    "postcss-import": "^16.1.0",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },
@@ -82,7 +49,6 @@
     "clsx": "^2.1.1",
     "concurrently": "^9.1.2",
     "lucide-react": "^0.475.0",
-    "open-props": "^1.7.12",
-    "postcss-jit-props": "^1.0.16"
+    "open-props": "^1.7.12"
   }
 }

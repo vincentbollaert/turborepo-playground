@@ -1,9 +1,9 @@
 import { reactQueryClient } from '@repo/api/apiClient'
-import { FeatureCard } from '@repo/ui/patterns/featureCard'
-import { Navigation } from '@repo/ui/patterns/navigation'
-import { Skeleton } from '@repo/ui/primitives/skeleton'
+import { FeatureCard } from '@repo/ui/featureCard'
+import { Navigation } from '@repo/ui/navigation'
+import { Skeleton } from '@repo/ui/skeleton'
 import { useState } from 'react'
-import '@repo/ui/styles/index.css'
+import '@repo/ui/index.css'
 import './App.css'
 
 export const App = () => {

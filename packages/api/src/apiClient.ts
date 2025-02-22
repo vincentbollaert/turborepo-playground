@@ -1,11 +1,12 @@
 import createFetchClient from 'openapi-fetch'
 import createReactQueryClient from 'openapi-react-query'
 
-import { paths } from '../schema/generated/schema'
-import { Endpoints } from './apiTypes'
+import { paths } from '../schema/generated/schema.js'
+import { Endpoints } from './apiTypes.js'
 
 const baseClient = createFetchClient<paths>({
-  baseUrl: 'http://localhost:1337/api/v1',
+  // baseUrl: 'http://localhost:1337/api/v1',
+  baseUrl: 'api/v1',
 })
 
 export const apiClient = {
