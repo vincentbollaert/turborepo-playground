@@ -1,10 +1,7 @@
 .app {
-  margin: 40px;
-}
-
-.large-avatar {
-  width: 160px;
-  height: 160px;
+  margin: auto;
+  margin-top: 120px;
+  max-width: 600px;
 }
 
 .skeleton {
@@ -14,9 +11,10 @@
   transform: translate(-50%);
 }
 
-.features {
-  margin: 20px auto;
-  max-width: 600px;
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
 }
 
 .learnings {
