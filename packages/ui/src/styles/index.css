@@ -4,6 +4,7 @@
 @import '../components/switch/switch.css';
 @import '../components/button/button.css';
 @import '../patterns/featureCard/featureCard.css';
+@import '../patterns/navigation/navigation.css';
 
 html {
   font-family: var(--font-antique);

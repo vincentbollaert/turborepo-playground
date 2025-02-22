@@ -1,5 +1,6 @@
 .btn {
   --ghost-btn-hover-bg: #fff;
+  --link-btn-hover-color: var(--color-primary);
 
   display: inline-flex;
   align-items: center;
@@ -69,7 +70,7 @@
   text-underline-offset: 4px;
 
   &:hover {
-    color: var(--color-primary);
+    color: var(--link-btn-hover-color);
     text-decoration: underline;
   }
 }
@@ -83,7 +84,6 @@
 }
 
 .btn--size-large {
-  margin: 0 var(--size-sm);
   padding: var(--size-md);
   font-size: 24px;
 }

@@ -1,0 +1,9 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.isActive {
+  color: var(--link-btn-hover-color);
+}

@@ -1,10 +1,10 @@
 import { reactQueryClient } from '@repo/api/apiClient'
 import { FeatureCard } from '@repo/ui/patterns/featureCard'
+import { Navigation } from '@repo/ui/patterns/navigation'
 import { Skeleton } from '@repo/ui/primitives/skeleton'
 import { useState } from 'react'
 import '@repo/ui/styles/index.css'
 import './App.css'
-import { Button } from '@repo/ui/components/button'
 
 export const App = () => {
   const [activeTab, setActiveTab] = useState('features')
@@ -20,19 +20,14 @@ export const App = () => {
 
   return (
     <div className="app">
-      <ul className="navigation">
-        {(['features', 'learnings'] as const).map(tab => (
-          <li key={tab}>
-            <Button variant="link" size="large" onClick={() => setActiveTab(tab)}>
-              {tab}
-            </Button>
-          </li>
-        ))}
-      </ul>
+      <Navigation
+        navItems={[{ title: 'features' }, { title: 'learnings' }]}
+        activeNavTitle={activeTab}
+        onClick={selectedNavTitle => setActiveTab(selectedNavTitle)}
+      />
 
       {activeTab === 'features' && (
         <ul className="features">
-          {/* TODO: should components know about feature model? */}
           {data?.features?.map(({ id, name, description, status }) => {
             return <FeatureCard key={id} id={id} title={name} description={description} status={status} />
           })}

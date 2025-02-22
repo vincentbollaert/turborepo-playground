@@ -34,6 +34,11 @@
       "types": "./dist/patterns/featureCard/featureCard.d.ts",
       "import": "./dist/patterns/featureCard/featureCard.mjs",
       "require": "./dist/patterns/featureCard/featureCard.js"
+    },
+    "./patterns/navigation": {
+      "types": "./dist/patterns/navigation/navigation.d.ts",
+      "import": "./dist/patterns/navigation/navigation.mjs",
+      "require": "./dist/patterns/navigation/navigation.js"
     }
   },
   "scripts": {
