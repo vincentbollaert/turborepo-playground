@@ -47,7 +47,6 @@
   }
 }
 
-/* style variants */
 .btn--default {
   background-color: var(--color-primary);
   color: var(--color-primary-foreground);
@@ -55,37 +54,6 @@
 
   &:hover {
     background-color: rgb(var(--color-primary) / 0.9);
-  }
-}
-
-.btn--destructive {
-  background-color: var(--color-destructive);
-  color: var(--color-destructive-foreground);
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.05);
-
-  &:hover {
-    background-color: rgb(var(--color-destructive) / 0.9);
-  }
-}
-
-.btn--outline {
-  border: 1px solid var(--color-border);
-  background-color: var(--color-surface-1);
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.05);
-
-  &:hover {
-    background-color: var(--color-surface-1);
-    color: var(--color-text-primary);
-  }
-}
-
-.btn--secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-secondary-foreground);
-  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.05);
-
-  &:hover {
-    background-color: rgb(var(--color-secondary) / 0.8);
   }
 }
 
@@ -97,21 +65,27 @@
 }
 
 .btn--link {
-  color: var(--color-primary);
+  color: var(--color-text-secondary);
   text-underline-offset: 4px;
 
   &:hover {
+    color: var(--color-primary);
     text-decoration: underline;
   }
 }
 
-/* size variants */
 .btn--size-default {
   padding: var(--size-md);
 
   &:has(> svg) {
     padding-inline: 0.75rem;
   }
+}
+
+.btn--size-large {
+  margin: 0 var(--size-sm);
+  padding: var(--size-md);
+  font-size: 24px;
 }
 
 .btn--size-icon {
