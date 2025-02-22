@@ -13,10 +13,10 @@ html {
 
   --color-surface-1: var(--gray-1);
   /* TODO: how to lighten var */
-  --color-surface-light: #f1f3f554;
+  --color-surface-light: #f1f3f56b;
   --color-text-primary: var(--gray-7);
   --color-text-secondary: var(--gray-6);
-  --color-border: var(--gray-3);
+  --color-border: #e2e5e7;
 
   --color-destructive: var(--red-4);
   --color-destructive-foreground: var(--red-9);
@@ -32,3 +32,10 @@ html {
 
   --radius-default: 2px;
 }
+
+.test-1: var(--radius-drawn-1);
+.test-2: var(--radius-drawn-2);
+.test-3: var(--radius-drawn-3);
+.test-4: var(--radius-drawn-4);
+.test-5: var(--radius-drawn-5);
+.test-6: var(--radius-drawn-6);

@@ -2,7 +2,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '../../components/button'
 import { Switch } from '../../components/switch'
-import { cn } from '../../lib/utils'
+import { cn, computeDrawnRadiusStyle } from '../../lib/utils'
 import styles from './featureCard.module.scss'
 
 export type FeatureCardProps = {
@@ -20,6 +20,7 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
       className={cn(styles.feature, {
         isExpanded,
       })}
+      style={computeDrawnRadiusStyle()}
       onClick={() => setIsExpanded(expandedState => !expandedState)}
     >
       <div className={styles.header}>

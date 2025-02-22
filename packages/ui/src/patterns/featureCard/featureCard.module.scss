@@ -2,14 +2,13 @@
   --spacing: var(--size-lg);
 
   padding: var(--spacing);
-  margin-bottom: var(--size-md);
   position: relative;
   border: 1px solid transparent;
   border-radius: var(--radius-drawn-6);
   cursor: pointer;
 
   &:hover, &.isExpanded {
-    border: 1px solid var(--color-surface-1);
+    border: 1px solid var(--color-border);
     background-color: var(--color-surface-light);
 
     .btn {
