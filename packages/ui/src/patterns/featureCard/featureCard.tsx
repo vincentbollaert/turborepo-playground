@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Button } from '../../components/button'
 import { Switch } from '../../components/switch'
 import { cn } from '../../lib/utils'
+import styles from './featureCard.module.scss'
 
 export type FeatureCardProps = {
   id: string
@@ -16,13 +17,13 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
 
   return (
     <li
-      className={cn('feature', {
+      className={cn(styles.feature, {
         isExpanded,
       })}
       onClick={() => setIsExpanded(expandedState => !expandedState)}
     >
-      <div className="feature__header">
-        <div className="feature__switch-wrapper">
+      <div className={styles.header}>
+        <div className={styles.switchWrapper}>
           <Switch
             id={`${id}-switch`}
             checked={title === 'Modern frontend applications'}
@@ -34,17 +35,17 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
             }}
           />
         </div>
-        <h2 className="feature__title">{title}</h2>
-        <Button variant="ghost" size="icon" className="feature__expand-button">
-          {isExpanded ? (
-            <ChevronUp className="feature__icon feature__icon--up" />
-          ) : (
-            <ChevronDown className="feature__icon feature__icon--down" />
-          )}
+        <h2 className={styles.title}>{title}</h2>
+        <Button variant="ghost" size="icon" className={styles.expandButton}>
+          {isExpanded ? <ChevronUp className={styles.icon} /> : <ChevronDown className={styles.icon} />}
         </Button>
       </div>
-      <div className={`feature__description ${isExpanded ? 'feature__description--expanded' : ''}`}>
-        <p className="feature__description-text">{description}</p>
+      <div
+        className={cn(styles.description, {
+          [styles.descriptionExpanded]: isExpanded,
+        })}
+      >
+        <p className={styles.descriptionText}>{description}</p>
       </div>
     </li>
   )

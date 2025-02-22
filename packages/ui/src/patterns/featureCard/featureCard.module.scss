@@ -19,43 +19,43 @@
   }
 }
 
-.feature__header {
+.header {
   display: flex;
   align-items: center;
 }
 
-.feature__switch-wrapper {
+.switchWrapper {
   display: flex;
   align-items: center;
   margin-right: 1rem;
 }
 
-.feature__title {
+.title {
   font-size: var(--text-lg);
   flex-grow: 1;
   color: var(--color-text-primary);
 }
 
-.feature__expand-button {
+.expandButton {
   position: absolute;
   right: 6px;
 }
 
-.feature__icon {
+.icon {
   height: 1.6rem;
   width: 1.6rem;
 }
 
-.feature__description {
+.description {
   margin-top: 1.6rem;
   display: none;
 }
 
-.feature__description--expanded {
+.descriptionExpanded {
   display: block;
 }
 
-.feature__description-text {
+.descriptionText {
   font-size: var(--text-md);
   color: var(--color-text-secondary);
 }

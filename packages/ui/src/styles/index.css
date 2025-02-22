@@ -1,10 +1,4 @@
 @import './reset.css';
-@import '../primitives/skeleton/skeleton.css';
-@import '../components/avatar/avatar.css';
-@import '../components/switch/switch.css';
-@import '../components/button/button.css';
-@import '../patterns/featureCard/featureCard.css';
-@import '../patterns/navigation/navigation.css';
 
 html {
   font-family: var(--font-antique);

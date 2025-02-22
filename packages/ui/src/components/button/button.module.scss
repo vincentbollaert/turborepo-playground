@@ -48,7 +48,7 @@
   }
 }
 
-.btn--default {
+.btnDefault {
   background-color: var(--color-primary);
   color: var(--color-primary-foreground);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -58,14 +58,14 @@
   }
 }
 
-.btn--ghost {
+.btnGhost {
   &:hover {
     background-color: var(--ghost-btn-hover-bg);
     color: var(--color-text-primary);
   }
 }
 
-.btn--link {
+.btnLink {
   color: var(--color-text-secondary);
   text-underline-offset: 4px;
 
@@ -75,7 +75,7 @@
   }
 }
 
-.btn--size-default {
+.btnSizeDefault {
   padding: var(--size-md);
 
   &:has(> svg) {
@@ -83,12 +83,12 @@
   }
 }
 
-.btn--size-large {
+.btnSizeLarge {
   padding: var(--size-md);
   font-size: 24px;
 }
 
-.btn--size-icon {
+.btnSizeIcon {
   inline-size: 3.8rem;
   block-size: 3.8rem;
 }
