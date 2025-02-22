@@ -10,7 +10,7 @@
 
   &:hover, &.isExpanded {
     border: 1px solid var(--color-surface-1);
-    background-color: var(--color-surface-1);
+    background-color: var(--color-surface-light);
 
     .btn {
       background-color: var(--ghost-btn-hover-bg);

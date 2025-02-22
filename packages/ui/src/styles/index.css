@@ -18,7 +18,8 @@ html {
   --color-accent-foreground: var(--blue-9);
 
   --color-surface-1: var(--gray-1);
-  --color-surface-2: var(--gray-0);
+  /* TODO: how to lighten var */
+  --color-surface-light: #f1f3f554;
   --color-text-primary: var(--gray-7);
   --color-text-secondary: var(--gray-6);
   --color-border: var(--gray-3);
@@ -37,24 +38,3 @@ html {
 
   --radius-default: 2px;
 }
-
-
-/* RADIX DOCS */
-/* color palette - https://www.radix-ui.com/colors/docs/palette-composition/scales */
-
-/* @theme {
-  --background-color-test: red;
-
-  --color-primary: #3db9cf;
-  --color-secondary: #82827c;
-  --color-error: #ec8e7b;
-
-  --spacing: 0.4rem;
-
-  --text-xxsm: 0.9rem;
-  --text-xsm: 1rem;
-  --text-sm: 1.1rem;
-  --text-md: 1.2rem;
-  --text-lg: 1.3rem;
-  --text-xlg: 1.6rem;
-} */
