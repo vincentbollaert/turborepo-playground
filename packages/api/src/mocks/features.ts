@@ -1,4 +1,4 @@
-import { Endpoints } from '../apiTypes'
+import { Endpoints } from '../apiTypes.js'
 
 export const allFeatures: Endpoints['Features']['GetFeatures']['Response'] = {
   features: [
