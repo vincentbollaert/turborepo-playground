@@ -9,7 +9,8 @@
   "exports": {
     "./apiClient": "./src/apiClient.ts",
     "./apiTypes": "./src/apiTypes.ts",
-    "./useMswInit": "./src/hooks/useMswInit.ts"
+    "./hooks": "./src/hooks/index.ts",
+    "./utils": "./src/utils/index.ts"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

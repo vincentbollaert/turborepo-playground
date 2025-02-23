@@ -1,6 +1,8 @@
 import { Endpoints } from '../apiTypes.js'
 
-export const allFeatures: Endpoints['Features']['GetFeatures']['Response'] = {
+export type FeaturesResponse = Endpoints['Features']['GetFeatures']['Response']
+
+export const defaultFeatures: FeaturesResponse = {
   features: [
     {
       id: crypto.randomUUID(),
@@ -64,3 +66,14 @@ export const allFeatures: Endpoints['Features']['GetFeatures']['Response'] = {
     },
   ],
 }
+
+export const emptyFeatures: FeaturesResponse = {
+  features: [],
+}
+
+export const errorFeatures = new Response(
+  JSON.stringify({ message: 'Internal Server Error' }), 
+  { status: 500 }
+)
+
+export type MockSetKey = 'default' | 'empty' | 'error'

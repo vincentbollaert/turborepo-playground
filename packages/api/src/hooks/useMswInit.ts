@@ -8,7 +8,7 @@ export function useMswInit() {
   useEffect(() => {
     const enableMocking = async () => {
       if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
-        const { browserWorker } = await import('../browserWorker');
+        const { browserWorker } = await import('../browserWorker.js');
         await browserWorker.start({ onUnhandledRequest: 'bypass' });
         setStatus('ready');
       }

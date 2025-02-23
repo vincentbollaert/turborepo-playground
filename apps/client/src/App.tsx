@@ -5,6 +5,7 @@ import { Skeleton } from '@repo/ui/skeleton'
 import { useState } from 'react'
 import '@repo/ui/index.scss'
 import styles from './App.module.scss'
+import { MockSelector } from './components/mockSelector/MockSelector'
 
 export const App = () => {
   const [activeTab, setActiveTab] = useState('features')
@@ -40,6 +41,7 @@ export const App = () => {
           <p>This section is under construction.</p>
         </div>
       )}
+      <MockSelector />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useMswInit } from '@repo/api/useMswInit'
+import { useMswInit } from '@repo/api/hooks'
 import { App } from './App'
 
 export const Layout = () => {
