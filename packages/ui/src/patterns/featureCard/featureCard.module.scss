@@ -1,19 +1,20 @@
+@use '../../components//button/button.module.scss';
+
 .feature {
   --spacing: var(--size-lg);
 
   padding: var(--spacing);
   position: relative;
   border: 1px solid transparent;
-  border-radius: var(--radius-drawn-6);
   cursor: pointer;
 
-  &:hover, &.isExpanded {
+  &:hover,
+  &[data-expanded='true'] {
     border: 1px solid var(--color-border);
     background-color: var(--color-surface-light);
 
-    .btn {
-      background-color: var(--ghost-btn-hover-bg);
-      box-shadow: var(--shadow-2);
+    .expandButton {
+      @extend %ghost-btn-hover;
     }
   }
 }
@@ -48,10 +49,10 @@
 .description {
   margin-top: 1.6rem;
   display: none;
-}
 
-.descriptionExpanded {
-  display: block;
+  [data-expanded='true'] & {
+    display: block;
+  }
 }
 
 .descriptionText {

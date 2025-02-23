@@ -17,10 +17,9 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
 
   return (
     <li
-      className={cn(styles.feature, computeDrawnBorderClass(), {
-        isExpanded,
-      })}
+      className={cn(styles.feature, computeDrawnBorderClass())}
       onClick={() => setIsExpanded(expandedState => !expandedState)}
+      data-expanded={isExpanded}
     >
       <div className={styles.header}>
         <div className={styles.switchWrapper}>
@@ -40,11 +39,7 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
           {isExpanded ? <ChevronUp className={styles.icon} /> : <ChevronDown className={styles.icon} />}
         </Button>
       </div>
-      <div
-        className={cn(styles.description, {
-          [styles.descriptionExpanded]: isExpanded,
-        })}
-      >
+      <div className={styles.description}>
         <p className={styles.descriptionText}>{description}</p>
       </div>
     </li>

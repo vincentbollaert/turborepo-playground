@@ -1,7 +1,10 @@
-.btn {
-  --ghost-btn-hover-bg: #fff;
-  --link-btn-hover-color: var(--color-primary);
+%ghost-btn-hover {
+  background-color: #fff;
+  box-shadow: var(--shadow-2);
+  color: var(--color-text-primary);
+}
 
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -60,8 +63,7 @@
 
 .btnGhost {
   &:hover {
-    background-color: var(--ghost-btn-hover-bg);
-    color: var(--color-text-primary);
+    @extend %ghost-btn-hover;
   }
 }
 
