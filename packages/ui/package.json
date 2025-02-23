@@ -14,6 +14,7 @@
     "./avatar": "./src/components/avatar/avatar.tsx",
     "./button": "./src/components/button/button.tsx",
     "./switch": "./src/components/switch/switch.tsx",
+    "./select": "./src/components/select/select.tsx",
     "./featureCard": "./src/patterns/featureCard/featureCard.tsx",
     "./navigation": "./src/patterns/navigation/navigation.tsx"
   },
@@ -43,6 +44,7 @@
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-select": "^2.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-switch": "^1.1.3",
     "class-variance-authority": "^0.7.1",

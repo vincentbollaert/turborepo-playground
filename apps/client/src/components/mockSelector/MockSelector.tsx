@@ -1,13 +1,13 @@
 import { handleSetMockVariants, mockVariantsByEndpoint } from '@repo/api/utils'
 import { useQueryClient } from '@tanstack/react-query'
 import styles from './mockSelector.module.scss'
+import { Select, SelectItem } from '@repo/ui/select'
 
 export const MockSelector = () => {
   const queryClient = useQueryClient()
 
-  const handleMockChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedMockVariantType = event.target.value as any
-    handleSetMockVariants({ endpointId: 'features', mockVariantType: selectedMockVariantType })
+  const handleMockChange = (newValue: string) => {
+    handleSetMockVariants({ endpointId: 'features', mockVariantType: newValue as any })
 
     queryClient.invalidateQueries({ queryKey: ['get', '/features'] })
   }
@@ -23,13 +23,13 @@ export const MockSelector = () => {
       <label className={styles.label} htmlFor="mockSelect">
         Mock Data:
       </label>
-      <select id="mockSelect" className={styles.select} onChange={handleMockChange} defaultValue="default">
+      <Select onValueChange={handleMockChange} defaultValue="default">
         {mockOptions.map(option => (
-          <option key={option.value} value={option.value}>
+          <SelectItem key={option.value} value={option.value}>
             {option.label}
-          </option>
+          </SelectItem>
         ))}
-      </select>
+      </Select>
     </div>
   )
 }
