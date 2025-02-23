@@ -4,7 +4,7 @@ export function cn(...inputs: ClassValue[]) {
   return clsx(inputs)
 }
 
-export function computeDrawnRadiusStyle() {
+export function computeDrawnBorderClass() {
   const validRandomInt = Math.floor(Math.random() * (6 - 1 + 1)) + 1
-  return { borderRadius: `var(--radius-drawn-${validRandomInt})` }
+  return `drawnBorders${validRandomInt}`
 }

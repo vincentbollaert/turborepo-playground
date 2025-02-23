@@ -8,14 +8,14 @@ import styles from './button.module.scss'
 const buttonVariants = cva('btn', {
   variants: {
     variant: {
-      default: styles.btnDefault,
-      ghost: styles.btnGhost,
-      link: styles.btnLink,
+      default: cn(styles.btn, styles.btnDefault),
+      ghost: cn(styles.btn, styles.btnGhost),
+      link: cn(styles.btn, styles.btnLink),
     },
     size: {
-      default: styles.btnSizeDefault,
-      large: styles.btnSizeLarge,
-      icon: styles.btnSizeIcon,
+      default: cn(styles.btn, styles.btnSizeDefault),
+      large: cn(styles.btn, styles.btnSizeLarge),
+      icon: cn(styles.btn, styles.btnSizeIcon),
     },
   },
   defaultVariants: {

@@ -1,4 +1,3 @@
-import { cn } from '../../lib/utils'
 import { Button } from '../../components/button'
 import styles from './navigation.module.scss'
 
@@ -14,12 +13,7 @@ export const Navigation = ({ navItems, activeNavTitle, onClick }: NavigationProp
     <ul className={styles.navigation}>
       {navItems.map(({ title }, index) => (
         <li key={index}>
-          <Button
-            variant="link"
-            size="large"
-            className={cn({ [styles.isActive]: activeNavTitle === title })}
-            onClick={() => onClick(title)}
-          >
+          <Button variant="link" size="large" onClick={() => onClick(title)} data-active={activeNavTitle === title}>
             {title}
           </Button>
         </li>

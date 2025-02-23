@@ -4,15 +4,12 @@
   margin-bottom: 32px;
 }
 
-.isActive {
-  // color: var(--link-btn-hover-color);
+[data-active="true"] {
   color: #eefdff;
-  // border-radius: 95px 65px 265px 35px / 25px 245px 35px 215px;
   background: #3bc9db;
   animation:
     morphRadius1 3.3s ease-in infinite,
     morphRadius2 5s ease-in infinite;
-  // animation-delay: 0s, 2s;
 }
 
 @keyframes morphRadius1 {

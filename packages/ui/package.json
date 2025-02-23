@@ -2,14 +2,14 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "sideEffects": [
-    "**/*.css"
+    "**/*.scss"
   ],
   "files": [
     "dist",
     "src"
   ],
   "exports": {
-    "./index.css": "./src/styles/index.css",
+    "./index.scss": "./src/styles/index.scss",
     "./skeleton": "./src/primitives/skeleton/skeleton.tsx",
     "./avatar": "./src/components/avatar/avatar.tsx",
     "./button": "./src/components/button/button.tsx",

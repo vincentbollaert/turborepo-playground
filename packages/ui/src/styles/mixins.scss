@@ -1,0 +1,11 @@
+@mixin export-radius-vars {
+  :export {
+    radius-drawn-1: var(--radius-drawn-1);
+    radius-drawn-2: var(--radius-drawn-2);
+    radius-drawn-3: var(--radius-drawn-3);
+    radius-drawn-4: var(--radius-drawn-4);
+    radius-drawn-5: var(--radius-drawn-5);
+    radius-drawn-6: var(--radius-drawn-6);
+  }
+}
+

@@ -3,15 +3,15 @@ import { FeatureCard } from '@repo/ui/featureCard'
 import { Navigation } from '@repo/ui/navigation'
 import { Skeleton } from '@repo/ui/skeleton'
 import { useState } from 'react'
-import '@repo/ui/index.css'
-import './App.css'
+import '@repo/ui/index.scss'
+import styles from './App.module.scss'
 
 export const App = () => {
   const [activeTab, setActiveTab] = useState('features')
   const { isPending, error, data } = reactQueryClient.useQuery('get', '/features')
 
   if (isPending) {
-    return <Skeleton className="skeleton" />
+    return <Skeleton className={styles.skeleton} />
   }
 
   if (error) {
@@ -19,7 +19,7 @@ export const App = () => {
   }
 
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Navigation
         navItems={[{ title: 'features' }, { title: 'learnings' }]}
         activeNavTitle={activeTab}
@@ -27,7 +27,7 @@ export const App = () => {
       />
 
       {activeTab === 'features' && (
-        <ul className="features">
+        <ul className={styles.features}>
           {data?.features?.map(({ id, name, description, status }) => {
             return <FeatureCard key={id} id={id} title={name} description={description} status={status} />
           })}
@@ -35,7 +35,7 @@ export const App = () => {
       )}
 
       {activeTab === 'learnings' && (
-        <div className="learnings">
+        <div className={styles.learnings}>
           <p>Your learnings will be displayed here.</p>
           <p>This section is under construction.</p>
         </div>

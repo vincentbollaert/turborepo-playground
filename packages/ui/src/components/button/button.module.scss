@@ -70,8 +70,12 @@
   text-underline-offset: 4px;
 
   &:hover {
-    color: var(--link-btn-hover-color);
-    text-decoration: underline;
+    color: #06bad1;
+  }
+
+  &[data-active='true']:hover {
+    color: #fff;
+    background-color: #06bad1;
   }
 }
 

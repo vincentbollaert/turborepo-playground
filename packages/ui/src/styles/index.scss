@@ -1,9 +1,11 @@
-@import './reset.css';
+@import './reset.scss';
+@import './utils.scss';
 
 html {
   font-family: var(--font-antique);
 }
 
+// TODO: iterate over vars
 :root {
   --color-primary: var(--blue-2);
   --color-primary-foreground: var(--blue-9);
@@ -32,10 +34,3 @@ html {
 
   --radius-default: 2px;
 }
-
-.test-1: var(--radius-drawn-1);
-.test-2: var(--radius-drawn-2);
-.test-3: var(--radius-drawn-3);
-.test-4: var(--radius-drawn-4);
-.test-5: var(--radius-drawn-5);
-.test-6: var(--radius-drawn-6);
