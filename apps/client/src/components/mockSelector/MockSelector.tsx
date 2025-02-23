@@ -21,7 +21,7 @@ export const MockSelector = () => {
   return (
     <div className={styles.mockSelector}>
       <label className={styles.label} htmlFor="mockSelect">
-        Mock Data:
+        features get
       </label>
       <Select onValueChange={handleMockChange} defaultValue="default">
         {mockOptions.map(option => (
