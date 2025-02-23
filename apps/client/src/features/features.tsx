@@ -1,18 +1,19 @@
 import { reactQueryClient } from '@repo/api/apiClient'
 import { FeatureCard } from '@repo/ui/featureCard'
-import { Navigation } from '@repo/ui/navigation'
 import { Skeleton } from '@repo/ui/skeleton'
-import { useState } from 'react'
-import '@repo/ui/index.scss'
-import styles from './App.module.scss'
-import { MockSelector } from './components/mockSelector/MockSelector'
+import styles from './features.module.scss'
+import { Info } from '@repo/ui/info'
+import type { Tab } from '../types'
 
-export const App = () => {
-  const [activeTab, setActiveTab] = useState('features')
-  const { isPending, error, data } = reactQueryClient.useQuery('get', '/features')
+export const Features = ({ activeTab }: { activeTab: Tab }) => {
+  const { isSuccess, isPending, error, data } = reactQueryClient.useQuery('get', '/features')
 
   if (isPending) {
     return <Skeleton className={styles.skeleton} />
+  }
+
+  if (isSuccess && !data.features?.length) {
+    return <Info variant="info" message="No features found" />
   }
 
   if (error) {
@@ -20,13 +21,7 @@ export const App = () => {
   }
 
   return (
-    <div className={styles.app}>
-      <Navigation
-        navItems={[{ title: 'features' }, { title: 'learnings' }]}
-        activeNavTitle={activeTab}
-        onClick={selectedNavTitle => setActiveTab(selectedNavTitle)}
-      />
-
+    <>
       {activeTab === 'features' && (
         <ul className={styles.features}>
           {data?.features?.map(({ id, name, description, status }) => {
@@ -41,7 +36,6 @@ export const App = () => {
           <p>This section is under construction.</p>
         </div>
       )}
-      <MockSelector />
-    </div>
+    </>
   )
 }

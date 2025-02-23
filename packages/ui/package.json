@@ -12,6 +12,7 @@
     "./index.scss": "./src/styles/index.scss",
     "./skeleton": "./src/primitives/skeleton/skeleton.tsx",
     "./avatar": "./src/components/avatar/avatar.tsx",
+    "./info": "./src/components/info/info.tsx",
     "./button": "./src/components/button/button.tsx",
     "./switch": "./src/components/switch/switch.tsx",
     "./select": "./src/components/select/select.tsx",

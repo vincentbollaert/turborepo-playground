@@ -1,14 +1,14 @@
 import { Button } from '../../components/button'
 import styles from './navigation.module.scss'
 
-export type NavigationProps = {
+export type NavigationProps<NavItem> = {
   navItems: {
-    title: string
+    title: NavItem
   }[]
   activeNavTitle: string
-  onClick: (title: string) => void
+  onClick: (title: NavItem) => void
 }
-export const Navigation = ({ navItems, activeNavTitle, onClick }: NavigationProps) => {
+export const Navigation = <NavItem extends string>({ navItems, activeNavTitle, onClick }: NavigationProps<NavItem>) => {
   return (
     <ul className={styles.navigation}>
       {navItems.map(({ title }, index) => (
