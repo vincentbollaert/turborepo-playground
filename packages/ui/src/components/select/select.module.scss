@@ -31,9 +31,10 @@
 .content {
   overflow: hidden;
   background-color: white;
-  // border: 1px solid #d9d9d9;
   border-radius: 6px;
   box-shadow: var(--shadow-2);
+  font-family: var(--font-rounded-sans);
+  cursor: pointer;
 }
 
 .viewport {

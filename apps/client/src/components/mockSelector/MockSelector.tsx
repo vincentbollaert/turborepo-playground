@@ -20,7 +20,7 @@ export const MockSelector = () => {
 
   return (
     <div className={styles.mockSelector}>
-      <label className={styles.label} htmlFor="mockSelect">
+      <label htmlFor="mockSelect">
         features get
       </label>
       <Select onValueChange={handleMockChange} defaultValue="default">
