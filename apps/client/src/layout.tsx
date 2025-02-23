@@ -3,7 +3,7 @@ import { Features } from './features/features'
 import { useState } from 'react'
 import { MockSelector } from './components/mockSelector/MockSelector'
 import { Navigation } from '@repo/ui/navigation'
-import styles from './layout.module.scss'
+import { Frame } from '@repo/ui/frame'
 import { Tab } from './types'
 
 export const Layout = () => {
@@ -15,7 +15,7 @@ export const Layout = () => {
   }
 
   return (
-    <main className={styles.layout}>
+    <Frame>
       <Navigation<Tab>
         navItems={[{ title: 'features' }, { title: 'learnings' }]}
         activeNavTitle={activeTab}
@@ -23,6 +23,6 @@ export const Layout = () => {
       />
       <Features activeTab={activeTab} />
       <MockSelector />
-    </main>
+    </Frame>
   )
 }

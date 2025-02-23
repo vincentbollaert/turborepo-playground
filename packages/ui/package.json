@@ -17,7 +17,8 @@
     "./switch": "./src/components/switch/switch.tsx",
     "./select": "./src/components/select/select.tsx",
     "./featureCard": "./src/patterns/featureCard/featureCard.tsx",
-    "./navigation": "./src/patterns/navigation/navigation.tsx"
+    "./navigation": "./src/patterns/navigation/navigation.tsx",
+    "./frame": "./src/templates/frame/frame.tsx"
   },
   "scripts": {
     "lint": "eslint src --max-warnings 0",
