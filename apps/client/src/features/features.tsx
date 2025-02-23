@@ -17,7 +17,7 @@ export const Features = ({ activeTab }: { activeTab: Tab }) => {
   }
 
   if (error) {
-    return 'An error has occurred: ' + error
+    return <Info variant="error" message={`An error has occurred: ${error}`} />
   }
 
   return (

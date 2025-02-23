@@ -1,5 +1,5 @@
-import { http } from 'msw'
-import { defaultFeatures, emptyFeatures, errorFeatures } from '../../mocks/features.js'
+import { http, HttpResponse } from 'msw'
+import { defaultFeatures, emptyFeatures } from '../../mocks/features.js'
 import { mockVariantsByEndpoint } from '../../utils/mockSelector.js'
 
 const getFeatures = () => {
@@ -9,7 +9,7 @@ const getFeatures = () => {
         return Response.json(emptyFeatures, { status: 200 })
       }
       case 'error': {
-        return errorFeatures
+        return new HttpResponse('General error', { status: 500 })
       }
       default: {
         return Response.json(defaultFeatures, { status: 200 })

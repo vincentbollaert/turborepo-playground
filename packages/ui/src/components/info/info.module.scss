@@ -1,9 +1,10 @@
-.infoVariant {
-  color: var(--yellow-9);
+.wrap {
   padding: 16px;
-  background-color: var(--yellow-2);
   border-radius: var(--radius-drawn-6);
 }
+.infoVariant {
+  background-color: var(--yellow-2);
+}
 .errorVariant {
-  color: red;
+  background-color: var(--red-2);
 }

@@ -70,10 +70,3 @@ export const defaultFeatures: FeaturesResponse = {
 export const emptyFeatures: FeaturesResponse = {
   features: [],
 }
-
-export const errorFeatures = new Response(
-  JSON.stringify({ message: 'Internal Server Error' }), 
-  { status: 500 }
-)
-
-export type MockSetKey = 'default' | 'empty' | 'error'

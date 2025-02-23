@@ -4,7 +4,13 @@ import { createRoot } from 'react-dom/client'
 import { Layout } from './layout'
 import '@repo/ui/index.scss'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+    },
+  },
+})
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
