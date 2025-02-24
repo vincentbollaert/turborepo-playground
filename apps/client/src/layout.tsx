@@ -1,5 +1,5 @@
 import { useMswInit } from '@repo/api/hooks'
-import { Features } from './features/features'
+import { Home } from './home/home'
 import { useState } from 'react'
 import { MockSelector } from './components/mockSelector/MockSelector'
 import { Navigation } from '@repo/ui/navigation'
@@ -21,7 +21,7 @@ export const Layout = () => {
         activeNavTitle={activeTab}
         onClick={selectedNavTitle => setActiveTab(selectedNavTitle)}
       />
-      <Features activeTab={activeTab} />
+      <Home activeTab={activeTab} />
       <MockSelector />
     </Frame>
   )
