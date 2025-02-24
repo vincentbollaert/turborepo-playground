@@ -10,8 +10,30 @@
 
   h2 {
     font-size: 20px;
-    margin-top: 34px;
     color: var(--color-text-primary);
+    margin-top: 34px;
+    position: relative;
+    margin-left: -30px;
+    padding-left: 30px;
+
+    &:hover a {
+      display: block;
+    }
+
+    a {
+      display: none;
+      position: absolute;
+      font-size: 30px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 1;
+      color: #d7d7d7;
+
+      &:hover {
+        color: #06bad1;
+      }
+    }
   }
 
   p {
