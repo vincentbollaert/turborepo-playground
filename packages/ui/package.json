@@ -21,6 +21,8 @@
     "./frame": "./src/templates/frame/frame.tsx"
   },
   "scripts": {
+    "ladle:build": "bun ladle build",
+    "ladle:serve": "bun run ladle:build && ladle serve",
     "lint": "eslint src --max-warnings 0",
     "check-types": "tsc --noEmit",
     "generate:component": "turbo gen component",
@@ -43,6 +45,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@ladle/react": "^5.0.1",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-label": "^2.1.2",
