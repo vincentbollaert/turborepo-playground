@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Button } from '../../components/button/button'
 import { Switch } from '../../components/switch/switch'
 import { cn, computeDrawnBorderClass, computeChaosShadowsClass } from '../../lib/utils'
-import styles from './Feature.module.scss'
+import styles from './feature.module.scss'
 
 export type FeatureProps = {
   id: string

@@ -1,7 +1,7 @@
 import styles from './info.module.scss'
 import { cn } from '../../lib/utils'
 
-type InfoProps = {
+export type InfoProps = {
   variant: 'info' | 'error'
   message: string
 }
