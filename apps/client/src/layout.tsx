@@ -1,7 +1,7 @@
 import { useMswInit } from '@repo/api/hooks'
 import { Home } from './home/home'
 import { useState } from 'react'
-import { MockSelector } from './components/mockSelector/MockSelector'
+import { MockSelector } from '@repo/ui/mockSelector'
 import { Navigation } from '@repo/ui/navigation'
 import { Frame } from '@repo/ui/frame'
 import { Tab } from './types'

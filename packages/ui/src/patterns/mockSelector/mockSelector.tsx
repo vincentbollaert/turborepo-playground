@@ -1,8 +1,9 @@
-import { handleSetMockVariants, mockVariantsByEndpoint } from '@repo/api/utils'
+import { handleSetMockVariants } from '@repo/api/utils'
 import { useQueryClient } from '@tanstack/react-query'
 import styles from './mockSelector.module.scss'
 import { Select, SelectItem } from '@repo/ui/select'
 
+// NOTE: this component should be more dumb
 export const MockSelector = () => {
   const queryClient = useQueryClient()
 
@@ -13,15 +14,15 @@ export const MockSelector = () => {
   }
 
   const mockOptions: { value: any; label: string }[] = [
-    { value: 'default', label: 'Default' },
-    { value: 'empty', label: 'Empty' },
-    { value: 'error', label: 'Error' },
+    { value: 'default', label: 'all' },
+    { value: 'empty', label: 'empty' },
+    { value: 'error', label: 'error' },
   ]
 
   return (
     <div className={styles.mockSelector}>
       <label htmlFor="mockSelect" className={styles.label}>
-        features get
+        features GET
       </label>
       <Select onValueChange={handleMockChange} defaultValue="default">
         {mockOptions.map(option => (
