@@ -3,8 +3,8 @@
 .feature {
   --spacing: var(--size-lg);
 
+  margin-top: 4px;
   padding: var(--spacing);
-  margin-bottom: 4px;
   position: relative;
   border: 1px solid transparent;
   cursor: pointer;
@@ -23,7 +23,7 @@
     }
 
     .switch {
-      background-color: #51565b;
+      background-color: #6a7077;
 
       &[data-state='checked'] {
         background-color: #21d6ed;
