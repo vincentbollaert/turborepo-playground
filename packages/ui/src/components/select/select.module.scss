@@ -7,23 +7,19 @@
   padding: 0 12px;
   height: 35px;
   gap: 12px;
-  background-color: #ffffff;
-  color: var(--color-text-primary);
+  background-color: #51565b;
+  color: #fff;
+  border-radius: var(--radius-drawn-6);
   box-shadow: var(--shadow-2);
   cursor: pointer;
 
   &:hover {
-    background-color: var(--gray-2);
-    box-shadow: var(--inner-shadow-1);
-  }
-
-  &[data-placeholder] {
-    color: var(--gray-7);
+    background-color: #000;
   }
 }
 
 .chevronIcon {
-  color: var(--color-text-secondary);
+  color: #fff;
   width: 16px;
   height: 16px;
 }

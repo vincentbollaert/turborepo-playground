@@ -72,12 +72,17 @@
   text-underline-offset: 4px;
 
   &:hover {
-    color: #06bad1;
+    color: #51565b;
   }
 
-  &[data-active='true']:hover {
-    color: #fff;
-    background-color: #06bad1;
+  &[data-active="true"] {
+    color: #eefdff;
+    background: #51565b;
+
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
   }
 }
 

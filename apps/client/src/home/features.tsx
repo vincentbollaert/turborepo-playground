@@ -20,10 +20,12 @@ export const Features = () => {
   }
 
   return (
-    <ul className={styles.features}>
-      {data?.features?.map(({ id, name, description, status }) => {
-        return <FeatureCard key={id} id={id} title={name} description={description} status={status} />
-      })}
-    </ul>
+    <div className={styles.featuresTab}>
+      <ul className={styles.features}>
+        {data?.features?.map(({ id, name, description, status }) => {
+          return <FeatureCard key={id} id={id} title={name} description={description} status={status} />
+        })}
+      </ul>
+    </div>
   )
 }

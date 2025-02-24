@@ -2,7 +2,7 @@ import styles from './home.module.scss'
 
 export const Learnings = () => {
   return (
-    <div className={styles.learnings}>
+    <div className={styles.learningsTab}>
       <h2 id="monorepos">
         <a href="#monorepos">#</a>
         Monorepos are cool

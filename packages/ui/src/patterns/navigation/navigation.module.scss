@@ -4,12 +4,14 @@
   margin-bottom: 32px;
 }
 
-[data-active="true"] {
-  color: #eefdff;
-  background: #3bc9db;
-  animation:
-    morphRadius1 3.3s ease-in infinite,
-    morphRadius2 5s ease-in infinite;
+.navItem {
+  margin: 0 8px;
+
+  &[data-active='true'] {
+    animation:
+      morphRadius1 3.3s ease-in infinite,
+      morphRadius2 5s ease-in infinite;
+  }
 }
 
 @keyframes morphRadius1 {

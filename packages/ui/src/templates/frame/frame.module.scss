@@ -1,5 +1,10 @@
 .layout {
+  border-left: 4px solid #868e96;
+  box-shadow: var(--box-shadow);
   margin: auto;
-  margin-top: 120px;
-  max-width: 600px;
+  margin-top: 100px;
+  background: #fff;
+  padding: 60px;
+  width: fit-content;
+  position: relative;
 }

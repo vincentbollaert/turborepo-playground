@@ -13,7 +13,13 @@ export const Navigation = <NavItem extends string>({ navItems, activeNavTitle, o
     <ul className={styles.navigation}>
       {navItems.map(({ title }, index) => (
         <li key={index}>
-          <Button variant="link" size="large" onClick={() => onClick(title)} data-active={activeNavTitle === title}>
+          <Button
+            variant="link"
+            size="large"
+            className={styles.navItem}
+            onClick={() => onClick(title)}
+            data-active={activeNavTitle === title}
+          >
             {title}
           </Button>
         </li>

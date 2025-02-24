@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as RadixSelect from '@radix-ui/react-select'
 
 import styles from './select.module.scss'
-import { cn, computeDrawnBorderClass } from '../../lib/utils'
+import { cn } from '../../lib/utils'
 import { ChevronDown, Check } from 'lucide-react'
 
 export type SelectProps = React.ComponentProps<typeof RadixSelect.Root>
