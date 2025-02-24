@@ -19,6 +19,7 @@
     "./featureCard": "./src/patterns/featureCard/featureCard.tsx",
     "./navigation": "./src/patterns/navigation/navigation.tsx",
     "./mockSelector": "./src/patterns/mockSelector/mockSelector.tsx",
+    "./socials": "./src/patterns/socials/socials.tsx",
     "./frame": "./src/templates/frame/frame.tsx"
   },
   "scripts": {

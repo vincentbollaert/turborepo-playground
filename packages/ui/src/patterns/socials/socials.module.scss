@@ -1,0 +1,15 @@
+.wrap {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.btn {
+  box-shadow: var(--shadow-3);
+}

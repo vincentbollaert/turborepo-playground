@@ -7,14 +7,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   white-space: nowrap;
-  border-radius: var(--radius-drawn-6);
   font-size: var(--text-md);
   cursor: pointer;
-  transition:
-    color 150ms,
-    box-shadow 150ms;
 
   & svg {
     pointer-events: none;
@@ -51,12 +46,12 @@
 }
 
 .btnDefault {
-  background-color: var(--color-primary);
-  color: var(--color-primary-foreground);
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  background-color: #ffffff;
+  color: var(--color-text-primary);
 
   &:hover {
-    background-color: rgb(var(--color-primary) / 0.9);
+    background-color: #000;
+    color: #fff;
   }
 }
 
@@ -74,7 +69,7 @@
     color: #51565b;
   }
 
-  &[data-active="true"] {
+  &[data-active='true'] {
     color: #eefdff;
     background: #51565b;
 

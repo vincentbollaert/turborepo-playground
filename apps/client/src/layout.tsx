@@ -5,6 +5,7 @@ import { MockSelector } from '@repo/ui/mockSelector'
 import { Navigation } from '@repo/ui/navigation'
 import { Frame } from '@repo/ui/frame'
 import { Tab } from './types'
+import { Socials } from '@repo/ui/socials'
 
 export const Layout = () => {
   const [activeTab, setActiveTab] = useState<Tab>('features')
@@ -16,6 +17,7 @@ export const Layout = () => {
 
   return (
     <Frame>
+      <Socials />
       <Navigation<Tab>
         navItems={[{ title: 'features' }, { title: 'learnings' }]}
         activeNavTitle={activeTab}
