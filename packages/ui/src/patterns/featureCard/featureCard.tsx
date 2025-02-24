@@ -2,7 +2,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '../../components/button'
 import { Switch } from '../../components/switch'
-import { cn, computeDrawnBorderClass } from '../../lib/utils'
+import { cn, computeDrawnBorderClass, computeChaosShadowsClass } from '../../lib/utils'
 import styles from './featureCard.module.scss'
 
 export type FeatureCardProps = {
@@ -17,7 +17,7 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
 
   return (
     <li
-      className={cn(styles.feature, computeDrawnBorderClass())}
+      className={cn(styles.feature, computeDrawnBorderClass(), computeChaosShadowsClass())}
       onClick={() => setIsExpanded(expandedState => !expandedState)}
       data-expanded={isExpanded}
     >
@@ -26,6 +26,7 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
           <Switch
             id={`${id}-switch`}
             checked={title === 'Modern frontend applications'}
+            className={styles.switch}
             onCheckedChange={() => {
               console.log('change')
             }}

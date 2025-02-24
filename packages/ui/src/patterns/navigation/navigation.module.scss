@@ -1,3 +1,14 @@
+@use '../../styles//utils.scss' as mixins;
+
+@mixin chaos-shadow-44 {
+  box-shadow:
+    -4px 12px 0 0px rgb(0 0 0 / 8%),
+    -12px -9px 0 -3px #00000014,
+    0 0 0 6px #00000005,
+    14px 0 0 6px #f7f7f7,
+    -14px 0 0 6px #f7f7f7;
+}
+
 .navigation {
   display: flex;
   justify-content: center;
@@ -9,12 +20,13 @@
 
   &[data-active='true'] {
     animation:
-      morphRadius1 3.3s ease-in infinite,
-      morphRadius2 5s ease-in infinite;
+      radiusBlobbing1 3.3s ease-in infinite,
+      rasiusBlobbing2 5s ease-in infinite,
+      shadowsChaosing 4s ease infinite;
   }
 }
 
-@keyframes morphRadius1 {
+@keyframes radiusBlobbing1 {
   0% {
     border-radius: 95px 65px 265px 95px/55px 245px 66px 215px;
   }
@@ -32,7 +44,7 @@
   }
 }
 
-@keyframes morphRadius2 {
+@keyframes rasiusBlobbing2 {
   0% {
     border-radius: 180px 55px 95px 65px/30px 120px 85px 145px;
   }
@@ -47,5 +59,23 @@
   }
   100% {
     border-radius: 180px 55px 95px 65px/30px 120px 85px 145px;
+  }
+}
+
+@keyframes shadowsChaosing {
+  0% {
+    @include mixins.chaos-shadow;
+  }
+  25% {
+    @include mixins.chaos-shadow-2;
+  }
+  50% {
+    @include mixins.chaos-shadow-3;
+  }
+  75% {
+    @include mixins.chaos-shadow-2;
+  }
+  100% {
+    @include mixins.chaos-shadow;
   }
 }

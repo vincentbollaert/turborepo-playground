@@ -4,17 +4,36 @@
   --spacing: var(--size-lg);
 
   padding: var(--spacing);
+  margin-bottom: 4px;
   position: relative;
   border: 1px solid transparent;
   cursor: pointer;
+  transition: box-shadow 0.2s var(--ease-out-3);
 
   &:hover,
   &[data-expanded='true'] {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-surface-light);
+    background-color: #51565b;
 
     .expandButton {
       @extend %ghost-btn-hover;
+    }
+
+    .title {
+      color: #f3f3f3;
+    }
+
+    .switch {
+      background-color: #51565b;
+    }
+
+    .expandButton {
+      background-color: #6a7077;
+      color: #fff;
+    }
+
+    .icon {
+      height: 2rem;
+      width: 2rem;
     }
   }
 }
@@ -57,5 +76,5 @@
 
 .descriptionText {
   font-size: var(--text-md);
-  color: var(--color-text-secondary);
+  color: #f3f3f3;
 }
