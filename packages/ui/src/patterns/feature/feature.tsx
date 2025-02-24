@@ -3,16 +3,16 @@ import { useState } from 'react'
 import { Button } from '../../components/button/button'
 import { Switch } from '../../components/switch/switch'
 import { cn, computeDrawnBorderClass, computeChaosShadowsClass } from '../../lib/utils'
-import styles from './featureCard.module.scss'
+import styles from './Feature.module.scss'
 
-export type FeatureCardProps = {
+export type FeatureProps = {
   id: string
   title: string
   status: string
   description: string
 }
 
-export const FeatureCard = ({ id, title, description, status }: FeatureCardProps) => {
+export const Feature = ({ id, title, description, status }: FeatureProps) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (

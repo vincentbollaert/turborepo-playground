@@ -1,5 +1,5 @@
 import { reactQueryClient } from '@repo/api/apiClient'
-import { FeatureCard } from '@repo/ui/featureCard'
+import { Feature } from '@repo/ui/feature'
 import { Skeleton } from '@repo/ui/skeleton'
 import styles from './home.module.scss'
 import { Info } from '@repo/ui/info'
@@ -37,7 +37,7 @@ export const Features = () => {
     <Shell>
       <ul>
         {data?.features?.map(({ id, name, description, status }) => {
-          return <FeatureCard key={id} id={id} title={name} description={description} status={status} />
+          return <Feature key={id} id={id} title={name} description={description} status={status} />
         })}
       </ul>
     </Shell>

@@ -24,7 +24,7 @@ export const Socials = () => {
         return (
           <li>
             <Button
-              size={'icon'}
+              size="icon"
               className={styles.btn}
               disabled={isDisabled}
               title={name}

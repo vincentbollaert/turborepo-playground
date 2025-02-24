@@ -1,6 +1,7 @@
 @use './reset.scss';
 @use './utils.scss';
 
+// NOTE: this svg should be imported and converted to inline with PostCSS
 html {
   font-family: var(--font-antique);
   color: var(--color-text-primary);
