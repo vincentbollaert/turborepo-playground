@@ -1,4 +1,4 @@
-import { Button } from '../../components/button'
+import { Button } from '../../components/button/button'
 import styles from './navigation.module.scss'
 
 export type NavigationProps<NavItem> = {

@@ -1,7 +1,7 @@
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
-import { Button } from '../../components/button'
-import { Switch } from '../../components/switch'
+import { Button } from '../../components/button/button'
+import { Switch } from '../../components/switch/switch'
 import { cn, computeDrawnBorderClass, computeChaosShadowsClass } from '../../lib/utils'
 import styles from './featureCard.module.scss'
 
