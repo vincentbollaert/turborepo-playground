@@ -24,6 +24,10 @@
 
     .switch {
       background-color: #51565b;
+
+      &[data-state='checked'] {
+        background-color: #21d6ed;
+      }
     }
 
     .expandButton {
