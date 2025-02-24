@@ -1,14 +1,5 @@
 @use '../../styles//utils.scss' as mixins;
 
-@mixin chaos-shadow-44 {
-  box-shadow:
-    -4px 12px 0 0px rgb(0 0 0 / 8%),
-    -12px -9px 0 -3px #00000014,
-    0 0 0 6px #00000005,
-    14px 0 0 6px #f7f7f7,
-    -14px 0 0 6px #f7f7f7;
-}
-
 .navigation {
   display: flex;
   justify-content: center;
@@ -19,6 +10,7 @@
   margin: 0 8px;
 
   &[data-active='true'] {
+    background-color: #000;
     animation:
       radiusBlobbing1 3.3s ease-in infinite,
       rasiusBlobbing2 5s ease-in infinite,
@@ -64,7 +56,7 @@
 
 @keyframes shadowsChaosing {
   0% {
-    @include mixins.chaos-shadow;
+    @include mixins.chaos-shadow-1;
   }
   25% {
     @include mixins.chaos-shadow-2;
@@ -76,6 +68,6 @@
     @include mixins.chaos-shadow-2;
   }
   100% {
-    @include mixins.chaos-shadow;
+    @include mixins.chaos-shadow-1;
   }
 }

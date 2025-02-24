@@ -19,7 +19,7 @@
 }
 
 // JS-added chaos shadows classes
-@mixin chaos-shadow {
+@mixin chaos-shadow-1 {
   box-shadow:
     -4px 12px 0 0px rgb(0 0 0 / 8%),
     -12px -9px 0 -3px #00000014,
@@ -54,15 +54,27 @@
     -4px 0 0 7px #f0f0f0;
 }
 
-.chaos-shadows-1:hover {
-  @include chaos-shadow;
+.chaos-shadows-1 {
+  &:hover,
+  &[data-expanded='true'] {
+    @include chaos-shadow-1;
+  }
 }
-.chaos-shadows-2:hover {
-  @include chaos-shadow-2;
+.chaos-shadows-2 {
+  &:hover,
+  &[data-expanded='true'] {
+    @include chaos-shadow-2;
+  }
 }
-.chaos-shadows-3:hover {
-  @include chaos-shadow-3;
+.chaos-shadows-3 {
+  &:hover,
+  &[data-expanded='true'] {
+    @include chaos-shadow-3;
+  }
 }
-.chaos-shadows-4:hover {
-  @include chaos-shadow-4;
+.chaos-shadows-4 {
+  &:hover,
+  &[data-expanded='true'] {
+    @include chaos-shadow-4;
+  }
 }
