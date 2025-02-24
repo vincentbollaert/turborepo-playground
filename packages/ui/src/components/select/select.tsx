@@ -15,7 +15,7 @@ export const Select = ({ children, ...props }: SelectProps) => (
       <ChevronDown className={styles.chevronIcon} />
     </RadixSelect.Trigger>
     <RadixSelect.Portal>
-      <RadixSelect.Content className={styles.content}>
+      <RadixSelect.Content className={styles.content} position="popper">
         <RadixSelect.Viewport className={styles.viewport}>{children}</RadixSelect.Viewport>
       </RadixSelect.Content>
     </RadixSelect.Portal>
@@ -26,9 +26,6 @@ export const SelectItem = ({ children, className, ...props }: SelectItemProps) =
   return (
     <RadixSelect.Item className={cn(styles.item, className)} {...props}>
       <RadixSelect.ItemText>{children}</RadixSelect.ItemText>
-      <RadixSelect.ItemIndicator className={styles.itemIndicator}>
-        <Check />
-      </RadixSelect.ItemIndicator>
     </RadixSelect.Item>
   )
 }
