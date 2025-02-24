@@ -19,26 +19,24 @@ export const Socials = () => {
   ]
 
   return (
-    <div className={styles.wrap}>
-      <ul className={styles.socials}>
-        {socialLinks.map(({ name, url, icon, isDisabled }) => {
-          return (
-            <li>
-              <Button
-                size={'icon'}
-                className={styles.btn}
-                disabled={isDisabled}
-                title={name}
-                onClick={() => {
-                  window.open(url, '_blank')
-                }}
-              >
-                {icon}
-              </Button>
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+    <ul className={styles.socials}>
+      {socialLinks.map(({ name, url, icon, isDisabled }) => {
+        return (
+          <li>
+            <Button
+              size={'icon'}
+              className={styles.btn}
+              disabled={isDisabled}
+              title={name}
+              onClick={() => {
+                window.open(url, '_blank')
+              }}
+            >
+              {icon}
+            </Button>
+          </li>
+        )
+      })}
+    </ul>
   )
 }

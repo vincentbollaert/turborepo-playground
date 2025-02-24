@@ -17,14 +17,24 @@ export const Layout = () => {
 
   return (
     <Frame>
-      <Socials />
-      <Navigation<Tab>
-        navItems={[{ title: 'features' }, { title: 'learnings' }]}
-        activeNavTitle={activeTab}
-        onClick={selectedNavTitle => setActiveTab(selectedNavTitle)}
-      />
-      <Home activeTab={activeTab} />
-      <MockSelector />
+      <Frame.Main>
+        <Navigation<Tab>
+          navItems={[{ title: 'features' }, { title: 'learnings' }]}
+          activeNavTitle={activeTab}
+          onClick={selectedNavTitle => setActiveTab(selectedNavTitle)}
+        />
+        <Home activeTab={activeTab} />
+      </Frame.Main>
+
+      <Frame.Aside>
+        <Frame.Aside.Block>
+          <MockSelector />
+        </Frame.Aside.Block>
+
+        <Frame.Aside.Block>
+          <Socials />
+        </Frame.Aside.Block>
+      </Frame.Aside>
     </Frame>
   )
 }
