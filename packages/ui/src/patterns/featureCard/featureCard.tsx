@@ -12,7 +12,7 @@ export type FeatureCardProps = {
   description: string
 }
 
-export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
+export const FeatureCard = ({ id, title, description, status }: FeatureCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -25,11 +25,8 @@ export const FeatureCard = ({ id, title, description }: FeatureCardProps) => {
         <div className={styles.switchWrapper}>
           <Switch
             id={`${id}-switch`}
-            checked={title === 'Modern frontend applications'}
             className={styles.switch}
-            onCheckedChange={() => {
-              console.log('change')
-            }}
+            checked={status === 'done'}
             onClick={event => {
               event.stopPropagation()
             }}

@@ -19,7 +19,7 @@
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 2px 2px #00000066;
-  transition: var(--ease-out-3);
+  transition: 0.1s var(--ease-out-3);
   transform: translateX(0.2rem);
   will-change: transform;
 
