@@ -1,10 +1,8 @@
 @use '../../components//button/button.module.scss';
 
 .feature {
-  --spacing: var(--size-lg);
-
   margin-top: var(--space-sm);
-  padding: var(--spacing);
+  padding: var(--space-lg);
   position: relative;
   border: 1px solid transparent;
   cursor: pointer;
@@ -12,27 +10,27 @@
 
   &:hover,
   &[data-expanded='true'] {
-    background-color: #51565b;
+    background-color: var(--color-surface-strong);
 
     .expandButton {
       @extend %ghost-btn-hover;
     }
 
     .title {
-      color: #f3f3f3;
+      color: var(--color-text-muted);
     }
 
     .switch {
-      background-color: #6a7077;
+      background-color: var(--color-surface-stronger);
 
       &[data-state='checked'] {
-        background-color: #21d6ed;
+        background-color: var(--color-accent-brighter);
       }
     }
 
     .expandButton {
-      background-color: #6a7077;
-      color: #fff;
+      background-color: var(--color-surface-stronger);
+      color: var(--color-text-inverted);
     }
 
     .icon {
@@ -54,9 +52,9 @@
 }
 
 .title {
-  font-size: var(--text-lg);
+  font-size: var(--type-size-body2);
   flex-grow: 1;
-  color: var(--color-text-primary);
+  color: var(--color-text-default);
 }
 
 .expandButton {
@@ -79,6 +77,6 @@
 }
 
 .descriptionText {
-  font-size: var(--text-md);
-  color: #f3f3f3;
+  font-size: var(--type-size-body);
+  color: var(--color-text-muted);
 }

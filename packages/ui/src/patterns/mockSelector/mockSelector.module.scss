@@ -3,12 +3,12 @@
   gap: var(--space-lg);
   align-items: center;
   padding: var(--space-xxlg);
-  background-color: #fff;
+  background-color: var(--color-surface-base);
   font-family: var(--font-rounded-sans);
   box-shadow: var(--shadow-3);
 }
 
 .label {
   white-space: nowrap;
-  color: var(--color-text-secondary);
+  color: var(--color-text-subtle);
 }

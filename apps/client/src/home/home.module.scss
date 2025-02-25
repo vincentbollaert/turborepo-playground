@@ -11,11 +11,11 @@
 
 .learningsTab {
   width: 740px;
-  color: var(--color-text-secondary);
+  color: var(--color-text-subtle);
 
   h2 {
     font-size: var(--type-size-heading);
-    color: var(--color-text-primary);
+    color: var(--color-text-default);
     margin-top: 34px;
     position: relative;
     margin-left: -30px;
@@ -33,10 +33,10 @@
       top: 50%;
       transform: translateY(-50%);
       line-height: 1;
-      color: #d7d7d7;
+      color: var(--color-surface-subtle);
 
       &:hover {
-        color: #06bad1;
+        color: var(--color-accent-brighter);
       }
     }
   }
