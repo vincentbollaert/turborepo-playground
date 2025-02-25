@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Providers } from './providers'
-import 'open-props/style';
+import 'open-props/style' // https://github.com/GoogleChromeLabs/postcss-jit-props/issues/7
 import '@repo/ui/global.scss'
 
 export const metadata: Metadata = {

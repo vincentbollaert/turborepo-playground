@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Layout } from './layout'
-import '@repo/ui/index.scss'
+import '@repo/ui/global.scss'
 
 const queryClient = new QueryClient({
   defaultOptions: {
