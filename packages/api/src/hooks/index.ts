@@ -1,1 +1,1 @@
-export { useMswInit } from './useMswInit.js'
+export { useMswInit } from './useMswInit'

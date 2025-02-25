@@ -1,4 +1,4 @@
-import { components, paths } from '../schema/generated/schema.js'
+import { components, paths } from '../schema/generated/schema'
 
 export type Models = {
   Feature: components['schemas']['Feature']

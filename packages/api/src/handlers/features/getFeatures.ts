@@ -1,6 +1,6 @@
 import { http, HttpResponse } from 'msw'
-import { defaultFeatures, emptyFeatures } from '../../mocks/features.js'
-import { mockVariantsByEndpoint } from '../../utils/mockSelector.js'
+import { defaultFeatures, emptyFeatures } from '../../mocks/features'
+import { mockVariantsByEndpoint } from '../../utils/mockSelector'
 
 const getFeatures = () => {
   return http.get('/api/v1/features', async () => {
