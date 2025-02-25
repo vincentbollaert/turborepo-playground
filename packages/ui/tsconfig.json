@@ -1,6 +1,6 @@
 {
   "extends": "@repo/typescript-config/react-library.json",
-  "include": ["src", ".ladle"],
+  "include": ["scss.d.ts", "src", ".ladle"],
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist",
