@@ -11,8 +11,12 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/api": "*",
     "@repo/ui": "*",
+    "@tanstack/react-query": "^5.66.9",
     "next": "^15.1.6",
+    "openapi-fetch": "^0.13.4",
+    "openapi-react-query": "^0.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.85.1"

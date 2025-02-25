@@ -1,13 +1,33 @@
 'use client'
 
-import { Feature } from '@repo/ui/feature'
+import { useMswInit } from '@repo/api/hooks'
+import { Frame } from '@repo/ui/frame'
+import { MockSelector } from '@repo/ui/mockSelector'
+import { Socials } from '@repo/ui/socials'
+import { Home } from './home'
 
 export default function IndexPage() {
+  const mswStatus = useMswInit()
+  
+  if (mswStatus === 'initializing') {
+    return null
+  }
+  
   return (
-    <main>
-      <div className="app">
-        <Feature id="sdsd" title="test" description="test desc" status="done" />
-      </div>
-    </main>
+    <Frame>
+      <Frame.Main>
+        <Home />
+      </Frame.Main>
+
+      <Frame.Aside>
+        <Frame.Aside.Block>
+          <MockSelector />
+        </Frame.Aside.Block>
+
+        <Frame.Aside.Block>
+          <Socials />
+        </Frame.Aside.Block>
+      </Frame.Aside>
+    </Frame>
   )
 }
