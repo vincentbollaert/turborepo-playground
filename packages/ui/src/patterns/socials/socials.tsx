@@ -23,7 +23,7 @@ export const Socials = () => {
     <ul className={styles.socials}>
       {socialLinks.map(({ name, url, icon, isDisabled }) => {
         return (
-          <li>
+          <li key={name}>
             <Button
               size="icon"
               className={styles.btn}

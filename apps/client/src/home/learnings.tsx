@@ -66,6 +66,12 @@ export const Learnings = () => {
         The additional complexity and build steps required during development meant that, in my case, serving packages
         as-is reduced compile time from a couple seconds to instant
       </p>
+      <h2 id="module-resolution">
+        <a href="#module-resolution">#</a>Only packages you plan to compile should be NodeNext
+      </h2>
+      <p>
+        My api package is used in both node and ESM environments. Initially I set it to ...
+      </p>
     </div>
   )
 }

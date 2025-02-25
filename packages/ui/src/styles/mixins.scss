@@ -1,11 +1,36 @@
-@mixin export-radius-vars {
-  :export {
-    radius-drawn-1: var(--radius-drawn-1);
-    radius-drawn-2: var(--radius-drawn-2);
-    radius-drawn-3: var(--radius-drawn-3);
-    radius-drawn-4: var(--radius-drawn-4);
-    radius-drawn-5: var(--radius-drawn-5);
-    radius-drawn-6: var(--radius-drawn-6);
-  }
+@mixin chaos-shadow-1 {
+  box-shadow:
+    -4px 12px 0 0px rgb(0 0 0 / 8%),
+    -12px -9px 0 -3px #00000014,
+    0 0 0 6px #00000005,
+    14px 0 0 6px #f7f7f7,
+    -14px 0 0 6px #f7f7f7 !important;
 }
 
+@mixin chaos-shadow-2 {
+  box-shadow:
+    7px 3px 0 0px #61616136,
+    -1px 0 0 0px #e5e5e5,
+    0px 2px 0 0px #e5e5e5,
+    0 0 0 6px #41414112,
+    14px 0 0 6px #65656512,
+    -14px 0 0 6px #0000000a !important;
+}
+
+@mixin chaos-shadow-3 {
+  box-shadow:
+    7px 0 0 0px #dddddd,
+    -13px 2px 0 0px rgb(207 207 207),
+    0px 2px 0 0px rgba(0, 0, 0, 0.0588235294),
+    -11px 4px 0 -3px #e9e9e9,
+    14px 0 0 8px #f0f0f0,
+    -14px 0 0 8px #f0f0f0 !important;
+}
+
+@mixin chaos-shadow-4 {
+  box-shadow:
+    17px -18px 0 0px #8b888814,
+    -11px 4px 0 -3px #e9e9e9,
+    14px 3px 0 2px #f0f0f0,
+    -4px 0 0 7px #f0f0f0 !important;
+}

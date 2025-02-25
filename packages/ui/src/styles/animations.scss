@@ -1,0 +1,55 @@
+@use './mixins.scss' as mixins;
+
+@keyframes radiusBlobbing1 {
+  0% {
+    border-radius: 95px 65px 265px 95px/55px 245px 66px 215px;
+  }
+  25% {
+    border-radius: 150px 45px 140px 100px/90px 160px 70px 165px;
+  }
+  50% {
+    border-radius: 250px 25px 65px 80px/55px 80px 105px 115px;
+  }
+  75% {
+    border-radius: 180px 55px 95px 65px/30px 120px 85px 145px;
+  }
+  100% {
+    border-radius: 95px 65px 265px 95px/55px 245px 66px 215px;
+  }
+}
+
+@keyframes radiusBlobbing2 {
+  0% {
+    border-radius: 180px 55px 95px 65px/30px 120px 85px 145px;
+  }
+  25% {
+    border-radius: 250px 25px 65px 80px/55px 80px 165px 95px;
+  }
+  50% {
+    border-radius: 95px 145px 165px 95px/155px 45px 135px 115px;
+  }
+  75% {
+    border-radius: 150px 85px 240px 100px/90px 50px 80px 125px;
+  }
+  100% {
+    border-radius: 180px 55px 95px 65px/30px 120px 85px 145px;
+  }
+}
+
+@keyframes shadowsChaosing {
+  0% {
+    @include mixins.chaos-shadow-1;
+  }
+  25% {
+    @include mixins.chaos-shadow-2;
+  }
+  50% {
+    @include mixins.chaos-shadow-3;
+  }
+  75% {
+    @include mixins.chaos-shadow-2;
+  }
+  100% {
+    @include mixins.chaos-shadow-1;
+  }
+}

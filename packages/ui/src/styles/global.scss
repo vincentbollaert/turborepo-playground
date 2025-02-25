@@ -1,5 +1,6 @@
 @use './reset.scss';
-@use './utils.scss';
+@use './mixins.scss' as mixins;
+@use './animations.scss';
 
 // NOTE: this svg should be imported and converted to inline with PostCSS
 html {
@@ -37,4 +38,48 @@ html {
   --text-lg: 1.8rem;
 
   --radius-default: 2px;
+
+  .drawnBorders1 {
+    border-radius: var(--radius-drawn-1);
+  }
+  .drawnBorders2 {
+    border-radius: var(--radius-drawn-2);
+  }
+  .drawnBorders3 {
+    border-radius: var(--radius-drawn-3);
+  }
+  .drawnBorders4 {
+    border-radius: var(--radius-drawn-4);
+  }
+  .drawnBorders5 {
+    border-radius: var(--radius-drawn-5);
+  }
+  .drawnBorders6 {
+    border-radius: var(--radius-drawn-6);
+  }
+
+  .chaos-shadows-1 {
+    &:hover,
+    &[data-expanded='true'] {
+      @include mixins.chaos-shadow-1;
+    }
+  }
+  .chaos-shadows-2 {
+    &:hover,
+    &[data-expanded='true'] {
+      @include mixins.chaos-shadow-2;
+    }
+  }
+  .chaos-shadows-3 {
+    &:hover,
+    &[data-expanded='true'] {
+      @include mixins.chaos-shadow-3;
+    }
+  }
+  .chaos-shadows-4 {
+    &:hover,
+    &[data-expanded='true'] {
+      @include mixins.chaos-shadow-4;
+    }
+  }
 }

@@ -9,7 +9,7 @@
     "src"
   ],
   "exports": {
-    "./index.scss": "./src/styles/index.scss",
+    "./global.scss": "./src/styles/global.scss",
     "./skeleton": "./src/primitives/skeleton/skeleton.tsx",
     "./info": "./src/components/info/info.tsx",
     "./button": "./src/components/button/button.tsx",
