@@ -3,11 +3,11 @@
 .navigation {
   display: flex;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: var(--space-xxxlg);
 }
 
 .navItem {
-  margin: 0 8px;
+  margin: 0 var(--space-md);
 
   &[data-active='true'] {
     background-color: #51565b;

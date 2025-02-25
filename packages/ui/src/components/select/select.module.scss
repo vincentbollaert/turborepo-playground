@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  padding: 0 12px;
+  padding: 0 var(--space-lg);
   height: 35px;
-  gap: 12px;
+  gap: var(--space-lg);
   background-color: #51565b;
   color: #fff;
   border-radius: var(--radius-drawn-6);
@@ -28,8 +28,8 @@
 
 .content {
   width: var(--radix-select-trigger-width);
-  margin-top: 4px;
-  padding: 4px 0;
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) 0;
   border-radius: var(--radius-drawn-4);
   overflow: hidden;
   background-color: #000;
@@ -45,7 +45,7 @@
 .item {
   display: flex;
   align-items: center;
-  padding: 2px 8px;
+  padding: 2px var(--space-md);
   position: relative;
   user-select: none;
   color: var(--color-text-secondary);

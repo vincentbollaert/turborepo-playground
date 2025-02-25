@@ -3,7 +3,7 @@
 .feature {
   --spacing: var(--size-lg);
 
-  margin-top: 4px;
+  margin-top: var(--space-sm);
   padding: var(--spacing);
   position: relative;
   border: 1px solid transparent;

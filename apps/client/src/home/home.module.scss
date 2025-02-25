@@ -14,7 +14,7 @@
   color: var(--color-text-secondary);
 
   h2 {
-    font-size: 20px;
+    font-size: var(--type-size-heading);
     color: var(--color-text-primary);
     margin-top: 34px;
     position: relative;
@@ -42,7 +42,7 @@
   }
 
   p {
-    margin: 12px 0 8px;
+    margin: var(--space-lg) 0 var(--space-md);
   }
 
   ul {

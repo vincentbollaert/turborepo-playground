@@ -27,22 +27,6 @@
     pointer-events: none;
     opacity: 0.5;
   }
-
-  &:focus-visible {
-    outline-width: 1px;
-    outline-color: rgb(0 0 0 / 0.5);
-    ring-width: 4px;
-    ring-color: rgb(0 0 0 / 0.1);
-
-    @media (prefers-color-scheme: dark) {
-      outline-color: rgb(255 255 255 / 0.4);
-      ring-color: rgb(255 255 255 / 0.2);
-    }
-  }
-
-  &[aria-invalid='true']:focus-visible {
-    ring-width: 0;
-  }
 }
 
 .btnDefault {
@@ -84,7 +68,7 @@
 }
 
 .btnSizeLarge {
-  padding: 20px 24px;
+  padding: var(--space-xlg) var(--space-xxlg);
   font-size: 24px;
 }
 

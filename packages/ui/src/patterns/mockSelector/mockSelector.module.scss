@@ -1,8 +1,8 @@
 .mockSelector {
   display: flex;
-  gap: 1.2em;
+  gap: var(--space-lg);
   align-items: center;
-  padding: 2.4rem;
+  padding: var(--space-xxlg);
   background-color: #fff;
   font-family: var(--font-rounded-sans);
   box-shadow: var(--shadow-3);
