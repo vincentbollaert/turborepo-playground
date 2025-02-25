@@ -58,6 +58,7 @@ html {
     border-radius: var(--radius-drawn-6);
   }
 
+  // NOTE: these generic chaos-shadows classes shouldn't be coupled to the data-expanded attributes
   .chaos-shadows-1 {
     &:hover,
     &[data-expanded='true'] {
