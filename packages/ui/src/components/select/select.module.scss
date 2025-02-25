@@ -10,7 +10,7 @@
   background-color: var(--color-surface-strong);
   color: var(--color-text-inverted);
   border-radius: var(--radius-drawn-6);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-md);
   white-space: nowrap;
   cursor: pointer;
 
@@ -33,7 +33,7 @@
   border-radius: var(--radius-drawn-4);
   overflow: hidden;
   background-color: var(--color-surface-strongest);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-md);
   font-family: var(--font-rounded-sans);
   cursor: pointer;
 }

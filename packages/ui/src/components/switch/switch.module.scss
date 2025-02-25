@@ -1,5 +1,6 @@
 .root {
   --height: 2.5rem;
+  --shadow: 0 2px 2px #00000066;
 
   width: 4.2rem;
   height: var(--height);
@@ -18,7 +19,7 @@
   height: 2.1rem;
   background-color: var(--color-surface-base);
   border-radius: var(--radius-circle);
-  box-shadow: var(--shadow-switch);
+  box-shadow: var(--shadow);
   transition: 0.1s var(--ease-out-3);
   transform: translateX(0.2rem);
   will-change: transform;
