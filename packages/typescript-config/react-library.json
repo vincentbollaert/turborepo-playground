@@ -4,8 +4,6 @@
   "compilerOptions": {
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "noEmit": true,
     "allowJs": true,
     "jsx": "react-jsx",

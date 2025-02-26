@@ -1,14 +1,14 @@
 .mockSelector {
   display: flex;
-  gap: 1.2em;
+  gap: var(--space-lg);
   align-items: center;
-  padding: 2.4rem;
-  background-color: #fff;
+  padding: var(--space-xxlg);
+  background-color: var(--color-surface-base);
   font-family: var(--font-rounded-sans);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-lg);
 }
 
 .label {
   white-space: nowrap;
-  color: var(--color-text-secondary);
+  color: var(--color-text-subtle);
 }

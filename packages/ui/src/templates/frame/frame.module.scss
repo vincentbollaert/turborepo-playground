@@ -5,8 +5,8 @@
 }
 
 .layout {
-  box-shadow: var(--shadow-3);
-  background: #fff;
+  box-shadow: var(--shadow-lg);
+  background: var(--color-surface-base);
   padding: 90px 60px;
 }
 
@@ -14,9 +14,9 @@
   position: absolute;
   left: 100%;
   top: 0;
-  margin-left: 4px;
+  margin-left: var(--space-sm);
 }
 
 .asideBlock {
-  margin-bottom: 4px;
+  margin-bottom: var(--space-sm);
 }

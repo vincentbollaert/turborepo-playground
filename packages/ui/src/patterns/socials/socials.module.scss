@@ -1,9 +1,9 @@
 .socials {
   display: flex;
-  gap: 4px;
-  margin-bottom: 4px;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .btn {
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-lg);
 }

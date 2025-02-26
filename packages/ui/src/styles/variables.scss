@@ -1,0 +1,50 @@
+:root {
+  // CORE
+  --core-space-unit: 0.2rem; // 2px
+  --core-space-2: calc(var(--core-space-unit) * 2); // 4px
+  --core-space-4: calc(var(--core-space-unit) * 4); // 8px
+  --core-space-6: calc(var(--core-space-unit) * 6); // 12px
+  --core-space-8: calc(var(--core-space-unit) * 8); // 16px
+  --core-space-10: calc(var(--core-space-unit) * 10); // 20px
+  --core-space-12: calc(var(--core-space-unit) * 12); // 24px
+  --core-space-16: calc(var(--core-space-unit) * 16); // 32px
+
+  --core-text-size-1: 1.6rem;
+  --core-text-size-2: 1.8rem;
+  --core-text-size-3: 2rem;
+
+  // SEMANTIC (kind of)
+  --color-primary: var(--blue-2);
+  --color-accent: var(--cyan-4);
+  --color-accent-brighter: var(--cyan-5);
+
+  --color-text-default: var(--gray-7);
+  --color-text-muted: var(--stone-2);
+  --color-text-subtle: var(--gray-6);
+  --color-text-inverted: var(--gray-0);
+
+  --color-surface-base: var(--gray-0);
+  --color-surface-subtle: var(--stone-3);
+  --color-surface-strong: var(--gray-7);
+  --color-surface-stronger: var(--gray-8);
+  --color-surface-strongest: var(--gray-12);
+
+  --space-sm: var(--core-space-2); // 4px
+  --space-md: var(--core-space-4); // 8px
+  --space-lg: var(--core-space-6); // 12px
+  --space-xlg: var(--core-space-10); // 20px
+  --space-xxlg: var(--core-space-12); // 24px
+  --space-xxxlg: var(--core-space-16); // 32px
+
+  --text-size-icon: var(--core-text-size-1); // 16px
+  --text-size-body: var(--core-text-size-1); // 16px
+  --text-size-body2: var(--core-text-size-2); // 18px
+  --text-size-heading: var(--core-text-size-3); // 20px
+
+  --radius-sm: 0.4rem;
+  --radius-full: 9999px;
+  --radius-circle: 50%;
+
+  --shadow-md: var(--shadow-2);
+  --shadow-lg: var(--shadow-3);
+}

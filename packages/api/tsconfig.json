@@ -2,9 +2,7 @@
   "extends": "@repo/typescript-config/node.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": ".",
-    "module": "ESNext",
-    "moduleResolution": "Bundler"
+    "rootDir": "."
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules", "dist"]

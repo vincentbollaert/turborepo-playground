@@ -1,6 +1,6 @@
 %ghost-btn-hover {
-  background-color: #fff;
-  color: var(--color-text-primary);
+  background-color: var(--color-surface-base);
+  color: var(--color-text-default);
 }
 
 .btn {
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  font-size: var(--text-md);
+  font-size: var(--text-size-body);
   cursor: pointer;
 
   & svg {
@@ -27,31 +27,15 @@
     pointer-events: none;
     opacity: 0.5;
   }
-
-  &:focus-visible {
-    outline-width: 1px;
-    outline-color: rgb(0 0 0 / 0.5);
-    ring-width: 4px;
-    ring-color: rgb(0 0 0 / 0.1);
-
-    @media (prefers-color-scheme: dark) {
-      outline-color: rgb(255 255 255 / 0.4);
-      ring-color: rgb(255 255 255 / 0.2);
-    }
-  }
-
-  &[aria-invalid='true']:focus-visible {
-    ring-width: 0;
-  }
 }
 
 .btnDefault {
-  background-color: #ffffff;
-  color: var(--color-text-primary);
+  background-color: var(--color-surface-base);
+  color: var(--color-text-default);
 
   &:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-surface-strongest);
+    color: var(--color-surface-base);
   }
 }
 
@@ -62,21 +46,21 @@
 }
 
 .btnLink {
-  color: var(--color-text-secondary);
+  color: var(--color-text-subtle);
   text-underline-offset: 4px;
 
   &:hover {
-    color: #51565b;
+    color: var(--color-surface-strong);
   }
 
   &[data-active='true'] {
-    color: #eefdff;
-    background: #51565b;
+    color: var(--color-text-muted);
+    background: var(--color-surface-strong);
   }
 }
 
 .btnSizeDefault {
-  padding: var(--size-md);
+  padding: var(--space-md);
 
   &:has(> svg) {
     padding-inline: 0.75rem;
@@ -84,7 +68,7 @@
 }
 
 .btnSizeLarge {
-  padding: 20px 24px;
+  padding: var(--space-xlg) var(--space-xxlg);
   font-size: 24px;
 }
 

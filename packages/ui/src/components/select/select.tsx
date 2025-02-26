@@ -3,7 +3,7 @@ import * as RadixSelect from '@radix-ui/react-select'
 
 import styles from './select.module.scss'
 import { cn } from '../../lib/utils'
-import { ChevronDown, Check } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export type SelectProps = React.ComponentProps<typeof RadixSelect.Root>
 export type SelectItemProps = React.ComponentProps<typeof RadixSelect.Item>
