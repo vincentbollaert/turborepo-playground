@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 import { mergeConfig } from 'vitest/config'
 import type { UserConfig } from 'vite'
 
-// Base Vite configuration for React projects
 export const baseViteConfig = defineConfig({
   plugins: [react()],
   test: {
