@@ -6,7 +6,8 @@ import { Endpoints } from './apiTypes'
 
 const baseClient = createFetchClient<paths>({
   // baseUrl: 'http://localhost:1337/api/v1',
-  baseUrl: 'api/v1',
+  // baseUrl: 'api/v1',
+  baseUrl: 'http://localhost:5173/api/v1',
 })
 
 export const apiClient = {

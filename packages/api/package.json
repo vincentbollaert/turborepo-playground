@@ -9,6 +9,8 @@
   "exports": {
     "./apiClient": "./src/apiClient.ts",
     "./apiTypes": "./src/apiTypes.ts",
+    "./serverWorker": "./src/serverWorker.ts",
+    "./handlers": "./src/handlers/index.ts",
     "./hooks": "./src/hooks/index.ts",
     "./utils": "./src/utils/index.ts"
   },

@@ -3,16 +3,18 @@ import { defaultFeatures, emptyFeatures } from '../../mocks/features'
 import { mockVariantsByEndpoint } from '../../utils/mockSelector'
 
 const getFeatures = () => {
-  return http.get('/api/v1/features', async () => {
+  // return http.get('/api/v1/features', async () => {
+  return http.get('http://localhost:5173/api/v1/features', async () => {
+    console.log('GET MOCKS', mockVariantsByEndpoint.features)
     switch (mockVariantsByEndpoint.features) {
       case 'empty': {
-        return Response.json(emptyFeatures, { status: 200 })
+        return HttpResponse.json(emptyFeatures, { status: 200 })
       }
       case 'error': {
         return new HttpResponse('General error', { status: 500 })
       }
       default: {
-        return Response.json(defaultFeatures, { status: 200 })
+        return HttpResponse.json(defaultFeatures, { status: 200 })
       }
     }
   })
