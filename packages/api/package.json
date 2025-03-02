@@ -8,10 +8,12 @@
   },
   "exports": {
     "./apiClient": "./src/apiClient/client.gen.ts",
-    "./reactQueryClient": "./src/apiClient/@tanstack/react-query.gen.ts",
+    "./reactQueries": "./src/apiClient/@tanstack/react-query.gen.ts",
+    "./reactQueryClient": "./src/reactQueryClient.tsx",
     "./apiTypes": "./src/apiTypes.ts",
     "./serverWorker": "./src/serverWorker.ts",
     "./handlers": "./src/handlers/index.ts",
+    "./mocks": "./src/mocks/index.ts",
     "./hooks": "./src/hooks/index.ts",
     "./utils": "./src/utils/index.ts"
   },

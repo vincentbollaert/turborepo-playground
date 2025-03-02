@@ -1,4 +1,4 @@
-import { getFeaturesOptions } from '@repo/api/reactQueryClient'
+import { getFeaturesOptions } from '@repo/api/reactQueries'
 import { Feature } from '@repo/ui/feature'
 import { Skeleton } from '@repo/ui/skeleton'
 import styles from './home.module.scss'
