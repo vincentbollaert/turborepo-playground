@@ -4,22 +4,26 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "openapi-typescript ./schema/openapi.yaml --output ./schema/generated/schema.d.ts"
+    "build": "openapi-ts"
   },
   "exports": {
-    "./apiClient": "./src/apiClient.ts",
+    "./apiClient": "./src/apiClient/client.gen.ts",
+    "./reactQueries": "./src/apiClient/@tanstack/react-query.gen.ts",
+    "./reactQueryClient": "./src/reactQueryClient.tsx",
     "./apiTypes": "./src/apiTypes.ts",
+    "./serverWorker": "./src/serverWorker.ts",
+    "./handlers": "./src/handlers/index.ts",
+    "./mocks": "./src/mocks/index.ts",
     "./hooks": "./src/hooks/index.ts",
     "./utils": "./src/utils/index.ts"
   },
   "devDependencies": {
+    "@hey-api/openapi-ts": "^0.64.7",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "msw": "^2.7.0",
-    "openapi-fetch": "^0.13.4",
-    "openapi-typescript": "^7.6.1"
+    "msw": "^2.7.0"
   },
   "dependencies": {
-    "openapi-react-query": "^0.3.0"
+    "@hey-api/client-fetch": "^0.8.2"
   }
 }

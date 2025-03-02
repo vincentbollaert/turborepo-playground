@@ -1,0 +1,20 @@
+{
+  "name": "@repo/vitest-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    "./configs": "./vite.config.ts",
+    "./testUtils": "./testUtils.tsx"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.66.5",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "jsdom": "^26.0.0",
+    "react": "^19.0.0",
+    "vitest": "^3.0.7"
+  }
+}

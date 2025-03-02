@@ -1,16 +1,14 @@
 import { handleSetMockVariants } from '@repo/api/utils'
-import { useQueryClient } from '@tanstack/react-query'
+import { reactQueryClient } from '@repo/api/reactQueryClient'
+import { getFeaturesQueryKey } from '@repo/api/reactQueries'
 import styles from './mockSelector.module.scss'
 import { Select, SelectItem } from '@repo/ui/select'
 
 // NOTE: this component should be more dumb
 export const MockSelector = () => {
-  const queryClient = useQueryClient()
-
   const handleMockChange = (newValue: string) => {
     handleSetMockVariants({ endpointId: 'features', mockVariantType: newValue as any })
-
-    queryClient.invalidateQueries({ queryKey: ['get', '/features'] })
+    reactQueryClient.invalidateQueries({ queryKey: getFeaturesQueryKey() })
   }
 
   const mockOptions: { value: any; label: string }[] = [

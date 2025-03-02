@@ -1,24 +1,32 @@
-import { components, paths } from '../schema/generated/schema'
+import {
+  Feature,
+  GetFeaturesResponse,
+  DeleteFeaturesByIdResponses,
+  PostFeaturesResponse,
+  GetFeaturesData,
+  PostFeaturesData,
+  DeleteFeaturesByIdData,
+} from './apiClient'
 
 export type Models = {
-  Feature: components['schemas']['Feature']
+  Feature: Feature
 }
 
 export type Endpoints = {
   Features: {
     GetFeatures: {
-      PathParams: paths['/features']['get']['parameters']['path']
-      QueryParams: paths['/features']['get']['parameters']['query']
-      Response: paths['/features']['get']['responses']['200']['content']['application/json']
+      PathParams: GetFeaturesData['path']
+      QueryParams: GetFeaturesData['query']
+      Response: GetFeaturesResponse
     }
     AddFeature: {
-      RequestBody: paths['/features']['post']['requestBody']['content']['application/json']
-      Response: paths['/features']['post']['responses']['201']['content']['application/json']
+      RequestBody: PostFeaturesData['body']
+      Response: PostFeaturesResponse
     }
     RemoveFeature: {
-      PathParams: paths['/features/{id}']['delete']['parameters']['path']
-      QueryParams: paths['/features/{id}']['delete']['parameters']['query']
-      Response: paths['/features/{id}']['delete']['responses']['200']['content']
+      PathParams: DeleteFeaturesByIdData['path']
+      QueryParams: DeleteFeaturesByIdData['query']
+      Response: DeleteFeaturesByIdResponses['200']
     }
   }
 }
