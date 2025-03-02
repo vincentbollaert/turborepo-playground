@@ -2,7 +2,7 @@ import styles from './home.module.scss'
 
 export const Learnings = () => {
   return (
-    <div className={styles.learningsTab}>
+    <div className={styles.learningsTab} data-testid="learnings">
       <h2 id="monorepos">
         <a href="#monorepos">#</a>
         Monorepos are cool
@@ -69,9 +69,14 @@ export const Learnings = () => {
       <h2 id="module-resolution">
         <a href="#module-resolution">#</a>Only packages you plan to compile should be NodeNext
       </h2>
-      <p>
-        My api package is used in both node and ESM environments. Initially I set it to ...
-      </p>
+      <p>My api package is used in both node and ESM environments. Initially I set it to ...</p>
+      <h2 id="jest-in-monorepos">
+        <a href="#jest-in-monorepos">#</a>Jest is not suited for monorepos, and I gave up getting it to work
+      </h2>
+      <h2 id="start-simple">
+        <a href="#start-simple">#</a>Was stuck on getting requests to intercept for long. turns out was gen lib and
+        found out after normal useQuery was intercepted. get vanila working together 1st, if new area, then add libs
+      </h2>
     </div>
   )
 }

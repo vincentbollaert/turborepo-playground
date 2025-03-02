@@ -20,6 +20,7 @@ export const Feature = ({ id, title, description, status }: FeatureProps) => {
       className={cn(styles.feature, computeDrawnBorderClass(), computeChaosShadowsClass())}
       onClick={() => setIsExpanded(expandedState => !expandedState)}
       data-expanded={isExpanded}
+      data-testid="feature"
     >
       <div className={styles.header}>
         <div className={styles.switchWrapper}>
@@ -33,7 +34,7 @@ export const Feature = ({ id, title, description, status }: FeatureProps) => {
           />
         </div>
         <h2 className={styles.title}>{title}</h2>
-        <Button variant="ghost" size="icon" className={styles.expandButton}>
+        <Button variant="ghost" size="icon" className={styles.expandButton} data-testid="expand-btn">
           {isExpanded ? <ChevronUp className={styles.icon} /> : <ChevronDown className={styles.icon} />}
         </Button>
       </div>
