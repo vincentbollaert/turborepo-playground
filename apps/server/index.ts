@@ -6,7 +6,7 @@ import { applySecurityMiddlewares } from './middlewares/security.js'
 import featureRoutes from './routes/features.js'
 import { config } from './config.js'
 
-const app = express()
+export const app = express()
 const sql = neon(config.dbPath)
 
 app.use(cors())
