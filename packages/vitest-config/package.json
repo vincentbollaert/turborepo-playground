@@ -4,6 +4,7 @@
   "private": true,
   "main": "index.ts",
   "types": "index.ts",
+  "type": "module",
   "exports": {
     "./configs": "./vite.config.ts",
     "./testUtils": "./testUtils.tsx"

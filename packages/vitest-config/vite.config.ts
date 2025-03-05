@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react-swc'
 import { mergeConfig } from 'vitest/config'
+import type { UserConfig } from 'vite'
 
 export const baseViteConfig = defineConfig({
   plugins: [react()],
@@ -16,6 +17,6 @@ export const baseViteConfig = defineConfig({
   },
 })
 
-export function mergeViteConfig(config) {
+export function mergeViteConfig(config: UserConfig) {
   return mergeConfig(baseViteConfig, config)
 }
