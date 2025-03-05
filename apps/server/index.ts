@@ -6,7 +6,7 @@ import { applySecurityMiddlewares } from './middlewares/security.js'
 import featureRoutes from './routes/features.js'
 import { config } from './config.js'
 
-export const app = express()
+const app = express()
 const sql = neon(config.dbPath)
 
 app.use(cors())
@@ -25,6 +25,10 @@ app.get('/api/v1/db-version', async (_req: Request, res: Response) => {
   }
 })
 
-app.listen(config.port, () => {
-  console.log(`Server running at http://localhost:${config.port}`)
-})
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(config.port, () => {
+    console.log(`Server running at http://localhost:${config.port}`)
+  })
+}
+
+export default app;
