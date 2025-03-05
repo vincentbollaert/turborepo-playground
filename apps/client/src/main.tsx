@@ -11,10 +11,7 @@ const devDbUrl = import.meta.env.VITE_LOCAL_DATABASE_URL
 const prodDbUrl = import.meta.env.VITE_PROD_DATABASE_URL
 
 client.setConfig({
-  baseUrl:
-    mode === 'production'
-      ? 'https://turborepo-playground-server.vercel.app/api/v1'
-      : 'https://turborepo-playground-server.vercel.app/api/v1',
+  baseUrl: mode === 'production' ? prodDbUrl : devDbUrl,
 })
 
 createRoot(document.getElementById('root')!).render(
