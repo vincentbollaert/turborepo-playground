@@ -1,15 +1,16 @@
 'use client'
 
-import { reactQueryClient } from '@repo/api/apiClient'
 import { Feature } from '@repo/ui/feature'
 import { Skeleton } from '@repo/ui/skeleton'
 import { Info } from '@repo/ui/info'
 import styles from './home.module.scss'
+import { useQuery } from '@tanstack/react-query'
+import { getFeaturesOptions } from '@repo/api/reactQueries'
 
 const Shell = ({ children }: { children: React.ReactNode }) => <div className={styles.featuresTab}>{children}</div>
 
 export const Features = () => {
-  const { isSuccess, isPending, error, data } = reactQueryClient.useQuery('get', '/features')
+  const { isSuccess, isPending, error, data } = useQuery(getFeaturesOptions())
 
   if (isPending) {
     return (
