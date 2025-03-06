@@ -2,8 +2,9 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '../../components/button/button'
 import { Switch } from '../../components/switch/switch'
-import { cn, computeDrawnBorderClass, computeChaosShadowsClass } from '../../lib/utils'
+import { computeDrawnBorderClass, computeChaosShadowsClass } from '../../styles/utils'
 import styles from './feature.module.scss'
+import clsx from 'clsx'
 
 export type FeatureProps = {
   id: string
@@ -17,7 +18,7 @@ export const Feature = ({ id, title, description, status }: FeatureProps) => {
 
   return (
     <li
-      className={cn(styles.feature, computeDrawnBorderClass(), computeChaosShadowsClass())}
+      className={clsx(styles.feature, computeDrawnBorderClass(), computeChaosShadowsClass())}
       onClick={() => setIsExpanded(expandedState => !expandedState)}
       data-expanded={isExpanded}
       data-testid="feature"

@@ -1,24 +1,23 @@
 @use './mixins.scss' as mixins;
 
 // GENERATED CLASSES
-// NOTE: should follow kebab convention
-.drawnBorders1 {
-  border-radius: var(--radius-drawn-1);
+.drawn-borders-1 {
+  border-radius: var(--radius-drawn-1) !important;
 }
-.drawnBorders2 {
-  border-radius: var(--radius-drawn-2);
+.drawn-borders-2 {
+  border-radius: var(--radius-drawn-2) !important;
 }
-.drawnBorders3 {
-  border-radius: var(--radius-drawn-3);
+.drawn-borders-3 {
+  border-radius: var(--radius-drawn-3) !important;
 }
-.drawnBorders4 {
-  border-radius: var(--radius-drawn-4);
+.drawn-borders-4 {
+  border-radius: var(--radius-drawn-4) !important;
 }
-.drawnBorders5 {
-  border-radius: var(--radius-drawn-5);
+.drawn-borders-5 {
+  border-radius: var(--radius-drawn-5) !important;
 }
-.drawnBorders6 {
-  border-radius: var(--radius-drawn-6);
+.drawn-borders-6 {
+  border-radius: var(--radius-drawn-6) !important;
 }
 
 // NOTE: these generic chaos-shadows classes shouldn't be coupled to the data-expanded attributes

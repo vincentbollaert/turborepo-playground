@@ -1,8 +1,9 @@
 import * as SwitchPrimitive from '@radix-ui/react-switch'
 import * as React from 'react'
 
-import { cn, computeDrawnBorderClass } from '../../lib/utils'
+import { computeDrawnBorderClass } from '../../styles/utils'
 import styles from './switch.module.scss'
+import clsx from 'clsx'
 
 type SwitchProps = React.ComponentProps<typeof SwitchPrimitive.Root>
 function Switch({ className, ...props }: SwitchProps) {
@@ -13,13 +14,13 @@ function Switch({ className, ...props }: SwitchProps) {
     <SwitchPrimitive.Root
       {...props}
       data-slot="switch"
-      className={cn(styles.root, computeDrawnBorderClass(), className)}
+      className={clsx(styles.root, computeDrawnBorderClass(), className)}
       onCheckedChange={() => {
         setIsChecked(currentState => !currentState)
       }}
       checked={isChecked}
     >
-      <SwitchPrimitive.Thumb data-slot="switch-thumb" className={cn(styles.thumb, computeDrawnBorderClass())} />
+      <SwitchPrimitive.Thumb data-slot="switch-thumb" className={clsx(styles.thumb, computeDrawnBorderClass())} />
     </SwitchPrimitive.Root>
   )
 }

@@ -1,5 +1,5 @@
 import styles from './info.module.scss'
-import { cn } from '../../lib/utils'
+import clsx from 'clsx'
 
 export type InfoProps = {
   variant: 'info' | 'error'
@@ -9,7 +9,7 @@ export type InfoProps = {
 export const Info = ({ message, variant }: InfoProps) => {
   return (
     <div
-      className={cn(styles.wrap, {
+      className={clsx(styles.wrap, {
         [styles.infoVariant]: variant === 'info',
         [styles.errorVariant]: variant === 'error',
       })}
