@@ -13,7 +13,14 @@ export const Features = () => {
   if (isPending) {
     return (
       <Shell>
-        <Skeleton className={styles.skeleton} />
+        {Array(7)
+          .fill('')
+          .map((_, index) => (
+            <div className={styles.row} key={index}>
+              <Skeleton className={styles.skeletonCircle} />
+              <Skeleton />
+            </div>
+          ))}
       </Shell>
     )
   }

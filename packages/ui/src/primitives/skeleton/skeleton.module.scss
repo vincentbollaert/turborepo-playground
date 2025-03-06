@@ -1,7 +1,5 @@
 .skeleton {
-  width: 200px;
-  height: 40px;
-  background-color: red;
-  animation: var(--animation-blink) forwards;
-  border-radius: var(--radius-sm);
+  height: 20px;
+  background-color: var(--color-surface-subtle);
+  border-radius: var(--radius-full);
 }
