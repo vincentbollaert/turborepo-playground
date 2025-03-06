@@ -20,7 +20,7 @@ export const Learnings = () => {
         you&apos;re left with is markup that makes no sense and cannot be debugged easily via dev tools.
       </p>
       <p>
-        Utility classes are a useful addition when used for utility purposes — (spacing, theming, etc.). But when used
+        Utility classes are a useful addition when used for utility purposes (spacing, theming, etc.). But when used
         to style everything, they severely impact your ability to productively maintain and scale your frontend
         codebase.
       </p>
@@ -66,17 +66,31 @@ export const Learnings = () => {
         The additional complexity and build steps required during development meant that, in my case, serving packages
         as-is reduced compile time from a couple seconds to instant
       </p>
-      <h2 id="module-resolution">
-        <a href="#module-resolution">#</a>Only packages you plan to compile should be NodeNext
-      </h2>
-      <p>My api package is used in both node and ESM environments. Initially I set it to ...</p>
       <h2 id="jest-in-monorepos">
-        <a href="#jest-in-monorepos">#</a>Jest is not suited for monorepos, and I gave up getting it to work
+        <a href="#jest-in-monorepos">#</a>The time of Jest is over
       </h2>
+      <p>jest was the go-to test runner for years, but it doesn&apos;t play well with modern tools</p>
+      <ul>
+        <li>it doesn&apos;t understand the concept of local monorepo packages</li>
+        <li>it&apos;s slow</li>
+        <li>struggles with module resolution</li>
+        <li>and configurations becomes overly complex in order to deal with these issues</li>
+      </ul>
+      <p>
+        Vitest, on the other hand, was effortless to set up, has a great DX (auto-watching test files you make changes
+        to) and is blazingly fast
+      </p>
       <h2 id="start-simple">
-        <a href="#start-simple">#</a>Was stuck on getting requests to intercept for long. turns out was gen lib and
-        found out after normal useQuery was intercepted. get vanila working together 1st, if new area, then add libs
+        <a href="#start-simple">#</a>Start simple
       </h2>
+      <p>
+        For longer than I care to admit, I was stuck trying to get MSW to properly intercept request handlers in my
+        tests. As it turns out, it was a React Query api client lib I was using that was incompatible with MSW.
+      </p>
+      <p>
+        Note to self: When dealing with libs that offer abstractions, first piece everything together yourself if this
+        is an area you are unfiliar with
+      </p>
     </div>
   )
 }
