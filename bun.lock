@@ -11,7 +11,33 @@
         "typescript": "^5.7.3",
       },
     },
-    "apps/client": {
+    "apps/client-next": {
+      "name": "client-next",
+      "version": "0.0.0",
+      "dependencies": {
+        "@repo/api": "*",
+        "@repo/ui": "*",
+        "@tanstack/react-query": "^5.66.9",
+        "next": "^15.1.6",
+        "open-props": "^1.7.13",
+        "openapi-fetch": "^0.13.4",
+        "openapi-react-query": "^0.3.0",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "sass": "^1.85.1",
+      },
+      "devDependencies": {
+        "@next/eslint-plugin-next": "^15.1.6",
+        "@repo/eslint-config": "*",
+        "@repo/typescript-config": "*",
+        "@types/node": "^22.13.0",
+        "@types/react": "^19.0.8",
+        "@types/react-dom": "^19.0.3",
+        "eslint": "^9.20.0",
+        "typescript": "^5.7.3",
+      },
+    },
+    "apps/client-react": {
       "name": "client-react",
       "version": "0.0.0",
       "dependencies": {
@@ -41,32 +67,6 @@
         "typescript": "^5.7.3",
         "vite": "^6.1.0",
         "vitest": "^3.0.7",
-      },
-    },
-    "apps/client-next": {
-      "name": "client-next",
-      "version": "0.0.0",
-      "dependencies": {
-        "@repo/api": "*",
-        "@repo/ui": "*",
-        "@tanstack/react-query": "^5.66.9",
-        "next": "^15.1.6",
-        "open-props": "^1.7.13",
-        "openapi-fetch": "^0.13.4",
-        "openapi-react-query": "^0.3.0",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "sass": "^1.85.1",
-      },
-      "devDependencies": {
-        "@next/eslint-plugin-next": "^15.1.6",
-        "@repo/eslint-config": "*",
-        "@repo/typescript-config": "*",
-        "@types/node": "^22.13.0",
-        "@types/react": "^19.0.8",
-        "@types/react-dom": "^19.0.3",
-        "eslint": "^9.20.0",
-        "typescript": "^5.7.3",
       },
     },
     "apps/server": {
@@ -913,7 +913,7 @@
 
     "client-only": ["client-only@0.0.1", "", {}, "sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA=="],
 
-    "client-react": ["client-react@workspace:apps/client"],
+    "client-react": ["client-react@workspace:apps/client-react"],
 
     "cliui": ["cliui@8.0.1", "", { "dependencies": { "string-width": "^4.2.0", "strip-ansi": "^6.0.1", "wrap-ansi": "^7.0.0" } }, "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ=="],
 
