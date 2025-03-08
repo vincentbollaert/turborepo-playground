@@ -58,6 +58,6 @@
     "clsx": "^2.1.1",
     "concurrently": "^9.1.2",
     "lucide-react": "^0.475.0",
-    "open-props": "^1.7.12"
+    "open-props": "^1.7.13"
   }
 }
