@@ -1,8 +1,8 @@
 import cors from "cors";
 import express from "express";
-import { env } from "./env";
-import { applySecurityMiddlewares } from "./middlewares/security";
-import featureRoutes from "./routes/features";
+import { env } from "./src/env";
+import { applySecurityMiddlewares } from "./src/middlewares/security";
+import featureRoutes from "./src/routes/features";
 
 const app = express();
 
