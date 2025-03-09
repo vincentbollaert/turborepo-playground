@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "bun --watch index.ts",
+    "dev": "bun --watch src/index.ts",
     "build": "tsc"
   },
   "prettier": "@repo/prettier-config",
