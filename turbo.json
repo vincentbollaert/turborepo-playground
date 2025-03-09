@@ -8,7 +8,7 @@
     },
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "env": ["DATABASE_URL", "NODE_ENV"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "dev": {
