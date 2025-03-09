@@ -1,10 +1,10 @@
+import clsx from 'clsx'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '../../components/button/button'
 import { Switch } from '../../components/switch/switch'
-import { computeDrawnBorderClass, computeChaosShadowsClass } from '../../styles/utils'
+import { computeChaosShadowsClass, computeDrawnBorderClass } from '../../styles/utils'
 import styles from './feature.module.scss'
-import clsx from 'clsx'
 
 export type FeatureProps = {
   id: string

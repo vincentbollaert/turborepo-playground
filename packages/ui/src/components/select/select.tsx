@@ -1,9 +1,9 @@
-import * as React from 'react'
 import * as RadixSelect from '@radix-ui/react-select'
+import * as React from 'react'
 
-import styles from './select.module.scss'
-import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
+import { ChevronDown } from 'lucide-react'
+import styles from './select.module.scss'
 
 export type SelectProps = React.ComponentProps<typeof RadixSelect.Root>
 export type SelectItemProps = React.ComponentProps<typeof RadixSelect.Item>

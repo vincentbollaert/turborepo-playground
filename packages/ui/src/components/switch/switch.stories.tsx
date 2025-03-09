@@ -1,6 +1,6 @@
+import { StoryWrapper } from '@/internal/story/story'
 import { StoryDefault } from '@ladle/react'
 import { Switch as DSSwitch } from './switch'
-import { StoryWrapper } from '@/internal/story/story'
 
 export default {
   title: 'Components',

@@ -1,11 +1,11 @@
 import { useMswInit } from '@repo/api/hooks'
-import { Home } from './home/home'
-import { useState } from 'react'
+import { Frame } from '@repo/ui/frame'
 import { MockSelector } from '@repo/ui/mockSelector'
 import { Navigation } from '@repo/ui/navigation'
-import { Frame } from '@repo/ui/frame'
-import { Tab } from './types'
 import { Socials } from '@repo/ui/socials'
+import { useState } from 'react'
+import { Home } from './home/home'
+import { Tab } from './types'
 
 export const Layout = () => {
   const [activeTab, setActiveTab] = useState<Tab>('features')

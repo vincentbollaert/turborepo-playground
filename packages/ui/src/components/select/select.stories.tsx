@@ -1,6 +1,6 @@
+import { StoryWrapper } from '@/internal/story/story'
 import type { Story, StoryDefault } from '@ladle/react'
 import { Select as DSSelect, SelectItem, SelectProps } from './select'
-import { StoryWrapper } from '@/internal/story/story'
 
 export default {
   title: 'Components',

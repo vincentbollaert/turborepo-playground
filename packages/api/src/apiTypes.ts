@@ -1,11 +1,11 @@
 import {
-  Feature,
-  GetFeaturesResponse,
-  DeleteFeaturesByIdResponses,
-  PostFeaturesResponse,
-  GetFeaturesData,
-  PostFeaturesData,
   DeleteFeaturesByIdData,
+  DeleteFeaturesByIdResponses,
+  Feature,
+  GetFeaturesData,
+  GetFeaturesResponse,
+  PostFeaturesData,
+  PostFeaturesResponse,
 } from './apiClient'
 
 export type Models = {

@@ -1,10 +1,10 @@
 import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
-import tseslint from "typescript-eslint";
-import pluginReactHooks from "eslint-plugin-react-hooks";
-import pluginReactRefresh from 'eslint-plugin-react-refresh'
 import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+import pluginReactRefresh from 'eslint-plugin-react-refresh';
 import globals from "globals";
+import tseslint from "typescript-eslint";
 import { baseConfig } from "./base.js";
 
 /**

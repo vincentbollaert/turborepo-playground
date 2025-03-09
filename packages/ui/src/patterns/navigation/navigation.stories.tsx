@@ -1,6 +1,6 @@
+import { StoryWrapper } from '@/internal/story/story'
 import { Story, StoryDefault } from '@ladle/react'
 import { Navigation as DSNavigation, NavigationProps } from './navigation'
-import { StoryWrapper } from '@/internal/story/story'
 
 export default {
   title: 'Patterns',

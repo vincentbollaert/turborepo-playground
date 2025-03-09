@@ -1,11 +1,11 @@
 'use client'
 
-import { Feature } from '@repo/ui/feature'
-import { Skeleton } from '@repo/ui/skeleton'
-import { Info } from '@repo/ui/info'
-import styles from './home.module.scss'
-import { useQuery } from '@tanstack/react-query'
 import { getFeaturesOptions } from '@repo/api/reactQueries'
+import { Feature } from '@repo/ui/feature'
+import { Info } from '@repo/ui/info'
+import { Skeleton } from '@repo/ui/skeleton'
+import { useQuery } from '@tanstack/react-query'
+import styles from './home.module.scss'
 
 const Shell = ({ children }: { children: React.ReactNode }) => <div className={styles.featuresTab}>{children}</div>
 

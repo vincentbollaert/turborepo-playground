@@ -1,9 +1,9 @@
 import * as SwitchPrimitive from '@radix-ui/react-switch'
 import * as React from 'react'
 
+import clsx from 'clsx'
 import { computeDrawnBorderClass } from '../../styles/utils'
 import styles from './switch.module.scss'
-import clsx from 'clsx'
 
 type SwitchProps = React.ComponentProps<typeof SwitchPrimitive.Root>
 function Switch({ className, ...props }: SwitchProps) {

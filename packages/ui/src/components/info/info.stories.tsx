@@ -1,6 +1,6 @@
-import type { StoryDefault, Story } from '@ladle/react'
-import { Info, InfoProps } from './info'
 import { StoryWrapper } from '@/internal/story/story'
+import type { Story, StoryDefault } from '@ladle/react'
+import { Info, InfoProps } from './info'
 
 export default {
   title: 'Components',

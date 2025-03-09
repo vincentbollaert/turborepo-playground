@@ -1,7 +1,7 @@
-import type { StoryDefault, Story } from '@ladle/react'
-import { Button, ButtonProps } from './button'
 import { StoryWrapper } from '@/internal/story/story'
+import type { Story, StoryDefault } from '@ladle/react'
 import { ChevronDown } from 'lucide-react'
+import { Button, ButtonProps } from './button'
 
 export default {
   title: 'Components',

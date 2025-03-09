@@ -1,10 +1,10 @@
-import { handleSetMockVariants } from '@repo/api/utils'
-import { reactQueryClient } from '@repo/api/reactQueryClient'
 import { getFeaturesQueryKey } from '@repo/api/reactQueries'
-import styles from './mockSelector.module.scss'
+import { reactQueryClient } from '@repo/api/reactQueryClient'
+import { handleSetMockVariants } from '@repo/api/utils'
 import { Select, SelectItem } from '@repo/ui/select'
+import styles from './mockSelector.module.scss'
 
-// NOTE: this component should be more dumb
+// TODO: this component should be refactored
 export const MockSelector = () => {
   const handleMockChange = (newValue: string) => {
     handleSetMockVariants({ endpointId: 'features', mockVariantType: newValue as any })

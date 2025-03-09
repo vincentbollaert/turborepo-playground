@@ -1,5 +1,5 @@
-import { defineConfig } from 'tsup'
 import { globSync } from 'glob'
+import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: globSync('src/**/*.{tsx,ts,js,css,scss}'),

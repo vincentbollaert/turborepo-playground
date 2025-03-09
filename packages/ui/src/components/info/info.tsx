@@ -1,5 +1,5 @@
-import styles from './info.module.scss'
 import clsx from 'clsx'
+import styles from './info.module.scss'
 
 export type InfoProps = {
   variant: 'info' | 'error'

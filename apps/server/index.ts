@@ -1,10 +1,10 @@
-import './env.js'
-import express, { Request, Response } from 'express'
-import cors from 'cors'
 import { neon } from '@neondatabase/serverless'
+import cors from 'cors'
+import express, { Request, Response } from 'express'
+import { config } from './config.js'
+import './env.js'
 import { applySecurityMiddlewares } from './middlewares/security.js'
 import featureRoutes from './routes/features.js'
-import { config } from './config.js'
 
 const app = express()
 const sql = neon(config.dbPath)

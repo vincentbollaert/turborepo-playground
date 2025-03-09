@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
-import { Providers } from './providers'
-import 'open-props/style' // https://github.com/GoogleChromeLabs/postcss-jit-props/issues/7
 import '@repo/ui/global.scss'
+import type { Metadata } from 'next'
+import 'open-props/style'; // https://github.com/GoogleChromeLabs/postcss-jit-props/issues/7
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'Create Turborepo',

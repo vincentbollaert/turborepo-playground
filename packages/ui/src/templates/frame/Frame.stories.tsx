@@ -1,6 +1,6 @@
+import { StoryWrapper } from '@/internal/story/story'
 import { StoryDefault } from '@ladle/react'
 import { Frame as DSFrame } from './frame'
-import { StoryWrapper } from '@/internal/story/story'
 
 export default {
   title: 'Templates',

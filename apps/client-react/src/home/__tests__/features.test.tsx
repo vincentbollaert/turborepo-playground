@@ -1,10 +1,10 @@
-import { describe, it, expect } from 'vitest'
-import { screen, waitFor, within } from '@testing-library/react'
-import { serverWorker } from '@repo/api/serverWorker'
 import { getFeaturesHandlers } from '@repo/api/handlers'
-import { renderApp } from '../../testSetup/testUtils.local'
 import { defaultFeatures } from '@repo/api/mocks'
+import { serverWorker } from '@repo/api/serverWorker'
+import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { describe, expect, it } from 'vitest'
+import { renderApp } from '../../testSetup/testUtils.local'
 
 describe('<Features />', () => {
   const FEATURE_INDEX = 0

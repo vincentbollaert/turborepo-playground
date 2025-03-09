@@ -1,6 +1,6 @@
+import { CircleUserRound, CodeXml } from 'lucide-react'
 import { Button } from '../../components/button/button'
 import styles from './socials.module.scss'
-import { CodeXml, CircleUserRound } from 'lucide-react'
 
 // NOTE: component should be more dumb
 export const Socials = () => {

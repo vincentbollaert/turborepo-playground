@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
 import { Navigation } from '@repo/ui/navigation'
+import { useState } from 'react'
 import { Features } from './features'
 import { Learnings } from './learnings'
 

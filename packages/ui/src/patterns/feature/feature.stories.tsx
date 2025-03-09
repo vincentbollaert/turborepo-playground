@@ -1,6 +1,6 @@
+import { StoryWrapper } from '@/internal/story/story'
 import type { Story, StoryDefault } from '@ladle/react'
 import { Feature, FeatureProps } from './feature'
-import { StoryWrapper } from '@/internal/story/story'
 
 export default {
   title: 'Patterns',
