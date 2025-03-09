@@ -1,6 +1,6 @@
 import { http, HttpResponse } from "msw";
+import { mockVariantsByEndpoint } from "../../manageMockSelection";
 import { defaultFeatures, emptyFeatures } from "../../mocks/features";
-import { mockVariantsByEndpoint } from "../../utils/mockSelector";
 
 const URL = "http://localhost:5173/api/v1/features";
 

@@ -1,5 +1,5 @@
-export type MockVariantTypes = "default" | "empty" | "error";
-export type MockVariantsByEndpoint = {
+type MockVariantTypes = "default" | "empty" | "error";
+type MockVariantsByEndpoint = {
   features: MockVariantTypes;
 };
 
