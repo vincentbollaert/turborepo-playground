@@ -1,9 +1,10 @@
 import { http, HttpResponse } from "msw";
+import { getEnv } from "../../env";
 import { mockVariantsByEndpoint } from "../../manageMockSelection";
 import { defaultFeatures, emptyFeatures } from "../../mocks/features";
 
-// TODO: should be relative url for dev, and abs for testing env
-const URL = "http://localhost:5173/api/v1/features";
+const URL =
+  getEnv().NODE_ENV === "development" ? "api/v1/features" : "http://localhost:5173/api/v1/features";
 
 const defaultResponse = () => HttpResponse.json(defaultFeatures, { status: 200 });
 const emptyResponse = () => HttpResponse.json(emptyFeatures, { status: 200 });
