@@ -1,0 +1,6 @@
+{
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
+  "prettier.configPath": "/packages/prettier-config/prettier.config.mjs",
+  "prettier.resolveGlobalModules": true
+}
