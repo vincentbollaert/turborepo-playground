@@ -4,7 +4,7 @@ import { mockVariantsByEndpoint } from "../../manageMockSelection";
 import { defaultFeatures, emptyFeatures } from "../../mocks/features";
 
 const URL =
-  getEnv().NODE_ENV === "development" ? "api/v1/features" : "http://localhost:5173/api/v1/features";
+  getEnv().NODE_ENV === "development" ? "api/v1/features" : "http://localhost:*/api/v1/features";
 
 const defaultResponse = () => HttpResponse.json(defaultFeatures, { status: 200 });
 const emptyResponse = () => HttpResponse.json(emptyFeatures, { status: 200 });
