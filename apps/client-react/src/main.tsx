@@ -4,14 +4,11 @@ import "@repo/ui/global.scss";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { getEnv } from "./env";
 import { Layout } from "./layout";
 
-const mode = import.meta.env.MODE;
-const devDbUrl = import.meta.env.VITE_LOCAL_DATABASE_URL;
-const prodDbUrl = import.meta.env.VITE_PROD_DATABASE_URL;
-
 client.setConfig({
-  baseUrl: mode === "production" ? prodDbUrl : devDbUrl,
+  baseUrl: getEnv().VITE_DATABASE_URL,
 });
 
 createRoot(document.getElementById("root")!).render(

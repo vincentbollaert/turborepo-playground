@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
 
-import { serverWorker } from "@repo/api/serverWorker";
-import { testQueryClient } from "@repo/vitest-config/testUtils";
+import { serverWorker } from "@repo/api-mocks/serverWorker";
 import { client } from "@repo/api/apiClient";
-import { afterEach, afterAll, beforeAll } from "vitest";
+import { testQueryClient } from "@repo/vitest-config/testUtils";
+import { afterAll, afterEach, beforeAll } from "vitest";
 
 beforeAll(() => {
   client.setConfig({

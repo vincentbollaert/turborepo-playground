@@ -1,6 +1,6 @@
+import { handleSetMockVariants } from "@repo/api-mocks/manageMockSelection";
 import { getFeaturesQueryKey } from "@repo/api/reactQueries";
 import { reactQueryClient } from "@repo/api/reactQueryClient";
-import { handleSetMockVariants } from "@repo/api/utils";
 import { Select, SelectItem } from "@repo/ui/select";
 import styles from "./mockSelector.module.scss";
 
@@ -16,6 +16,10 @@ export const MockSelector = () => {
     { value: "empty", label: "empty" },
     { value: "error", label: "error" },
   ];
+
+  if (process.env.NODE_ENV === "production") {
+    return null;
+  }
 
   return (
     <div className={styles.mockSelector}>

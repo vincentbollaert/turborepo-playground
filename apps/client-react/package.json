@@ -18,12 +18,14 @@
     "@tanstack/react-query": "^5.66.9",
     "@testing-library/user-event": "^14.6.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@repo/prettier-config": "*",
     "@repo/eslint-config": "*",
     "@repo/vitest-config": "*",
+    "@repo/api-mocks": "*",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/react": "^19.0.8",

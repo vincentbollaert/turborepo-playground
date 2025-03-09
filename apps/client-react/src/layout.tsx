@@ -1,5 +1,5 @@
-import { useMswInit } from "@repo/api/hooks";
 import { Frame } from "@repo/ui/frame";
+import { useMswInit } from "@repo/ui/hooks";
 import { MockSelector } from "@repo/ui/mockSelector";
 import { Navigation } from "@repo/ui/navigation";
 import { Socials } from "@repo/ui/socials";

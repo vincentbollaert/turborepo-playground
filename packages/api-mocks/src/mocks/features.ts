@@ -1,4 +1,4 @@
-import { Endpoints } from "../apiTypes";
+import { Endpoints } from "@repo/api/apiTypes";
 
 export type FeaturesResponse = Endpoints["Features"]["GetFeatures"]["Response"];
 

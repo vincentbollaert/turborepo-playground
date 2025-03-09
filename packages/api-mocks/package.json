@@ -1,0 +1,25 @@
+{
+  "name": "@repo/api-mocks",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./browserWorker": "./src/browserWorker.ts",
+    "./serverWorker": "./src/serverWorker.ts",
+    "./mockHandlers": "./src/handlers/index.ts",
+    "./manageMockSelection": "./src/manageMockSelection.ts",
+    "./mocks": "./src/mocks/index.ts",
+    "./handlers": "./src/handlers/index.ts"
+  },
+  "prettier": "@repo/prettier-config",
+  "devDependencies": {
+    "@repo/prettier-config": "*",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@repo/api": "*",
+    "msw": "^2.7.0"
+  },
+  "dependencies": {
+    "@hey-api/client-fetch": "^0.8.2"
+  }
+}

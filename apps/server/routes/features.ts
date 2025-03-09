@@ -1,10 +1,10 @@
 import { Endpoints } from "@repo/api/apiTypes";
 import express, { Response } from "express";
 import { Pool } from "pg";
-import { config } from "../config.js";
+import { env } from "../env";
 
 const pool = new Pool({
-  connectionString: config.dbPath,
+  connectionString: env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false, // Required for Neon's SSL connection
   },
