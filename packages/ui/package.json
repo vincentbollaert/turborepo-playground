@@ -19,7 +19,8 @@
     "./navigation": "./src/patterns/navigation/navigation.tsx",
     "./mockSelector": "./src/patterns/mockSelector/mockSelector.tsx",
     "./socials": "./src/patterns/socials/socials.tsx",
-    "./frame": "./src/templates/frame/frame.tsx"
+    "./frame": "./src/templates/frame/frame.tsx",
+    "./hooks": "./src/hooks/index.ts"
   },
   "scripts": {
     "ladle:build": "bun ladle build",
@@ -37,6 +38,8 @@
     "@repo/prettier-config": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/api": "*",
+    "@repo/api-mocks": "*",
     "@turbo/gen": "^2.4.0",
     "@types/glob": "^8.1.0",
     "@types/node": "^22.13.0",
