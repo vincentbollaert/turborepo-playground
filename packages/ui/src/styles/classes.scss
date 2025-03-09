@@ -1,4 +1,4 @@
-@use './mixins.scss' as mixins;
+@use "./mixins.scss" as mixins;
 
 // GENERATED CLASSES
 .drawn-borders-1 {
@@ -23,25 +23,29 @@
 // NOTE: these generic chaos-shadows classes shouldn't be coupled to the data-expanded attributes
 .chaos-shadows-1 {
   &:hover,
-  &[data-expanded='true'] {
+  &[data-expanded="true"] {
     @include mixins.chaos-shadow-1;
   }
 }
 .chaos-shadows-2 {
   &:hover,
-  &[data-expanded='true'] {
+  &[data-expanded="true"] {
     @include mixins.chaos-shadow-2;
   }
 }
 .chaos-shadows-3 {
   &:hover,
-  &[data-expanded='true'] {
+  &[data-expanded="true"] {
     @include mixins.chaos-shadow-3;
   }
 }
 .chaos-shadows-4 {
   &:hover,
-  &[data-expanded='true'] {
+  &[data-expanded="true"] {
     @include mixins.chaos-shadow-4;
   }
+}
+
+.isHidden {
+  display: none;
 }

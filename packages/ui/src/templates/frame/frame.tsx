@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ReactNode } from "react";
 import styles from "./frame.module.scss";
 
@@ -14,8 +15,8 @@ const FrameAside = ({ children }: { children: ReactNode }) => {
   return <aside className={styles.aside}>{children}</aside>;
 };
 
-const FrameAsideBlock = ({ children }: { children: ReactNode }) => {
-  return <aside className={styles.asideBlock}>{children}</aside>;
+const FrameAsideBlock = ({ children, className }: { children: ReactNode; className?: string }) => {
+  return <aside className={clsx(styles.asideBlock, className)}>{children}</aside>;
 };
 
 Frame.Main = FrameMain;

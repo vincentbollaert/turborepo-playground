@@ -17,10 +17,6 @@ export const MockSelector = () => {
     { value: "error", label: "error" },
   ];
 
-  if (process.env.NODE_ENV === "production") {
-    return null;
-  }
-
   return (
     <div className={styles.mockSelector}>
       <label htmlFor="mockSelect" className={styles.label}>
