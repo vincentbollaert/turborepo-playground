@@ -1,7 +1,7 @@
 "use client";
 
-import { useMswInit } from "@repo/api/hooks";
 import { Frame } from "@repo/ui/frame";
+import { useMswInit } from "@repo/ui/hooks";
 import { MockSelector } from "@repo/ui/mockSelector";
 import { Socials } from "@repo/ui/socials";
 import { Home } from "./home";
