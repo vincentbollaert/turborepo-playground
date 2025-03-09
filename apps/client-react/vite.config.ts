@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import { mergeViteConfig } from '@repo/vitest-config/configs'
+import { defineConfig } from "vite";
+import { mergeViteConfig } from "@repo/vitest-config/configs";
 
-export default defineConfig(() => 
+export default defineConfig(() =>
   mergeViteConfig({
     test: {
-      setupFiles: ['./setupTests.ts'],
-    }
-  })
-)
+      setupFiles: ["./setupTests.ts"],
+    },
+  }),
+);

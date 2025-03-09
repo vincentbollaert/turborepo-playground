@@ -1,1 +1,1 @@
-export { handleSetMockVariants, mockVariantsByEndpoint } from './mockSelector'
+export { handleSetMockVariants, mockVariantsByEndpoint } from "./mockSelector";

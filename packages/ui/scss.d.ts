@@ -1,13 +1,12 @@
 // TODO: (minor) create types from css module files
-declare module '*.scss' {
+declare module "*.scss" {
   const content: any;
   export default content;
 }
-declare module '*.module.scss' {
+declare module "*.module.scss" {
   const content: any;
   export default content;
 }
-
 
 // declare module '*.scss' {
 //   type ClassNames = {

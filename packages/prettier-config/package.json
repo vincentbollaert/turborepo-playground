@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
-  "exports": {
-    "./config": "./prettier.config.ts"
-  },
+  "exports": "./prettier.config.ts",
   "devDependencies": {
     "prettier": "^3.5.0"
   }

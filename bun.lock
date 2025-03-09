@@ -29,6 +29,7 @@
       "devDependencies": {
         "@next/eslint-plugin-next": "^15.1.6",
         "@repo/eslint-config": "*",
+        "@repo/prettier-config": "*",
         "@repo/typescript-config": "*",
         "@types/node": "^22.13.0",
         "@types/react": "^19.0.8",
@@ -43,13 +44,14 @@
       "dependencies": {
         "@repo/api": "*",
         "@repo/ui": "*",
-        "@tanstack/react-query": "^5.66.5",
+        "@tanstack/react-query": "^5.66.9",
         "@testing-library/user-event": "^14.6.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
       },
       "devDependencies": {
         "@repo/eslint-config": "*",
+        "@repo/prettier-config": "*",
         "@repo/vitest-config": "*",
         "@testing-library/jest-dom": "^6.6.3",
         "@testing-library/react": "^16.2.0",
@@ -83,6 +85,7 @@
       },
       "devDependencies": {
         "@repo/eslint-config": "*",
+        "@repo/prettier-config": "*",
         "@repo/typescript-config": "*",
         "@types/cors": "^2.8.17",
         "@types/express": "^4.17.21",
@@ -98,6 +101,7 @@
       "devDependencies": {
         "@hey-api/openapi-ts": "^0.64.7",
         "@repo/eslint-config": "*",
+        "@repo/prettier-config": "*",
         "@repo/typescript-config": "*",
         "msw": "^2.7.0",
       },
@@ -119,6 +123,13 @@
         "typescript-eslint": "^8.23.0",
       },
     },
+    "packages/prettier-config": {
+      "name": "@repo/prettier-config",
+      "version": "0.0.0",
+      "devDependencies": {
+        "prettier": "^3.5.0",
+      },
+    },
     "packages/typescript-config": {
       "name": "@repo/typescript-config",
       "version": "0.0.0",
@@ -138,10 +149,11 @@
         "clsx": "^2.1.1",
         "concurrently": "^9.1.2",
         "lucide-react": "^0.475.0",
-        "open-props": "^1.7.12",
+        "open-props": "^1.7.13",
       },
       "devDependencies": {
         "@repo/eslint-config": "*",
+        "@repo/prettier-config": "*",
         "@repo/typescript-config": "*",
         "@turbo/gen": "^2.4.0",
         "@types/glob": "^8.1.0",
@@ -162,13 +174,16 @@
       "name": "@repo/vitest-config",
       "version": "0.0.0",
       "dependencies": {
-        "@tanstack/react-query": "^5.66.5",
+        "@tanstack/react-query": "^5.66.9",
         "@testing-library/jest-dom": "^6.6.3",
         "@testing-library/react": "^16.2.0",
         "@vitejs/plugin-react-swc": "^3.5.0",
         "jsdom": "^26.0.0",
         "react": "^19.0.0",
         "vitest": "^3.0.7",
+      },
+      "devDependencies": {
+        "@repo/prettier-config": "*",
       },
     },
   },
@@ -528,6 +543,8 @@
     "@repo/api": ["@repo/api@workspace:packages/api"],
 
     "@repo/eslint-config": ["@repo/eslint-config@workspace:packages/eslint-config"],
+
+    "@repo/prettier-config": ["@repo/prettier-config@workspace:packages/prettier-config"],
 
     "@repo/typescript-config": ["@repo/typescript-config@workspace:packages/typescript-config"],
 

@@ -35,8 +35,7 @@ export type GetFeaturesResponses = {
   };
 };
 
-export type GetFeaturesResponse =
-  GetFeaturesResponses[keyof GetFeaturesResponses];
+export type GetFeaturesResponse = GetFeaturesResponses[keyof GetFeaturesResponses];
 
 export type PostFeaturesData = {
   body: Feature;
@@ -52,8 +51,7 @@ export type PostFeaturesResponses = {
   201: Feature;
 };
 
-export type PostFeaturesResponse =
-  PostFeaturesResponses[keyof PostFeaturesResponses];
+export type PostFeaturesResponse = PostFeaturesResponses[keyof PostFeaturesResponses];
 
 export type DeleteFeaturesByIdData = {
   body?: never;

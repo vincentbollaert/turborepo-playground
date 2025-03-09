@@ -1,18 +1,18 @@
-'use client'
+"use client";
 
-import { useMswInit } from '@repo/api/hooks'
-import { Frame } from '@repo/ui/frame'
-import { MockSelector } from '@repo/ui/mockSelector'
-import { Socials } from '@repo/ui/socials'
-import { Home } from './home'
+import { useMswInit } from "@repo/api/hooks";
+import { Frame } from "@repo/ui/frame";
+import { MockSelector } from "@repo/ui/mockSelector";
+import { Socials } from "@repo/ui/socials";
+import { Home } from "./home";
 
 export default function IndexPage() {
-  const mswStatus = useMswInit()
-  
-  if (mswStatus === 'initializing') {
-    return null
+  const mswStatus = useMswInit();
+
+  if (mswStatus === "initializing") {
+    return null;
   }
-  
+
   return (
     <Frame>
       <Frame.Main>
@@ -29,5 +29,5 @@ export default function IndexPage() {
         </Frame.Aside.Block>
       </Frame.Aside>
     </Frame>
-  )
+  );
 }

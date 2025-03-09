@@ -1,5 +1,3 @@
-// prettier.config.ts, .prettierrc.ts, prettier.config.mts, or .prettierrc.mts
-
 import { type Config } from "prettier";
 
 const config: Config = {
@@ -9,9 +7,9 @@ const config: Config = {
   trailingComma: "all",
   semi: true,
   singleQuote: false,
-  quoteProps: 'as-needed',
-  arrowParens: 'always',
-  bracketSpacing: true
+  quoteProps: "as-needed",
+  arrowParens: "always",
+  bracketSpacing: true,
 };
 
 export default config;

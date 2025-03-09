@@ -23,7 +23,7 @@ This project demonstrates a modern monorepo architecture using Turborepo, with s
 ## 🚀 Key Features
 
 - **Monorepo Structure**: Organized with Turborepo for efficient workspace management
-- **Multiple Frontend Implementations**: 
+- **Multiple Frontend Implementations**:
   - React app with Vite
   - Next.js app
 - **Backend API**: Express server with PostgreSQL (NeonDB)
@@ -36,11 +36,13 @@ This project demonstrates a modern monorepo architecture using Turborepo, with s
 ## 🛠️ Tech Stack
 
 ### Core Technologies
+
 - **Build System**: [Turborepo](https://turbo.build/)
 - **Package Manager**: [Bun](https://bun.sh/)
 - **Languages**: TypeScript, SCSS
 
 ### Frontend
+
 - **Frameworks**: React 19, Next.js 15
 - **Build Tools**: Vite 6
 - **Data Fetching**: TanStack Query (React Query)
@@ -48,11 +50,13 @@ This project demonstrates a modern monorepo architecture using Turborepo, with s
 - **Styling**: SCSS Modules, Open Props
 
 ### Backend
+
 - **Server**: Express.js
 - **Database**: PostgreSQL (NeonDB)
 - **API**: OpenAPI 3.1
 
 ### Testing & Development
+
 - **Testing**: Vitest, React Testing Library
 - **API Mocking**: Mock Service Worker (MSW)
 - **Documentation**: Ladle (component stories)
@@ -62,6 +66,7 @@ This project demonstrates a modern monorepo architecture using Turborepo, with s
 ## 🏁 Getting Started
 
 ### Prerequisites
+
 - Node.js >= 18
 - Bun >= 1.2.2
 
@@ -143,14 +148,18 @@ This project uses a comprehensive testing approach:
 ### Key Packages
 
 #### UI Library
+
 The UI library is organized into:
+
 - **Primitives**: Low-level UI building blocks
 - **Components**: Reusable UI components
 - **Patterns**: Higher-level UI patterns
 - **Templates**: Page templates and layouts
 
 #### API Package
+
 The API package provides:
+
 - OpenAPI schema
 - Generated API clients
 - React Query hooks
@@ -162,16 +171,19 @@ The API package provides:
 This project demonstrates several modern frontend architecture concepts:
 
 1. **Monorepo Management**
+
    - Workspace dependencies
    - Shared configuration
    - Build caching and optimization
 
 2. **Component Library Design**
+
    - Component hierarchy (primitives → components → patterns → templates)
    - Styling strategies
    - Component documentation
 
 3. **API Integration**
+
    - Schema-first API development
    - Type-safe API clients
    - API mocking strategies

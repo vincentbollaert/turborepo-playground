@@ -1,23 +1,23 @@
-import { CircleUserRound, CodeXml } from 'lucide-react'
-import { Button } from '../../components/button/button'
-import styles from './socials.module.scss'
+import { CircleUserRound, CodeXml } from "lucide-react";
+import { Button } from "../../components/button/button";
+import styles from "./socials.module.scss";
 
 // NOTE: component should be more dumb
 export const Socials = () => {
   const socialLinks = [
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: <CodeXml />,
-      url: 'https://github.com/vincentbollaert',
+      url: "https://github.com/vincentbollaert",
       isDisabled: false,
     },
     {
-      name: 'Blog - under development',
+      name: "Blog - under development",
       icon: <CircleUserRound />,
-      url: 'vincentcodes.dev',
+      url: "vincentcodes.dev",
       isDisabled: true,
     },
-  ]
+  ];
 
   return (
     <ul className={styles.socials}>
@@ -30,14 +30,14 @@ export const Socials = () => {
               disabled={isDisabled}
               title={name}
               onClick={() => {
-                window.open(url, '_blank')
+                window.open(url, "_blank");
               }}
             >
               {icon}
             </Button>
           </li>
-        )
+        );
       })}
     </ul>
-  )
-}
+  );
+};

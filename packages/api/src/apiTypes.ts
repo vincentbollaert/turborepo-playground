@@ -6,27 +6,27 @@ import {
   GetFeaturesResponse,
   PostFeaturesData,
   PostFeaturesResponse,
-} from './apiClient'
+} from "./apiClient";
 
 export type Models = {
-  Feature: Feature
-}
+  Feature: Feature;
+};
 
 export type Endpoints = {
   Features: {
     GetFeatures: {
-      PathParams: GetFeaturesData['path']
-      QueryParams: GetFeaturesData['query']
-      Response: GetFeaturesResponse
-    }
+      PathParams: GetFeaturesData["path"];
+      QueryParams: GetFeaturesData["query"];
+      Response: GetFeaturesResponse;
+    };
     AddFeature: {
-      RequestBody: PostFeaturesData['body']
-      Response: PostFeaturesResponse
-    }
+      RequestBody: PostFeaturesData["body"];
+      Response: PostFeaturesResponse;
+    };
     RemoveFeature: {
-      PathParams: DeleteFeaturesByIdData['path']
-      QueryParams: DeleteFeaturesByIdData['query']
-      Response: DeleteFeaturesByIdResponses['200']
-    }
-  }
-}
+      PathParams: DeleteFeaturesByIdData["path"];
+      QueryParams: DeleteFeaturesByIdData["query"];
+      Response: DeleteFeaturesByIdResponses["200"];
+    };
+  };
+};

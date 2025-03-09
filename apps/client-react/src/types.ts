@@ -1,1 +1,1 @@
-export type Tab = 'features' | 'learnings'
+export type Tab = "features" | "learnings";

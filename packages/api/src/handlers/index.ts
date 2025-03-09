@@ -1,1 +1,1 @@
-export { getFeaturesHandlers } from './features/getFeatures';
+export { getFeaturesHandlers } from "./features/getFeatures";
