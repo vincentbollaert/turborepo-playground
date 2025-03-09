@@ -17,7 +17,9 @@
     "./hooks": "./src/hooks/index.ts",
     "./utils": "./src/utils/index.ts"
   },
+  "prettier": "@repo/prettier-config",
   "devDependencies": {
+    "@repo/prettier-config": "*",
     "@hey-api/openapi-ts": "^0.64.7",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",

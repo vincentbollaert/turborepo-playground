@@ -10,6 +10,7 @@
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit"
   },
+  "prettier": "@repo/prettier-config",
   "dependencies": {
     "@repo/api": "*",
     "@repo/ui": "*",
@@ -23,6 +24,7 @@
     "sass": "^1.85.1"
   },
   "devDependencies": {
+    "@repo/prettier-config": "*",
     "@next/eslint-plugin-next": "^15.1.6",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",

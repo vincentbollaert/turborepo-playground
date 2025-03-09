@@ -9,6 +9,10 @@
     "./configs": "./vite.config.ts",
     "./testUtils": "./testUtils.tsx"
   },
+  "prettier": "@repo/prettier-config",
+  "devDependencies": {
+    "@repo/prettier-config": "*"
+  },
   "dependencies": {
     "@tanstack/react-query": "^5.66.9",
     "@testing-library/jest-dom": "^6.6.3",

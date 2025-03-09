@@ -11,6 +11,7 @@
     "test": "vitest",
     "test:ui": "bun run test --ui"
   },
+  "prettier": "@repo/prettier-config",
   "dependencies": {
     "@repo/api": "*",
     "@repo/ui": "*",
@@ -20,6 +21,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@repo/prettier-config": "*",
     "@repo/eslint-config": "*",
     "@repo/vitest-config": "*",
     "@testing-library/jest-dom": "^6.6.3",
