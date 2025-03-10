@@ -19,6 +19,7 @@
     "./navigation": "./src/patterns/navigation/navigation.tsx",
     "./mockSelector": "./src/patterns/mockSelector/mockSelector.tsx",
     "./socials": "./src/patterns/socials/socials.tsx",
+    "./appSwitcher": "./src/patterns/appSwitcher/appSwitcher.tsx",
     "./frame": "./src/templates/frame/frame.tsx",
     "./hooks": "./src/hooks/index.ts"
   },

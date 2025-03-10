@@ -1,5 +1,6 @@
 "use client";
 
+import { AppSwitcher } from "@repo/ui/appSwitcher";
 import { Navigation } from "@repo/ui/navigation";
 import { useState } from "react";
 import { Features } from "./features";
@@ -14,6 +15,7 @@ export const Home = () => {
 
   return (
     <div>
+      <AppSwitcher />
       <Navigation
         navItems={navItems}
         activeNavTitle={activeTab}

@@ -1,0 +1,35 @@
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: var(--core-space-2);
+  background: var(--color-surface-strong);
+  padding: var(--core-space-2);
+  margin: var(--core-space-4);
+  font-family: var(--font-rounded-sans);
+  border-radius: var(--radius-drawn-4);
+  line-height: 1;
+}
+
+.app {
+  padding: var(--core-space-2) var(--core-space-4);
+  display: block;
+  color: var(--color-surface-base);
+
+  &[data-active="false"] {
+    &:hover {
+      color: var(--color-surface-subtle);
+      background-color: transparent;
+    }
+  }
+
+  &[data-active="true"] {
+    background: var(--color-surface-base);
+    padding: var(--core-space-2) var(--core-space-4);
+    display: block;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-drawn-1);
+    color: var(--color-text-default);
+  }
+}

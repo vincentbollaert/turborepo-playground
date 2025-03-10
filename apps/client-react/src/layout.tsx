@@ -1,3 +1,4 @@
+import { AppSwitcher } from "@repo/ui/appSwitcher";
 import { Frame } from "@repo/ui/frame";
 import { useMswInit } from "@repo/ui/hooks";
 import { MockSelector } from "@repo/ui/mockSelector";
@@ -21,6 +22,7 @@ export const Layout = () => {
   return (
     <Frame>
       <Frame.Main>
+        <AppSwitcher />
         <Navigation<Tab>
           navItems={[{ title: "features" }, { title: "learnings" }]}
           activeNavTitle={activeTab}
