@@ -6,63 +6,62 @@ export const defaultFeatures: FeaturesResponse = {
   features: [
     {
       id: crypto.randomUUID(),
-      name: "Modern frontend applications",
-      description: "Next.js and Vite/React apps showing different setups",
+      name: "Multi-framework Frontend Applications",
+      description: "Next.js and Vite/React apps with shared dependencies",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "Shared component library",
+      name: "Express server",
       description:
-        "Tailwind shadcn components with component generation and automatic export management",
+        "Express server with structured routing, middleware layers, and shared API types",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "API layer",
-      description: "OpenAPI schema-driven development with MSW for mocking",
+      name: "Hierarchical component library system",
+      description:
+        "Radix UI components in Primitives > Components > Patterns > Templates structure with SCSS modules",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "Shared configuration packages",
-      description: "Shared Typscript and ESLint configs",
+      name: "Multi-level CSS design tokens",
+      description:
+        "CSS variables following core > semantic > component hierarchy for consistent theming",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "Versioning consistency",
-      description: "Leveraring syncpack to ensure consistent dependency versions",
+      name: "Contract-first API development",
+      description:
+        "OpenAPI schemas with type-safe client generation and MSW for consistent mock handling",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "Express TODO",
-      description: "Express server with repository pattern TODO",
+      name: "Shared development configurations",
+      description: "Common TypeScript, ESLint, and testing configs",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "Database TODO",
-      description: "",
+      name: "Dependency version management",
+      description:
+        "Syncpack for consistent package versions and preventing dependency conflicts across apps",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "Testing TODO",
-      description: "",
+      name: "Serverless database integration",
+      description: "Simple Neon PostgreSQL database intergration",
       status: "done",
     },
     {
       id: crypto.randomUUID(),
-      name: "Local persistence layer?",
-      description: "",
-      status: "done",
-    },
-    {
-      id: crypto.randomUUID(),
-      name: "API validation?",
-      description: "",
+      name: "Intergration tests",
+      description:
+        "Vitest and RTL intergration tests with layered render functions and shared test utilities",
       status: "done",
     },
   ],
