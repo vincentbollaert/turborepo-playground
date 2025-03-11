@@ -8,7 +8,6 @@ import { Home } from "./home";
 
 export default function IndexPage() {
   const mswStatus = useMswInit();
-
   if (mswStatus === "initializing") {
     return null;
   }
