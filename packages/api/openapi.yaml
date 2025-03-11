@@ -12,18 +12,18 @@ components:
   examples:
     Feature:
       value:
-        id: 'id1'
-        name: 'Modern web applications'
-        description: 'Modern web applications showing diverging setups'
-        status: 'done'
+        id: "id1"
+        name: "Modern web applications"
+        description: "Modern web applications showing diverging setups"
+        status: "done"
 
     Features:
       value:
         features:
-          - id: 'id2'
-            name: 'Shared component library'
-            description: 'Tailwind component library with codegen'
-            status: 'done'
+          - id: "id2"
+            name: "Shared component library"
+            description: "Tailwind component library with codegen"
+            status: "done"
 
   schemas:
     Feature:
@@ -48,14 +48,14 @@ components:
         - status
       example:
         default:
-          $ref: '#/components/examples/Feature'
+          $ref: "#/components/examples/Feature"
 
 paths:
   /features:
     get:
       summary: Get features
       responses:
-        '200':
+        "200":
           description: Features
           content:
             application/json:
@@ -65,41 +65,7 @@ paths:
                   features:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Feature'
+                      $ref: "#/components/schemas/Feature"
               examples:
                 default:
-                  $ref: '#/components/examples/Features'
-    post:
-      summary: Add a new feature
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Feature'
-            examples:
-              default:
-                $ref: '#/components/examples/Feature'
-      responses:
-        '201':
-          description: Feature added successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Feature'
-              examples:
-                default:
-                  $ref: '#/components/examples/Feature'
-
-  /features/{id}:
-    parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: string
-    delete:
-      summary: Remove a feature
-      responses:
-        '200':
-          description: Feature removed successfully
+                  $ref: "#/components/examples/Features"

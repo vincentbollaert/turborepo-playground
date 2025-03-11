@@ -37,38 +37,6 @@ export type GetFeaturesResponses = {
 
 export type GetFeaturesResponse = GetFeaturesResponses[keyof GetFeaturesResponses];
 
-export type PostFeaturesData = {
-  body: Feature;
-  path?: never;
-  query?: never;
-  url: "/features";
-};
-
-export type PostFeaturesResponses = {
-  /**
-   * Feature added successfully
-   */
-  201: Feature;
-};
-
-export type PostFeaturesResponse = PostFeaturesResponses[keyof PostFeaturesResponses];
-
-export type DeleteFeaturesByIdData = {
-  body?: never;
-  path: {
-    id: string;
-  };
-  query?: never;
-  url: "/features/{id}";
-};
-
-export type DeleteFeaturesByIdResponses = {
-  /**
-   * Feature removed successfully
-   */
-  200: unknown;
-};
-
 export type ClientOptions = {
   baseUrl: `${string}://${string}/api/v1` | (string & {});
 };
