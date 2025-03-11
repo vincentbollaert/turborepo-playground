@@ -13,7 +13,7 @@ describe("<Features />", () => {
   it("should render loading state", async () => {
     renderApp();
 
-    expect(screen.getByTestId("skeleton")).toBeInTheDocument();
+    expect(screen.getAllByTestId("skeleton")).toHaveLength(14);
   });
 
   it("should render empty state", async () => {
@@ -44,7 +44,7 @@ describe("<Features />", () => {
     renderApp();
 
     const feature = await getFeature();
-    expect(within(feature).getByText("Modern frontend applications")).toBeInTheDocument();
+    expect(within(feature).getByText("Multi-framework frontend applications")).toBeInTheDocument();
   });
 
   it("should render feature description", async () => {

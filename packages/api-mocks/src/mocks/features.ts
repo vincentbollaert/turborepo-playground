@@ -6,7 +6,7 @@ export const defaultFeatures: FeaturesResponse = {
   features: [
     {
       id: crypto.randomUUID(),
-      name: "Multi-framework Frontend Applications",
+      name: "Multi-framework frontend applications",
       description: "Next.js and Vite/React apps with shared dependencies",
       status: "done",
     },
