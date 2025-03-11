@@ -10,7 +10,6 @@ type Tab = "features" | "learnings";
 
 export const Home = () => {
   const [activeTab, setActiveTab] = useState<Tab>("features");
-
   const navItems = [{ title: "features" }, { title: "learnings" }];
 
   return (
