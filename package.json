@@ -1,6 +1,7 @@
 {
   "name": "turborepo-playgorund",
   "devDependencies": {
+    "husky": "^9.1.7",
     "prettier": "^3.5.0",
     "syncpack": "^13.0.2",
     "tsx": "4.19.1",
@@ -19,10 +20,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "deps:check": "syncpack list-mismatches",
     "deps:fix": "syncpack fix-mismatches",
-    "generate": "turbo run generate"
+    "generate": "turbo run generate",
+    "prepare": "husky"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "lint-staged": "^15.4.3"
+  }
 }

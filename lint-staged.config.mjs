@@ -1,0 +1,4 @@
+export default {
+  "*": "bun run lint",
+  "*": "bun run format",
+};
