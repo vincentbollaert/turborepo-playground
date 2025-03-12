@@ -10,6 +10,9 @@ config:
   look: handDrawn
   layout: fixed
   theme: redux
+  rankSpacing: 30
+  nodeSpacing: 20
+  curve: basis
 ---
 flowchart LR
     A["Turborepo"] --> B["Apps"] & C["Packages"]
