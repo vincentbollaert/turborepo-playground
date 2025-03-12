@@ -22,7 +22,7 @@
     "deps:check": "syncpack list-mismatches",
     "deps:fix": "syncpack fix-mismatches",
     "generate": "turbo run generate",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "workspaces": [
     "apps/*",
