@@ -1,3 +1,3 @@
 export default {
-  "*.{js,jsx,ts,tsx}": ["bun run lint", "bun run format"],
+  "*.{js,jsx,ts,tsx,scss}": ["bun run lint", "bun run format"],
 };

@@ -2,7 +2,7 @@
 
 A modern monorepo architecture showcasing best practices for frontend development with React, Next.js, and Node.js.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```mermaid
 graph TD
@@ -20,7 +20,7 @@ graph TD
 
 This project demonstrates a modern monorepo architecture using Turborepo, with shared packages and multiple applications that showcase different frontend frameworks and patterns.
 
-## 🚀 Key Features
+## Key Features
 
 - **Monorepo Structure**: Organized with Turborepo for efficient workspace management
 - **Multiple Frontend Implementations**:
@@ -33,7 +33,7 @@ This project demonstrates a modern monorepo architecture using Turborepo, with s
 - **Consistent Configuration**: Shared ESLint, TypeScript, and testing configurations
 - **Modern Styling**: SCSS modules with utility functions
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core Technologies
 
@@ -63,7 +63,7 @@ This project demonstrates a modern monorepo architecture using Turborepo, with s
 - **Code Quality**: ESLint, TypeScript strict mode
 - **Dependency Management**: Syncpack
 
-## 🏁 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -84,7 +84,7 @@ bun install
 bun run dev
 ```
 
-## 💻 Development Workflow
+## Development Workflow
 
 ### Running Apps
 
@@ -118,7 +118,7 @@ bun run test
 bun run test --filter=client-react
 ```
 
-## 🧪 Testing Strategy
+## Testing Strategy
 
 This project uses a comprehensive testing approach:
 
@@ -127,7 +127,7 @@ This project uses a comprehensive testing approach:
 - **Mock Service Worker**: API mocking for predictable test scenarios
 - **Test Utilities**: Shared test setup and utilities
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -166,7 +166,7 @@ The API package provides:
 - MSW handlers for mocking
 - Utility functions
 
-## 📚 Learning Resources
+## Learning Resources
 
 This project demonstrates several modern frontend architecture concepts:
 
