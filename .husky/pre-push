@@ -1,1 +1,1 @@
-cd apps/client-react && bun run test
+cd apps/client-react && bun run test --watch=false
