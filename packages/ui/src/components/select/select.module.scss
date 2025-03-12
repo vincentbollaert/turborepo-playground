@@ -15,7 +15,7 @@
   cursor: pointer;
 
   &:hover,
-  &[data-state='open'] {
+  &[data-state="open"] {
     background-color: var(--color-surface-strongest);
   }
 }
@@ -34,7 +34,6 @@
   overflow: hidden;
   background-color: var(--color-surface-strongest);
   box-shadow: var(--shadow-md);
-  font-family: var(--font-rounded-sans);
   cursor: pointer;
 }
 
@@ -52,7 +51,7 @@
   white-space: nowrap;
 
   &[data-highlighted],
-  &[data-state='checked'] {
+  &[data-state="checked"] {
     outline: none;
     color: var(--color-text-inverted);
   }

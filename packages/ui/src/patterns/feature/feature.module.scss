@@ -1,6 +1,8 @@
-@use '../../components//button/button.module.scss';
+@use "../../components/button/button.module.scss";
 
 .feature {
+  --btn-right-spacing: var(--core-space-6);
+
   margin-top: var(--space-sm);
   padding: var(--space-lg);
   position: relative;
@@ -9,7 +11,7 @@
   transition: box-shadow 0.2s var(--ease-out-3);
 
   &:hover,
-  &[data-expanded='true'] {
+  &[data-expanded="true"] {
     background-color: var(--color-surface-strong);
 
     .expandButton {
@@ -23,7 +25,7 @@
     .switch {
       background-color: var(--color-surface-stronger);
 
-      &[data-state='checked'] {
+      &[data-state="checked"] {
         background-color: var(--color-accent-brighter);
       }
     }
@@ -59,7 +61,7 @@
 
 .expandButton {
   position: absolute;
-  right: 6px;
+  right: var(--btn-right-spacing);
 }
 
 .icon {
@@ -71,7 +73,7 @@
   margin-top: 1.6rem;
   display: none;
 
-  [data-expanded='true'] & {
+  [data-expanded="true"] & {
     display: block;
   }
 }
