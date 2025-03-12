@@ -1,5 +1,6 @@
 "use client";
 
+import { AppSwitcher } from "@repo/ui/appSwitcher";
 import { Frame } from "@repo/ui/frame";
 import { useMswInit } from "@repo/ui/hooks";
 import { MockSelector } from "@repo/ui/mockSelector";
@@ -15,6 +16,7 @@ export default function IndexPage() {
   return (
     <Frame>
       <Frame.Main>
+        <AppSwitcher />
         <Home />
       </Frame.Main>
 
