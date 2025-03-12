@@ -1,24 +1,21 @@
 # Turborepo Playground
 
-A modern monorepo architecture showcasing best practices for frontend development with React, Next.js, and Node.js.
+A minimal modern monorepo architecture showcasing my current practices for stitching together React, Next.js, and Node.js applications. The focus is more on sharing dependencies between apps, than it is following best practices within them.
 
 ## Architecture Overview
 
 ```mermaid
-graph TD
-    A[Turborepo] --> B[Apps]
-    A --> C[Packages]
-    B --> D[Next.js App]
-    B --> E[React/Vite App]
-    B --> F[Express Server]
-    C --> G[UI Library]
-    C --> H[API SDK]
-    C --> I[ESLint Config]
-    C --> J[TypeScript Config]
-    C --> K[Vitest Config]
+---
+config:
+  look: handDrawn
+  layout: fixed
+  theme: redux
+---
+flowchart LR
+    A["Turborepo"] --> B["Apps"] & C["Packages"]
+    B --> D["Next.js app"] & E["React/Vite app"] & F["Express server"]
+    C --> G["UI library"] & H["API client"] & I["API mocks"] & J["ESLint config"] & K["Prettier config"] & L["TypeScript config"] & M["Vitest config"]
 ```
-
-This project demonstrates a modern monorepo architecture using Turborepo, with shared packages and multiple applications that showcase different frontend frameworks and patterns.
 
 ## Key Features
 
@@ -39,36 +36,36 @@ This project demonstrates a modern monorepo architecture using Turborepo, with s
 
 - **Build System**: [Turborepo](https://turbo.build/)
 - **Package Manager**: [Bun](https://bun.sh/)
-- **Languages**: TypeScript, SCSS
+- **Languages**: [TypeScript](https://www.typescriptlang.org/), [SCSS](https://sass-lang.com/)
 
 ### Frontend
 
-- **Frameworks**: React 19, Next.js 15
-- **Build Tools**: Vite 6
-- **Data Fetching**: TanStack Query (React Query)
-- **UI Components**: Radix UI primitives
-- **Styling**: SCSS Modules, Open Props
+- **Frameworks**: [React 19](https://react.dev/), [Next.js 15](https://nextjs.org/)
+- **Build Tools**: [Vite 6](https://vitejs.dev/)
+- **Data Fetching**: [TanStack Query](https://tanstack.com/query/latest) (React Query)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/) primitives
+- **Styling**: [SCSS Modules](https://github.com/css-modules/css-modules), [Open Props](https://open-props.style/)
 
 ### Backend
 
-- **Server**: Express.js
-- **Database**: PostgreSQL (NeonDB)
-- **API**: OpenAPI 3.1
+- **Server**: [Express.js](https://expressjs.com/)
+- **Database**: [PostgreSQL](https://www.postgresql.org/) ([NeonDB](https://neon.tech/))
+- **API**: [OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0)
 
 ### Testing & Development
 
-- **Testing**: Vitest, React Testing Library
-- **API Mocking**: Mock Service Worker (MSW)
-- **Documentation**: Ladle (component stories)
-- **Code Quality**: ESLint, TypeScript strict mode
-- **Dependency Management**: Syncpack
+- **Testing**: [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- **API Mocking**: [Mock Service Worker](https://mswjs.io/) (MSW)
+- **Documentation**: [Ladle](https://ladle.dev/) (component stories)
+- **Code Quality**: [ESLint](https://eslint.org/), TypeScript strict mode
+- **Dependency Management**: [Syncpack](https://github.com/JamieMason/syncpack)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js >= 18
-- Bun >= 1.2.2
+- [Node.js](https://nodejs.org/) >= 18
+- [Bun](https://bun.sh/) >= 1.2.2
 
 ### Installation
 
@@ -120,10 +117,9 @@ bun run test --filter=client-react
 
 ## Testing Strategy
 
-This project uses a comprehensive testing approach:
+This project uses the foundations of a comprehensive testing approach:
 
 - **Integration Tests**: Testing components with their data fetching logic
-- **Component Tests**: Isolated UI component testing
 - **Mock Service Worker**: API mocking for predictable test scenarios
 - **Test Utilities**: Shared test setup and utilities
 
@@ -136,10 +132,12 @@ This project uses a comprehensive testing approach:
 │   ├── client-react/          # React application with Vite
 │   └── server/                # Express API server
 ├── packages/                  # Shared packages
-│   ├── api/                   # API client, types, and mocks
+│   ├── api/                   # API client and types
+│   ├── api-mocks/             # API mocks and handlers
+│   ├── ui/                    # Shared UI component library
 │   ├── eslint-config/         # Shared ESLint configurations
 │   ├── typescript-config/     # Shared TypeScript configurations
-│   ├── ui/                    # Shared UI component library
+│   ├── prettier-config/       # Shared prettier configurations
 │   └── vitest-config/         # Shared Vitest configuration
 ├── package.json               # Root package.json
 └── turbo.json                 # Turborepo configuration
@@ -162,9 +160,13 @@ The API package provides:
 
 - OpenAPI schema
 - Generated API clients
-- React Query hooks
+
+#### API Mocks Package
+
+The API package provides:
+
 - MSW handlers for mocking
-- Utility functions
+- Mocks
 
 ## Learning Resources
 
@@ -179,8 +181,8 @@ This project demonstrates several modern frontend architecture concepts:
 2. **Component Library Design**
 
    - Component hierarchy (primitives → components → patterns → templates)
-   - Styling strategies
-   - Component documentation
+   - Styling strategies (hierarchical design tokens)
+   - Component documentation with Ladle (Storybook alternative)
 
 3. **API Integration**
 
@@ -189,7 +191,6 @@ This project demonstrates several modern frontend architecture concepts:
    - API mocking strategies
 
 4. **Testing Strategies**
-   - Component testing
    - Integration testing
    - Mock data management
 
