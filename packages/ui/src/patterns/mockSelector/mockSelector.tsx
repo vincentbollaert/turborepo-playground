@@ -4,7 +4,8 @@ import { reactQueryClient } from "@repo/api/reactQueryClient";
 import { Select, SelectItem } from "@repo/ui/select";
 import styles from "./mockSelector.module.scss";
 
-// TODO: this component should be refactored
+// TODO: this component's mock oprions should inherit from a type, or better yet, each app should
+// pass into it its own options
 export const MockSelector = () => {
   const handleMockChange = (newValue: string) => {
     handleSetMockVariants({ endpointId: "features", mockVariantType: newValue as any });
