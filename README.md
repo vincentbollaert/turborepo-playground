@@ -1,6 +1,10 @@
 # Turborepo Playground
 
-A minimal modern monorepo architecture showcasing my current practices for stitching together React, Next.js, and Node.js applications. The focus is more on sharing dependencies between apps, than it is following best practices within them.
+A monorepo architecture showcasing my current practices for stitching together React, Next.js, and Node.js applications
+
+## Screenshot
+![Screenshot 2025-03-14 212041](https://github.com/user-attachments/assets/7f92abc4-a652-42f5-91c6-7d1176819f8e)
+
 
 ## Architecture Overview
 
@@ -31,7 +35,7 @@ flowchart LR
 - **API Layer**: OpenAPI-driven development with automatic client generation
 - **Mock Service Worker Integration**: Seamless API mocking for development and testing
 - **Consistent Configuration**: Shared ESLint, TypeScript, and testing configurations
-- **Modern Styling**: SCSS modules with utility functions
+- **Modern Styling**: SCSS modules with open-props and utility classes
 
 ## Tech Stack
 
