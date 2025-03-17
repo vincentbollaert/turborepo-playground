@@ -1,13 +1,14 @@
 "use client";
 
-// import { AppSwitcher } from "@repo/ui/appSwitcher";
 import { Frame } from "@repo/ui/frame";
 import { useMswInit } from "@repo/ui/hooks";
 import { MockSelector } from "@repo/ui/mockSelector";
 import { Socials } from "@repo/ui/socials";
+import clsx from "clsx";
 import { Home } from "./home";
 
 import dynamic from "next/dynamic";
+import { getClientEnv } from "./env";
 
 const AppSwitcher = dynamic(() => import("@repo/ui/appSwitcher").then((mod) => mod.AppSwitcher), {
   ssr: false,
@@ -27,7 +28,7 @@ export default function IndexPage() {
       </Frame.Main>
 
       <Frame.Aside>
-        <Frame.Aside.Block>
+        <Frame.Aside.Block className={clsx({ isHidden: getClientEnv().NODE_ENV === "production" })}>
           <MockSelector />
         </Frame.Aside.Block>
 

@@ -1,8 +1,17 @@
-.skeleton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
+.row {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: var(--space-xlg);
+  margin-top: var(--space-xlg);
+  align-items: center;
+
+  &:first-child {
+    margin-top: 50px;
+  }
+}
+
+.skeletonCircle {
+  border-radius: var(--radius-full);
 }
 
 .featuresTab {
